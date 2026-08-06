@@ -804,3 +804,77 @@ body { overflow: hidden; }
 
 /* solid top bar on every slide */
 .nav { background: rgba(20,20,20,.97); border-bottom: 1px solid rgba(207,174,112,.18); }
+
+/* ---------- 24. Density pass: fit each slide at 1440x900 ---------- */
+@media (min-width: 1000px) {
+  :root { --content-max: 1320px; }
+  .slide { padding: calc(var(--nav-h) + 1.25rem) 0 calc(56px + 1rem); }
+  .eyebrow { margin-bottom: .6rem; }
+  .h2 { font-size: clamp(1.75rem, 2.8vw, 2.4rem); margin-bottom: .7rem; }
+  .lead { font-size: 1rem; max-width: 82ch; }
+  .why { font-size: .85rem; }
+  .card { padding: 1rem 1.15rem; }
+  .card h3 { font-size: 1.1rem; }
+  .card p { font-size: .9rem; }
+  .grid { gap: .8rem; }
+
+  .quiz { max-width: 1140px; }
+  .duo { display: grid; gap: 1rem 1.5rem; grid-template-columns: 1fr 1fr; align-items: start; margin-top: 1.25rem; }
+  .duo .quiz { margin-top: 0 !important; }
+  .quiz__q { font-size: clamp(1rem, 1.4vw, 1.2rem); margin-bottom: .5rem; }
+  .quiz__options { gap: .5rem; }
+  .opt { padding: .55rem .8rem; font-size: .92rem; gap: .6rem; }
+  .opt .mark { width: 22px; height: 22px; font-size: .78rem; }
+  .quiz__feedback { margin-top: .55rem; font-size: .92rem; }
+  .quiz__nav { margin-top: .55rem; }
+  .deeper { margin-top: .9rem; }
+  .deeper summary { padding: .55rem 0; }
+
+  /* trainers whose answer labels are short go multi-column */
+  #portalFact .quiz__options { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 560px; }
+  #entrancePick .quiz__options,
+  #managerCall .quiz__options,
+  #statGuess .quiz__options { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  .hero .h-hero { font-size: clamp(2.5rem, 5vw, 4rem); }
+  .objectives { margin-top: 1.25rem; }
+  .objectives__list { gap: .4rem; }
+  .objectives__list li { font-size: .95rem; }
+  .hero__cta { margin-top: 1.25rem; }
+  .hero__meta { margin-top: 1.25rem; }
+
+  .welcome .qr-card__code { width: clamp(150px, 20vh, 210px); }
+  .welcome .hero__meta { margin-top: 1rem; }
+  .welcome .hero__cta { margin-top: 1rem; }
+
+  .plan { margin-top: .75rem; }
+  .plan__form { gap: .8rem 1.5rem; max-width: 1140px; grid-template-columns: 1.05fr 1fr; align-items: start; }
+  .plan__form > .plan__field:nth-of-type(2) { grid-column: 2; grid-row: 1 / span 3; }
+  .plan__form > .plan__field:nth-of-type(1),
+  .plan__form > .plan__field:nth-of-type(3),
+  .plan__form > .plan__field:nth-of-type(4) { grid-column: 1; }
+  .plan__form .lab__runrow { grid-column: 1 / -1; }
+  .plan__chips .opt { padding: .4rem .65rem; font-size: .82rem; }
+  .plan__field label, .plan__label { font-size: .9rem; margin-bottom: .3rem; }
+  .plan__field input[type="text"] { padding: .6rem .85rem; font-size: .98rem; }
+  .plan__chips .opt { padding: .5rem .8rem; font-size: .88rem; }
+  .lab__runrow { margin-top: .75rem; }
+
+  .quiz .eyebrow { margin-bottom: .3rem; }
+  .quiz__progress { margin: .2rem 0 0; }
+  .quiz__feedback { min-height: 1.2em; }
+
+  .vidcard { padding: 1rem 1.15rem; gap: .5rem; }
+  .vidcard--feature h3 { font-size: 1.2rem; }
+  .vidcard--feature p { font-size: .9rem; }
+  .slide .footer { margin-top: 1rem; padding: .9rem 0 .6rem; }
+  .slide .footer img { max-width: 150px; }
+  .slide .footer .brandline { font-size: 1rem; }
+  .slide .footer__grid { gap: 1.25rem; }
+  .slide .footer ul { display: flex; flex-wrap: wrap; gap: .3rem .9rem; }
+  .slide .footer__legal { font-size: .75rem; margin-top: .6rem; padding-top: .5rem; }
+  .slide .footer a { font-size: .9rem; }
+  .slide .footer h4 { margin-bottom: .5rem; }
+  .slide .footer .brandline { font-size: 1.15rem; margin: .5rem 0 0; }
+  .slide .footer__legal { margin-top: 1rem; padding-top: .75rem; }
+}

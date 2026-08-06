@@ -17,7 +17,7 @@
 <link rel="preload" href="../assets/fonts/libre-caslon-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
-<link rel="stylesheet" href="../assets/css/styles.css?v=2">
+<link rel="stylesheet" href="../assets/css/styles.css?v=3">
 <style>
   /* skill pills (course-level) */
   .skills { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-top: 1.5rem; }
@@ -28,16 +28,25 @@
     padding: .3rem .65rem; border-radius: 999px; border: 1px solid rgba(207,174,112,.55);
     color: rgba(255,255,255,.85); }
   .skillpill--core { background: var(--vu-gold-flat); border-color: var(--vu-gold-flat); color: var(--vu-black); }
-  /* entrance cards */
-  .doorgrid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 2rem; }
-  .doorgrid .card h3 { margin-top: .35rem; }
-  .doorgrid .card .enter { font-size: .85rem; color: var(--vu-gold-flat); margin: .5rem 0 0; }
-  @media (min-width: 1000px) {
-    .doorgrid { gap: .8rem; margin-top: 1.25rem; grid-template-columns: repeat(3, 1fr); }
-    .doorgrid .card h3 { font-size: 1rem; }
-    .doorgrid .card .muted { font-size: .85rem; }
-    .doorgrid .card .enter { font-size: .8rem; margin-top: .35rem; }
-  }
+  /* entrance doors (expanding) */
+  .doors { margin-top: 1.5rem; display: grid; gap: .6rem; }
+  @media (min-width: 900px) { .doors { grid-template-columns: 1fr 1fr; gap: .6rem .9rem; align-items: start; } }
+  .door { border: 1px solid rgba(255,255,255,.16); border-radius: 6px; background: #242424; }
+  .door[open] { border-color: rgba(207,174,112,.55); }
+  .door summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: .75rem; padding: .7rem .9rem; }
+  .door summary::-webkit-details-marker { display: none; }
+  .door summary .tag { flex-shrink: 0; }
+  .door__quote { font-family: var(--font-serif); font-size: 1rem; color: rgba(255,255,255,.92); line-height: 1.25; }
+  .door .chev { width: 15px; height: 15px; margin-left: auto; flex-shrink: 0; color: var(--vu-gold-flat); transition: transform .25s var(--ease); }
+  .door[open] .chev { transform: rotate(90deg); }
+  .door__body { padding: .1rem .95rem .9rem; display: grid; gap: .55rem; }
+  .door__row { margin: 0; font-size: .85rem; color: rgba(255,255,255,.78); line-height: 1.5; }
+  .door__row b { color: var(--vu-gold-flat); font-family: var(--font-condensed); text-transform: uppercase; letter-spacing: .06em; font-weight: 700; font-size: .7rem; display: block; margin-bottom: .1rem; }
+  .crumbs { list-style: none; margin: .2rem 0; padding: 0; counter-reset: crumb; display: grid; gap: .35rem; }
+  .crumbs li { counter-increment: crumb; position: relative; padding-left: 1.7rem; font-size: .85rem; color: rgba(255,255,255,.88); line-height: 1.4; }
+  .crumbs li::before { content: counter(crumb); position: absolute; left: 0; top: .05rem; width: 1.15rem; height: 1.15rem; border-radius: 50%; border: 1px solid var(--vu-gold-flat); color: var(--vu-gold-flat); font-family: var(--font-condensed); font-weight: 700; font-size: .68rem; display: grid; place-items: center; }
+  .crumbs li:not(:last-child)::after { content: ""; position: absolute; left: .55rem; top: 1.35rem; bottom: -.5rem; width: 1px; background: rgba(207,174,112,.35); }
+  .crumbs__chip { display: inline-block; margin-left: .35rem; font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: .6rem; color: var(--vu-black); background: var(--vu-gold-flat); border-radius: 999px; padding: .12rem .5rem; vertical-align: 1px; }
   /* two-track process */
   .tracks { display: grid; gap: 1.25rem; grid-template-columns: 1fr; margin-top: 2rem; }
   @media (min-width: 900px) { .tracks { grid-template-columns: 1fr 1fr; } }
@@ -45,6 +54,8 @@
   .on-cream .track, .on-light .track { background: rgba(255,255,255,.55); }
   .track ol { margin: .75rem 0 0; padding-left: 1.2rem; display: grid; gap: .5rem; font-size: .95rem; }
   .track ol b { font-weight: 600; }
+  .track a { color: inherit; text-decoration: underline; }
+  .warmup .card a:not(.btn) { color: var(--vu-gold-flat); text-decoration: underline; font-size: .82rem; }
   @media (min-width: 1000px) {
     .tracks { gap: 1rem; margin-top: 1.25rem; }
     .track { padding: .9rem 1.1rem; }
@@ -68,11 +79,6 @@
     .stats .card p { font-size: .76rem; }
   }
   @media (min-width: 1280px) {
-    .doorgrid { grid-template-columns: repeat(6, 1fr); gap: .6rem; }
-    .doorgrid .card { padding: .8rem; }
-    .doorgrid .card h3 { font-size: .92rem; }
-    .doorgrid .card .muted { font-size: .78rem; }
-    .doorgrid .card .enter { font-size: .76rem; }
     #nextMove .quiz__options { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     #nextMove .quiz__options .opt { font-size: .85rem; align-items: start; }
     #entrancePick .quiz__options { grid-template-columns: repeat(6, minmax(0, 1fr)); }
@@ -296,7 +302,7 @@ body.fac-hide .facshow { display: inline-flex; }
   <section class="slide on-light" id="s-what" data-count data-title="What it is">
     <div class="wrap">
       <p class="eyebrow" data-reveal>Section 01 · What It Is</p>
-      <h2 class="h2" data-reveal>Your career, in <em>one</em> place.</h2>
+      <h2 class="h2" data-reveal>One <em>private</em> portal for every internal move.</h2>
       <p class="lead" data-reveal>One front door for internal movement: requisitions with a two-week internal-first window, Careers of Interest, your skills, Grow plans, and Gigs (short stretch assignments). In Oracle: your <b>Talent Profile</b>, the <b>Grow</b> area, and the <b>Opportunity Marketplace</b>. Leaders see only aggregated data, through <b>Workforce Intelligence</b>.</p>
 
       <div class="grid grid-3" style="margin-top:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
@@ -354,46 +360,124 @@ body.fac-hide .facshow { display: inline-flex; }
   <section class="slide on-dark" id="s-entrances" data-count data-title="Six entrances">
     <div class="wrap">
       <p class="eyebrow" data-reveal>Section 02 · Entrances</p>
-      <h2 class="h2" data-reveal>Six entrances, one <em>portal</em>.</h2>
-      <p class="lead" data-reveal>Six doors for six situations. Find yours today; change lanes any time.</p>
+      <h2 class="h2" data-reveal>Match your situation to its <em>entrance</em>.</h2>
+      <p class="lead" data-reveal>Six doors for six situations, and every one of them opens best the same way: a growth conversation with your manager. That start is recommended, never required. Exploring stays private until you choose otherwise. Open your door to see the full path.</p>
 
-      <div class="doorgrid">
-        <div class="card" data-reveal>
-          <span class="tag">A · The Explorer</span>
-          <h3>"I'm curious, but not ready to move"</h3>
-          <p class="muted">Generally happy, wondering what else exists here.</p>
-          <p class="enter"><b>Enter through:</b> Careers of Interest + skills profile. Browse and declare privately; suggestions start arriving. Your manager is not notified.</p>
-        </div>
-        <div class="card" data-reveal>
-          <span class="tag">B · The Tenured High Performer</span>
-          <h3>"I need a new challenge"</h3>
-          <p class="muted">Deep institutional knowledge, plateaued in the current role.</p>
-          <p class="enter"><b>Enter through:</b> Gigs + Careers of Interest. A stretch assignment in another unit while keeping your home role. Development, with no transfer promise.</p>
-        </div>
-        <div class="card" data-reveal>
-          <span class="tag">C · The Underutilized Contributor</span>
-          <h3>"I have skills I never get to use"</h3>
-          <p class="muted">Hired for one thing, grew into others, no outlet.</p>
-          <p class="enter"><b>Enter through:</b> skills update + requisition search. Tag skills at their true level; the portal surfaces roles and Gigs that need them.</p>
-        </div>
-        <div class="card" data-reveal>
-          <span class="tag">D · The Post-Reorg Realigner</span>
-          <h3>"My role feels misaligned"</h3>
-          <p class="muted">Team, mission, or manager just changed materially.</p>
-          <p class="enter"><b>Enter through:</b> advisory conversation + requisitions. An advisor helps you clarify what's next; you apply competitively. You start it, never HR.</p>
-        </div>
-        <div class="card" data-reveal>
-          <span class="tag">E · The At-Risk Employee</span>
-          <h3>"I've heard my role may be at risk"</h3>
-          <p class="muted">Restructure, elimination, or budget pressure looming.</p>
-          <p class="enter"><b>Enter through:</b> advisory + priority matching. Proactive support and expedited review where your skills transfer.</p>
-        </div>
-        <div class="card" data-reveal>
-          <span class="tag">F · The Direct Applicant</span>
-          <h3>"There's an open job I want"</h3>
-          <p class="muted">Knows the role, knows they're ready.</p>
-          <p class="enter"><b>Enter through:</b> the requisition listing. Apply in the two-week window, interview, and if selected, transition with a coordinated handoff.</p>
-        </div>
+      <div class="doors">
+        <details class="door" data-reveal>
+          <summary>
+            <span class="tag">A &middot; The Explorer</span>
+            <span class="door__quote">"I'm curious, but not ready to move"</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </summary>
+          <div class="door__body">
+            <p class="door__row"><b>You right now</b> Generally happy, wondering what else exists at Vanderbilt, and wary of curiosity being read as a resignation.</p>
+            <ol class="crumbs" aria-label="The path through this entrance">
+              <li>Growth conversation with your manager <span class="crumbs__chip">recommended start</span></li>
+              <li>Update the skills in your Talent Profile</li>
+              <li>Flag Careers of Interest in the Grow area</li>
+              <li>Browse the Opportunity Marketplace at your own pace</li>
+              <li>Suggestions arrive as matching roles open</li>
+            </ol>
+            <p class="door__row"><b>Where it leads</b> A private map of your options that builds itself while you keep doing your job.</p>
+            <p class="door__row"><b>Worth knowing</b> Declaring interest notifies no one. You decide if and when to say more.</p>
+          </div>
+        </details>
+        <details class="door" data-reveal>
+          <summary>
+            <span class="tag">B &middot; The Tenured High Performer</span>
+            <span class="door__quote">"I need a new challenge"</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </summary>
+          <div class="door__body">
+            <p class="door__row"><b>You right now</b> Years of institutional knowledge, excellent reviews, and work that has started running on autopilot.</p>
+            <ol class="crumbs" aria-label="The path through this entrance">
+              <li>Growth conversation with your manager <span class="crumbs__chip">recommended start</span></li>
+              <li>Browse Gigs in the Opportunity Marketplace</li>
+              <li>Take one with a defined scope and duration, home role intact</li>
+              <li>Add the new skills to your Talent Profile</li>
+              <li>Compete when the right requisition opens</li>
+            </ol>
+            <p class="door__row"><b>Where it leads</b> Stretch and fresh relationships now, and a stronger candidacy for the bigger next chapter.</p>
+            <p class="door__row"><b>Worth knowing</b> A Gig is development with no transfer promise. Permanent moves always run through a competitive requisition.</p>
+          </div>
+        </details>
+        <details class="door" data-reveal>
+          <summary>
+            <span class="tag">C &middot; The Underutilized Contributor</span>
+            <span class="door__quote">"I have skills I never get to use"</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </summary>
+          <div class="door__body">
+            <p class="door__row"><b>You right now</b> Hired for one thing, grew into others, and the current role gives the extra skills no outlet.</p>
+            <ol class="crumbs" aria-label="The path through this entrance">
+              <li>Growth conversation with your manager <span class="crumbs__chip">recommended start</span></li>
+              <li>Tag every real skill at its true level in the Skills Center</li>
+              <li>Point your Grow plan at the underused ones</li>
+              <li>The portal surfaces roles and Gigs that need them</li>
+              <li>Apply, or take a Gig, when the fit is real</li>
+            </ol>
+            <p class="door__row"><b>Where it leads</b> Work that finally uses the whole toolkit, found by matching instead of luck.</p>
+            <p class="door__row"><b>Worth knowing</b> The matching runs on your skills data. Honest levels beat long lists every time.</p>
+          </div>
+        </details>
+        <details class="door" data-reveal>
+          <summary>
+            <span class="tag">D &middot; The Post-Reorg Realigner</span>
+            <span class="door__quote">"My role feels misaligned"</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </summary>
+          <div class="door__body">
+            <p class="door__row"><b>You right now</b> Your division merged or restructured, and the role you signed up for moved underneath you.</p>
+            <ol class="crumbs" aria-label="The path through this entrance">
+              <li>Growth conversation with your manager <span class="crumbs__chip">recommended start</span></li>
+              <li>Request an employee-consultant conversation, confidential and yours to open</li>
+              <li>Sort out the next chapter with your advisor</li>
+              <li>Apply competitively to the requisitions that fit</li>
+              <li>Transition through a coordinated handoff</li>
+            </ol>
+            <p class="door__row"><b>Where it leads</b> Clarity about the next chapter before you commit to chasing it.</p>
+            <p class="door__row"><b>Worth knowing</b> You start the advisory, never HR, and nothing moves without your consent.</p>
+          </div>
+        </details>
+        <details class="door" data-reveal>
+          <summary>
+            <span class="tag">E &middot; The At-Risk Employee</span>
+            <span class="door__quote">"I've heard my role may be at risk"</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </summary>
+          <div class="door__body">
+            <p class="door__row"><b>You right now</b> Restructure, elimination, or budget pressure is looming over the role you hold.</p>
+            <ol class="crumbs" aria-label="The path through this entrance">
+              <li>Growth conversation with your manager <span class="crumbs__chip">recommended start</span></li>
+              <li>Ask for advisory support and priority matching</li>
+              <li>Your skills are matched proactively against open needs</li>
+              <li>Expedited review where they transfer</li>
+              <li>Land the next role before the risk lands</li>
+            </ol>
+            <p class="door__row"><b>Where it leads</b> The program working hardest exactly when you need it most.</p>
+            <p class="door__row"><b>Worth knowing</b> Advisory stays confidential, and priority matching activates only on your request.</p>
+          </div>
+        </details>
+        <details class="door" data-reveal>
+          <summary>
+            <span class="tag">F &middot; The Direct Applicant</span>
+            <span class="door__quote">"There's an open job I want"</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </summary>
+          <div class="door__body">
+            <p class="door__row"><b>You right now</b> A posting is live, the skills match, and you are ready today.</p>
+            <ol class="crumbs" aria-label="The path through this entrance">
+              <li>Growth conversation with your manager <span class="crumbs__chip">recommended start</span></li>
+              <li>Apply inside the two-week internal-first window</li>
+              <li>Interview in the same process every candidate gets</li>
+              <li>HR and both managers plan the handoff, typically two to four weeks</li>
+              <li>Onboard fast while your old role backfills through the portal</li>
+            </ol>
+            <p class="door__row"><b>Where it leads</b> A new chapter at Vanderbilt with your institutional knowledge riding along.</p>
+            <p class="door__row"><b>Worth knowing</b> The window guarantees the first look. The interview is yours to win; internal never means entitled.</p>
+          </div>
+        </details>
       </div>
 
       <div class="quiz" id="entrancePick" data-reveal style="margin-top:1rem">
@@ -424,23 +508,23 @@ body.fac-hide .facshow { display: inline-flex; }
         </div>
       </details>
     </div>
-    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 2 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Make the portal personal: everyone picks a door.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Six doors: curious, plateaued, hidden skills, post-reorg, at risk, and ready to apply. One is yours today, and you can change lanes any time.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Walk the six cards in one line each.</li><li>Run Pick the Entrance on devices or as a vote.</li><li>Show of hands, A through F: which is yours?</li></ol></div><p class="facnote__meta"><b>Validate:</b> Every learner has picked an entrance; it feeds the card.</p><p class="facnote__meta"><b>Watch for:</b> Protect anyone who picked E; nobody reveals that pick.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Behind every door, the same process.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: cards in three breaths, trainer as one vote, hands stay.</p></aside>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 2 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Make the portal personal: everyone picks a door.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Six doors: curious, plateaued, hidden skills, post-reorg, at risk, and ready to apply. Every one opens best the same way, a growth conversation with your manager, recommended and never required. Tap your door to see the whole trail, first conversation to landed move. One is yours today, and you can change lanes any time.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Open one door and walk its trail; the other five read the same way.</li><li>Name the standing start: every door opens best with the manager conversation, recommended, never required.</li><li>Run Pick the Entrance on devices or as a vote.</li><li>Show of hands, A through F: which is yours?</li></ol></div><p class="facnote__meta"><b>Validate:</b> Every learner has picked an entrance; it feeds the card.</p><p class="facnote__meta"><b>Watch for:</b> Protect anyone who picked E; nobody reveals that pick.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Behind every door, the same process.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: one door opened, trainer as one vote, hands stay.</p></aside>
   </section>
 
   <!-- ============ 6 · 03 THE PROCESS ============ -->
   <section class="slide on-cream" id="s-process" data-count data-title="The process">
     <div class="wrap">
       <p class="eyebrow" data-reveal>Section 03 · The Process</p>
-      <h2 class="h2" data-reveal>Two tracks, both <em>yours</em>.</h2>
+      <h2 class="h2" data-reveal>Explore <em>privately</em>. Compete when a role opens.</h2>
       <p class="lead" data-reveal><b>Interest &amp; Development</b> is always on and private. <b>Move</b> starts when a requisition opens, and it is competitive. Same portal; they feed each other.</p>
 
       <div class="tracks">
         <div class="track" data-reveal>
           <span class="tag">Track 1 · Interest &amp; Development, always on</span>
           <ol>
-            <li><b>Build your profile.</b> In your Talent Profile: Career Preferences plus both skills lists, honestly leveled. Private to you.</li>
+            <li><b>Build your profile.</b> In your <a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/faces/deeplink?objType=NFX_VIEW_MY_SKILLS_AND_QUAL_VB&action=NONE">Talent Profile</a> (Oracle lists it as Skills and Qualifications): Career Preferences plus both skills lists, honestly leveled in the <a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/redwood/profiles/skills/skillscenter?navigateBack=true">Skills Center</a>. Private to you.</li>
             <li><b>Set a Grow plan and flag Careers of Interest.</b> Both live in Grow: one to three goals, plus the roles you want suggestions about.</li>
-            <li><b>Explore.</b> Browse the Opportunity Marketplace; save what interests you.</li>
+            <li><b>Explore.</b> Browse the <a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/redwood/internalmobility/opportunitymarketplace/search">Opportunity Marketplace</a> with the Opportunity filter set to Career Roles: you are browsing careers, with or without an open requisition. Save what interests you.</li>
             <li><b>Take a Gig, optionally.</b> Defined scope, defined duration, real development. No transfer guarantee.</li>
             <li><b>Ask for advisory support, optionally.</b> Confidential, on your initiative; nothing happens without your consent.</li>
           </ol>
@@ -486,14 +570,14 @@ body.fac-hide .facshow { display: inline-flex; }
         </div>
       </details>
     </div>
-    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 2 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Make every step predictable, including disclosure timing.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Two tracks. Interest and Development: always on, private; profile, Grow plan, the Opportunity Marketplace, an optional Gig, optional advisory. Move: a requisition posts internally first, you apply and interview, and if you win it, a coordinated handoff, then your old role backfills through the same portal. One rule everyone wonders about: explore silently, and talk to your manager once you're a serious candidate.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Tracks in two breaths.</li><li>Run Call the Next Move as a fast vote.</li></ol></div><p class="facnote__meta"><b>Validate:</b> 4+ of 5 on the trainer.</p><p class="facnote__meta"><b>Watch for:</b> The 'guaranteed job' misread: the window guarantees first look, the interview is yours to win.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Now the section that decides whether any of this works.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: tracks in one breath each, trainer as one vote.</p></aside>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 2 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Make every step predictable, including disclosure timing.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Two tracks. Interest and Development: always on, private; profile, Grow plan, the Opportunity Marketplace, an optional Gig, optional advisory. Move: a requisition posts internally first, you apply and interview, and if you win it, a coordinated handoff, then your old role backfills through the same portal. One rule everyone wonders about: explore silently, and talk to your manager once you're a serious candidate.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Tracks in two breaths.</li><li>Point out the live Oracle links: Talent Profile, Skills Center, Opportunity Marketplace with Opportunity set to Career Roles.</li><li>Run Call the Next Move as a fast vote.</li></ol></div><p class="facnote__meta"><b>Validate:</b> 4+ of 5 on the trainer.</p><p class="facnote__meta"><b>Watch for:</b> The 'guaranteed job' misread: the window guarantees first look, the interview is yours to win.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Now the section that decides whether any of this works.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: tracks in one breath each, trainer as one vote.</p></aside>
   </section>
 
   <!-- ============ 7 · 04 THE CULTURE SHIFT ============ -->
   <section class="slide on-dark" id="s-culture" data-count data-title="The culture shift">
     <div class="wrap">
       <p class="eyebrow" data-reveal>Section 04 · The Culture Shift</p>
-      <h2 class="h2" data-reveal>Let's talk about <em>poaching</em>.</h2>
+      <h2 class="h2" data-reveal>Releasing talent is a leadership <em>win</em>.</h2>
       <p class="lead" data-reveal>Some managers will hear "internal mobility" and think "poaching." That reaction has been measured: about <b>three quarters of managers admit to talent hoarding</b>, and hoarding <b>deters internal applications</b> (<a href="https://www.aeaweb.org/articles?id=10.1257/aer.20220264" style="color:var(--vu-gold-flat);text-decoration:underline">Haegele, American Economic Review, 2024</a>). Left alone, the average manager suppresses exactly what this portal needs. The culture work is the work.</p>
 
       <div class="grid grid-3" style="margin-top:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
@@ -513,6 +597,7 @@ body.fac-hide .facshow { display: inline-flex; }
         <div class="card" data-reveal>
           <span class="tag">Manager guardrails</span>
           <p class="muted"><b>No retaliation:</b> blocking, rating threats, or sidelining an applicant is a serious violation. <b>No surveillance:</b> no notifications, no workarounds. <b>Do coach:</b> hold the "what's next for you here" conversation before a requisition holds it for you.</p>
+          <p style="margin-top:.65rem"><a class="btn" style="font-size:.8rem;padding:.5rem .85rem" href="https://ecsr.fa.us2.oraclecloud.com:443/fscmUI/redwood/learner/learn/redirect?learningItemId=300002856554050&learningItemType=ORA_COURSE">Take the manager course in Oracle Learning</a></p>
         </div>
       </div>
 
@@ -544,14 +629,14 @@ body.fac-hide .facshow { display: inline-flex; }
         </div>
       </details>
     </div>
-    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 3 min · Core 2</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">The center of gravity: hoarding named, reframe installed, response drilled.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Some managers hear internal mobility and think poaching. It's been measured: about three quarters of managers admit to talent hoarding, and hoarding deters internal applications without stopping external ones. So the real choice is lose them to the third floor with a handoff and a backfill, or lose them to another employer with two weeks' notice. The whole culture turns on one response: thank you for telling me.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Land the 75% stat and let it sit a beat.</li><li>Read both script cards aloud; pause after the bad one.</li><li>Run Judge the Response; it IS the section.</li></ol></div><p class="facnote__meta"><b>Validate:</b> 4+ of 5 on the trainer; the room can tell hoarding from a guardrail violation.</p><p class="facnote__meta"><b>Watch for:</b> Manager shame; keep it structural (incentives, not villains) and land the backfill cascade.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;For the meeting where you need ammunition, the numbers.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: stat, both script cards, trainer. Nothing else, and never less.</p></aside>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 3 min · Core 2</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">The center of gravity: hoarding named, reframe installed, response drilled.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Some managers hear internal mobility and think poaching. It's been measured: about three quarters of managers admit to talent hoarding, and hoarding deters internal applications without stopping external ones. So the real choice is lose them to the third floor with a handoff and a backfill, or lose them to another employer with two weeks' notice. The whole culture turns on one response: thank you for telling me.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Land the 75% stat and let it sit a beat.</li><li>Read both script cards aloud; pause after the bad one.</li><li>Run Judge the Response; it IS the section.</li><li>Point managers at the Oracle Learning course link in the guardrails card for the deeper dive.</li></ol></div><p class="facnote__meta"><b>Validate:</b> 4+ of 5 on the trainer; the room can tell hoarding from a guardrail violation.</p><p class="facnote__meta"><b>Watch for:</b> Manager shame; keep it structural (incentives, not villains) and land the backfill cascade.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;For the meeting where you need ammunition, the numbers.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: stat, both script cards, trainer. Nothing else, and never less.</p></aside>
   </section>
 
   <!-- ============ 8 · 05 THE EVIDENCE ============ -->
   <section class="slide on-light" id="s-evidence" data-count data-title="The evidence">
     <div class="wrap">
       <p class="eyebrow" data-reveal>Section 05 · The Evidence</p>
-      <h2 class="h2" data-reveal>The case, in <em>numbers</em>.</h2>
+      <h2 class="h2" data-reveal>People who move inside <em>stay</em>.</h2>
       <p class="lead" data-reveal>Built to be borrowed: every claim is cited and linked. First, test your instincts.</p>
 
       <div class="duo">
@@ -713,16 +798,19 @@ body.fac-hide .facshow { display: inline-flex; }
         <div class="card" data-reveal>
           <span class="tag">03 · Career Preferences</span>
           <p class="muted">In your Oracle Talent Profile: next career move, preferred function and family, aspirations in the comments.</p>
+          <p style="margin-top:.5rem"><a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/faces/deeplink?objType=NFX_VIEW_MY_SKILLS_AND_QUAL_VB&action=NONE">Open your Talent Profile</a></p>
           <figure class="uishot"><img src="../assets/img/oracle-career-preferences.png" alt="Oracle Career Preferences screen with Next Career Move, Preferred Job Function, Preferred Job Family, and a comments box" loading="lazy" onerror="this.closest('figure').hidden=true"><figcaption>Oracle · Talent Profile · Career Preferences</figcaption></figure>
         </div>
         <div class="card" data-reveal>
           <span class="tag">04 · Skills</span>
           <p class="muted">Both lists, Skills I have and Skills I'm developing, honestly leveled. The matching runs on this data.</p>
+          <p style="margin-top:.5rem"><a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/redwood/profiles/skills/skillscenter?navigateBack=true">Open the Skills Center</a></p>
           <figure class="uishot"><img src="../assets/img/oracle-skills.png" alt="Oracle skills screen showing Skills I'm developing and Skills I have with endorsement counts" loading="lazy" onerror="this.closest('figure').hidden=true"><figcaption>Oracle · Talent Profile · Skills</figcaption></figure>
         </div>
         <div class="card" data-reveal>
           <span class="tag">05 · Careers of Interest</span>
-          <p class="muted">In the Grow area, flag the roles that interest you, then browse the Opportunity Marketplace. Private to you.</p>
+          <p class="muted">In the Grow area, flag the roles that interest you, then browse the Opportunity Marketplace with Opportunity set to Career Roles. Private to you.</p>
+          <p style="margin-top:.5rem"><a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/redwood/internalmobility/opportunitymarketplace/search">Browse the Opportunity Marketplace</a></p>
           <figure class="uishot"><img src="../assets/img/oracle-marketplace.png" alt="Oracle Opportunity Marketplace showing career role cards with job openings and an Update Interests button" loading="lazy" onerror="this.closest('figure').hidden=true"><figcaption>Oracle · Grow · Opportunity Marketplace</figcaption></figure>
         </div>
       </div>
@@ -796,7 +884,7 @@ body.fac-hide .facshow { display: inline-flex; }
 
 
 <script src="../assets/js/qrcode.js?v=1"></script>
-<script src="../assets/js/main.js?v=1"></script>
+<script src="../assets/js/main.js?v=2"></script>
 
 <script>
 (function () {

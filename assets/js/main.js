@@ -628,4 +628,14 @@
 
   // year
   var yEl = $('#year'); if (yEl) yEl.textContent = new Date().getFullYear();
+
+  /* ---------- Entrance doors: one open at a time per group ---------- */
+  $$('.doors').forEach(function (group) {
+    $$('details.door', group).forEach(function (d) {
+      d.addEventListener('toggle', function () {
+        if (!d.open) return;
+        $$('details.door[open]', group).forEach(function (o) { if (o !== d) o.open = false; });
+      });
+    });
+  });
 })();

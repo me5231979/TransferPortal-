@@ -36,15 +36,17 @@ catalog at me5231979/Course_Library. Same engine, same standing principles.
 7. **No frameworks.** One CSS file, one JS file, vendored QR lib,
    self-hosted fonts; hero uses the particle canvas (no video montage).
 
-## Layout (14 slides)
+## Layout (10 slides)
 
-Welcome/QR (privacy norm) → Hero (5 objectives) → Agenda →
-01 What it is (Fact or Fiction) → manifesto ("Talent that can move inside,
-stays inside.") → 02 Six entrances (Pick the Entrance) → 03 The process,
-two tracks (Call the Next Move) → 04 The culture shift (Judge the
-Response) → 05 The evidence (Guess the Number + stat tiles) → Recap quiz →
-Capstone First Move Card → Do This Today (five actions, Oracle screenshots,
-Talent Compass Tool link) → Glossary → Closing.
+Welcome/QR (privacy norm) → Hero (5 objectives) →
+01 What it is (Fact or Fiction) → 02 Six entrances (Pick the Entrance) →
+03 The process, two tracks (Call the Next Move) → 04 The culture shift
+(Judge the Response) → 05 The evidence (Guess the Number + stat tiles) →
+Recap quiz → Capstone First Move Card + five-move warm-up (Oracle
+screenshots, Talent Compass Tool link) → Closing.
+
+Deliberately no agenda, manifesto, or glossary slides; the deck was
+consolidated to teaching pages only. Don't reintroduce filler pages.
 
 Oracle screenshots live at `assets/img/oracle-career-preferences.png`,
 `oracle-skills.png`, `oracle-marketplace.png`; the figures hide gracefully
@@ -58,7 +60,7 @@ developing), Grow (Careers of Interest), Opportunity Marketplace.
 - Trainers: `makeTrainer` configs (portalFact, entrancePick, nextMove,
   managerCall, statGuess)
 - Capstone maps: `PRACTICE` / `NOT` / `WHEN` in main.js (id `movePlan`)
-- Runbook: `facilitator/notes.json` (timing must sum: Full 90 / Core 60)
+- Runbook: `facilitator/notes.json` (timing must sum: Full 15 / Core 10)
 - Printables: `cheatsheet.html` (quick reference), `worksheet.html`
   (first move card)
 - Source doc: "The Transfer Portal: A Training Guide for Staff and

@@ -33,7 +33,7 @@ picture of its slide.
 5. **The evidence:** cited, linked research on retention, tenure,
    engagement, speed, cost, and quality of internal mobility.
 
-Length: Full 90 minutes / Core 60 (per-section cuts in the runbook).
+Length: Full 15 minutes / Core 10 (per-section cuts in the runbook).
 Kirkpatrick evaluation: fist-to-five close (L1), scored recap quiz (L2),
 first move card plus 7-day pulse and 30-day re-poll (L3).
 
@@ -41,7 +41,7 @@ first move card plus 7-day pulse and 30-day re-poll (L3).
 
 - Copy lives in `index.html`; interactions in `assets/js/main.js`
   (trainer configs, recap `QUESTIONS`, capstone `PRACTICE` / `NOT` / `WHEN`).
-- The runbook is `facilitator/notes.json` (timing must sum: Full 90 / Core 60).
+- The runbook is `facilitator/notes.json` (timing must sum: Full 15 / Core 10).
 - The web and facilitator editions are **generated, never hand-edited**:
 
 ```

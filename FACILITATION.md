@@ -9,11 +9,10 @@ bank, and copy-paste templates. Print the whole packet from
 
 ## The two paths
 
-- **Full · 90 min:** everything as designed, all five trainers, all pair
-  activities, the drafting exercise, and the capstone.
-- **Core · 60 min:** every trainer stays (they're fast); pair debriefs
-  shrink to one voice, agenda and manifesto pass in stride, glossary is
-  pointed at. Per-section cuts are in each section's coreNote. Never cut
+- **Full · 15 min:** all five trainers played briskly, one show of hands
+  per section, and the first move card.
+- **Core · 10 min:** objectives skipped, three trainers run as single
+  votes. Per-section cuts are in each section's coreNote. Never cut
   Section 04's trainer, the recap, or the capstone.
 
 ## The one norm that carries the session

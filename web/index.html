@@ -53,6 +53,7 @@
   .crumbs li::before { content: counter(crumb); position: absolute; left: 0; top: .05rem; width: 1.15rem; height: 1.15rem; border-radius: 50%; border: 1px solid var(--vu-gold-flat); color: var(--vu-gold-flat); font-family: var(--font-condensed); font-weight: 700; font-size: .68rem; display: grid; place-items: center; }
   .crumbs li:not(:last-child)::after { content: ""; position: absolute; left: .55rem; top: 1.35rem; bottom: -.5rem; width: 1px; background: rgba(207,174,112,.35); }
   .crumbs__chip { display: inline-block; margin-left: .35rem; font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: .6rem; color: var(--vu-black); background: var(--vu-gold-flat); border-radius: 999px; padding: .12rem .5rem; vertical-align: 1px; }
+  .crumbs__chip--soon { background: transparent; border: 1px solid rgba(207,174,112,.7); color: var(--vu-gold-flat); }
   /* two-track process */
   .tracks { display: grid; gap: 1.25rem; grid-template-columns: 1fr; margin-top: 2rem; }
   @media (min-width: 900px) { .tracks { grid-template-columns: 1fr 1fr; } }
@@ -195,7 +196,7 @@
       <ol class="pieces" data-reveal>
         <li><b>A conversation with your manager</b>An open, ongoing dialogue about where you want to go, what growth looks like for you, and the support to get there.</li>
         <li><b>A skill map you own</b>The skills you have and the ones you want to grow, paired with your Careers of Interest. Private to you, always.</li>
-        <li><b>Oracle, where it runs</b>Learning tied to your skills, interest and skill declarations, Gigs (short stretch assignments), and open requisitions with a two-week internal-first window. Leaders see only aggregated data, through Workforce Intelligence.</li>
+        <li><b>Oracle, where it runs</b>Learning tied to your skills, interest and skill declarations, Gigs (short stretch assignments, not yet launched), and open requisitions with a two-week internal-first window. Leaders see only aggregated data, through Workforce Intelligence.</li>
       </ol>
 
       <div class="grid grid-3" style="margin-top:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
@@ -279,13 +280,13 @@
             <p class="door__row"><b>You right now</b> Years of institutional knowledge, excellent reviews, and work that has started running on autopilot.</p>
             <ol class="crumbs" aria-label="The path through this entrance">
               <li>Growth conversation with your manager <span class="crumbs__chip">recommended start</span></li>
-              <li>Browse Gigs in the Opportunity Marketplace</li>
+              <li>Browse Gigs in the Opportunity Marketplace <span class="crumbs__chip crumbs__chip--soon">at launch</span></li>
               <li>Take one with a defined scope and duration, home role intact</li>
               <li>Add the new skills to your Talent Profile</li>
               <li>Compete when the right requisition opens</li>
             </ol>
             <p class="door__row"><b>Where it leads</b> Stretch and fresh relationships now, and a stronger candidacy for the bigger next chapter.</p>
-            <p class="door__row"><b>Worth knowing</b> A Gig is development with no transfer promise. Permanent moves always run through a competitive requisition.</p>
+            <p class="door__row"><b>Worth knowing</b> Gigs have not launched yet; until they arrive, start with the conversation, your skills, and Careers of Interest. A Gig is development with no transfer promise. Permanent moves always run through a competitive requisition.</p>
           </div>
         </details>
         <details class="door" data-reveal>
@@ -301,7 +302,7 @@
               <li>Tag every real skill at its true level in the Skills Center</li>
               <li>Point your Grow plan at the underused ones</li>
               <li>The portal surfaces roles and Gigs that need them</li>
-              <li>Apply, or take a Gig, when the fit is real</li>
+              <li>Apply when the fit is real, or take a Gig once Gigs launch</li>
             </ol>
             <p class="door__row"><b>Where it leads</b> Work that finally uses the whole toolkit, found by matching instead of luck.</p>
             <p class="door__row"><b>Worth knowing</b> The matching runs on your skills data. Honest levels beat long lists every time.</p>
@@ -395,22 +396,22 @@
     <div class="wrap">
       <p class="eyebrow" data-reveal>Section 03 · The Process</p>
       <h2 class="h2" data-reveal>Explore <em>privately</em>. Compete when a role opens.</h2>
-      <p class="lead" data-reveal><b>Interest &amp; Development</b> is always on and private. <b>Move</b> starts when a requisition opens, and it is competitive. Same portal; they feed each other.</p>
+      <p class="lead" data-reveal>You will use the portal in two ways. Most days you build quietly: skills, interests, learning, none of it visible to your manager. Then a role you want opens and the quiet work pays off: you apply, compete, and move with support. Each list below runs in order.</p>
 
       <div class="tracks">
         <div class="track" data-reveal>
-          <span class="tag">Track 1 · Interest &amp; Development, always on</span>
+          <span class="tag">Every day · Quiet building, private to you</span>
           <ol>
             <li><b>Build your profile.</b> In your <a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/faces/deeplink?objType=NFX_VIEW_MY_SKILLS_AND_QUAL_VB&action=NONE">Talent Profile</a> (Oracle lists it as Skills and Qualifications): Career Preferences plus both skills lists, honestly leveled in the <a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/redwood/profiles/skills/skillscenter?navigateBack=true">Skills Center</a>. Private to you.</li>
             <li><b>Set a Grow plan and flag Careers of Interest.</b> Both live in Grow: one to three goals, plus the roles you want suggestions about.</li>
             <li><b>Take the learning.</b> Courses in Oracle Learning, tied to the skills you want to grow.</li>
             <li><b>Explore.</b> Browse the <a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/redwood/internalmobility/opportunitymarketplace/search">Opportunity Marketplace</a> with the Opportunity filter set to Career Roles: you are browsing careers, with or without an open requisition. Save what interests you.</li>
-            <li><b>Take a Gig, optionally.</b> Defined scope, defined duration, real development. No transfer guarantee.</li>
+            <li><b>Take a Gig, optionally, once Gigs launch.</b> Defined scope, defined duration, real development. No transfer guarantee. Gigs are still to come; watch for the announcement.</li>
             <li><b>Ask for advisory support, optionally.</b> Confidential, on your initiative; nothing happens without your consent.</li>
           </ol>
         </div>
         <div class="track" data-reveal>
-          <span class="tag">Track 2 · Move, event-driven</span>
+          <span class="tag">When a role opens · The competitive move</span>
           <ol>
             <li><b>A requisition opens,</b> internal-first for two weeks.</li>
             <li><b>You apply.</b> Recruiters run one consistent process; the hiring manager sees what you choose to share; performance data follows policy.</li>
@@ -594,55 +595,11 @@
   </section>
 
   <!-- ============ 10 · FIRST MOVE CARD (capstone) ============ -->
-  <section class="slide on-dark" id="s-plan" data-title="My first move">
+  <section class="slide on-dark" id="s-plan" data-title="The job aid">
     <div class="wrap">
-      <p class="eyebrow" data-reveal>Capstone · My first move card</p>
-      <h2 class="h2" data-reveal>One direction. One move. <em>One date.</em></h2>
-      <p class="lead" data-reveal>A portal nobody opens changes nothing. Name your direction, pick your first move, put a date on it.</p>
-      <p class="why" data-reveal><b>Why this matters:</b> a named move with a date happens; "sometime" never does. Nothing you type here is saved or sent.</p>
-
-      <div class="plan" id="movePlan" data-reveal>
-        <div class="plan__form">
-          <div class="plan__field">
-            <label for="planWho"><b>1 · Your direction.</b> What are you curious about or ready for at Vanderbilt? A role family, a skill, a unit, or for managers, a team member's growth.</label>
-            <input type="text" id="planWho" maxlength="140" placeholder="e.g. project coordination roles in research administration" autocomplete="off">
-          </div>
-          <div class="plan__field">
-            <span class="plan__label"><b>2 · Your first move.</b> The one thing you'll do in the portal this week.</span>
-            <div class="plan__chips" id="planPractice" role="group" aria-label="First move">
-              <button class="opt" data-practice="explore"><span>Update my skills profile and declare a Career of Interest</span></button>
-              <button class="opt" data-practice="gig"><span>Browse Gigs and save one that fits my Grow plan</span></button>
-              <button class="opt" data-practice="req"><span>Search open internal requisitions in my target area</span></button>
-              <button class="opt" data-practice="advisory"><span>Request an employee-consultant conversation</span></button>
-              <button class="opt" data-practice="coach"><span>Manager move: hold a "what's next for you here" conversation</span></button>
-            </div>
-          </div>
-          <div class="plan__field">
-            <span class="plan__label"><b>3 · What you will NOT do.</b> The honest failure mode you're retiring.</span>
-            <div class="plan__chips" id="planNot" role="group" aria-label="Failure mode to avoid">
-              <button class="opt" data-not="drift"><span>Wait to be discovered</span></button>
-              <button class="opt" data-not="inflate"><span>Inflate my skill ratings</span></button>
-              <button class="opt" data-not="stall"><span>Put the career conversation off again</span></button>
-              <button class="opt" data-not="hoard"><span>Manager mode: guilt or slow-walk a team member's move</span></button>
-            </div>
-          </div>
-          <div class="plan__field">
-            <span class="plan__label"><b>4 · When does the move happen?</b></span>
-            <div class="plan__chips" id="planWhen" role="group" aria-label="Commitment window">
-              <button class="opt" data-when="tomorrow"><span>Tomorrow</span></button>
-              <button class="opt" data-when="threedays"><span>Within 3 days</span></button>
-              <button class="opt" data-when="week"><span>Within 7 days</span></button>
-            </div>
-          </div>
-          <div class="lab__runrow">
-            <button class="btn" id="planBuild" disabled>Build my first move card</button>
-            <span class="quiz__progress" id="planStatus">Fill in all four parts</span>
-          </div>
-        </div>
-        <div class="lab__outcome" id="planOut" hidden aria-live="polite"></div>
-      </div>
-
-      <p class="eyebrow" data-reveal style="margin-top:1rem">The warm-up · Five moves, this week</p>
+      <p class="eyebrow" data-reveal>Job aid · Your first week</p>
+      <h2 class="h2" data-reveal>Your first week, <em>mapped</em>.</h2>
+      <p class="lead" data-reveal>Nothing to fill in and nothing to submit. When you are ready to step through the portal, this is the runway: five small moves, the exact Oracle screens, and live links that open them.</p>
       <div class="warmup">
         <div class="card" data-reveal>
           <span class="tag">01 · The conversation</span>
@@ -651,7 +608,7 @@
         <div class="card" data-reveal>
           <span class="tag">02 · The Talent Compass Tool</span>
           <p class="muted">Map your skills and build a growth plan. Managers: evaluate the skills across your team.</p>
-          <p style="margin-top:.75rem"><a class="btn" href="https://me5231979.github.io/skill_matrix/">Open the Talent Compass Tool</a></p>
+          <p style="margin-top:.75rem"><a class="btn" href="https://vanderbilttalentcompass.vercel.app/">Open the Talent Compass Tool</a></p>
         </div>
         <div class="card" data-reveal>
           <span class="tag">03 · Career Preferences</span>
@@ -684,16 +641,15 @@
     <div class="wrap" style="text-align:center">
       <img src="../assets/img/vu-centered-white.png" alt="Vanderbilt University" width="120" height="125" style="margin:0 auto 1.25rem;width:clamp(80px,8vw,110px);height:auto" data-reveal>
       <h2 class="h2 gold-text" data-reveal style="max-width:20ch;margin-inline:auto">Now make the first <em>move</em>.</h2>
-      <p class="lead" data-reveal style="margin:1.25rem auto 0;color:rgba(255,255,255,.82)">You know the portal, your entrance, both tracks, the conversation, and the numbers. One card leaves this room with a date on it.</p>
+      <p class="lead" data-reveal style="margin:1.25rem auto 0;color:rgba(255,255,255,.82)">You know the portal, your entrance, both tracks, the conversation, and the numbers. The job aid, one page back, maps your first week.</p>
       <div class="vidcard vidcard--feature" data-reveal style="text-align:left;max-width:680px;margin:1.25rem auto 0;cursor:default">
         <div class="vidcard__top"><span class="vidcard__src">Your one next step · This week</span><span class="vidcard__dur">Within 7 days</span></div>
-        <h3>The first move on your card, exactly as written</h3>
-        <p>Open Oracle and do the one thing you committed to. Your card page, one slide back, has the five-move warm-up with the exact screens. Afterward, write one line about what you found; it decides your second move.</p>
+        <h3>Pick one move from the job aid</h3>
+        <p>Open Oracle and take it. The job aid walks all five moves with the exact screens and live links. Afterward, write one line about what you found; it decides your second move.</p>
       </div>
-      <p class="why" data-reveal style="margin:1rem auto 0;max-width:52ch;text-align:center"><b>Before you go:</b> say your move and your day out loud, or type it in the chat. Spoken commitments stick.</p>
+      <p class="why" data-reveal style="margin:1rem auto 0;max-width:52ch;text-align:center"><b>Before you go:</b> the five moves are small on purpose. Pick the one you will take this week.</p>
       <div class="hero__cta" data-reveal style="justify-content:center;margin-top:1.25rem">
         <a class="btn" href="../cheatsheet.html" target="_blank" rel="noopener">Take the quick reference card</a>
-        <a class="btn btn--ghost" href="../worksheet.html" target="_blank" rel="noopener">Print the first move card</a>
         <a class="btn btn--ghost" href="#s-recap">Retake the quiz</a>
       </div>
     </div>
@@ -719,7 +675,7 @@
         <h4>Keep Learning</h4>
         <ul>
           <li><a href="#s-recap">Knowledge Check</a></li>
-          <li><a href="#s-plan">My First Move Card</a></li>
+          <li><a href="#s-plan">The Job Aid</a></li>
           <li><a href="#s-close">Your Next Step</a></li>
           <li><a href="../">Classroom edition (for facilitators)</a></li>
           <li><a href="https://me5231979.github.io/Course_Library/">Course Library</a></li>
@@ -740,6 +696,6 @@
 
 
 <script src="../assets/js/qrcode.js?v=1"></script>
-<script src="../assets/js/main.js?v=2"></script>
+<script src="../assets/js/main.js?v=3"></script>
 </body>
 </html>

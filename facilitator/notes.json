@@ -4,7 +4,7 @@
   "totalMinutes": 15,
   "audience": "All Vanderbilt staff and their managers. Designed as a 15-minute experience: a team huddle, the top of a staff meeting, or a self-paced quarter hour. Works at any size; no prerequisites.",
   "roomSetup": "Projector plus presenter device; learners on their own devices via the Welcome-slide QR; movable seating for pairs. Virtual: breakouts of 2 for the pair activities. This session touches real career hopes: establish early that nothing typed in the course is saved or sent, and that the portal itself is private by default. If HR leadership attends, brief them beforehand that the tough questions section may surface real policy questions to take away.",
-  "postSession": "Seven days out, send the pulse: 'Did you make the first move on your card? What did you find in the portal? What is your second move?' At 30 days, re-poll the fist-to-five confidence question from the close plus 'has your unit had its first Transfer Portal conversation, and how did it go?' The count of completed first moves is the program's headline Level 3 metric; for manager cohorts, also count completed career conversations.",
+  "postSession": "Seven days out, send the pulse: 'Did you take your first move from the job aid? What did you find in the portal? What is your second move?' At 30 days, re-poll the fist-to-five confidence question from the close plus 'has your unit had its first Transfer Portal conversation, and how did it go?' The count of completed first moves is the program's headline Level 3 metric; for manager cohorts, also count completed career conversations.",
   "paths": {
    "full": {
     "minutes": 15,
@@ -145,7 +145,7 @@
    "watchFor": "Reading the list verbatim; paraphrase it.",
    "coreMinutes": 0,
    "coreNote": "Core: skip; the deck carries it.",
-   "say": "Five things in fifteen minutes: what the portal is and what it guarantees, your entrance, the process, the manager conversation, and the numbers. Growth here means upward or lateral, inside your unit or across into another, and moving is a normal part of a Vanderbilt career. It ends with a first move card you date.",
+   "say": "Five things in fifteen minutes: what the portal is and what it guarantees, your entrance, the process, the manager conversation, and the numbers. Growth here means upward or lateral, inside your unit or across into another, and moving is a normal part of a Vanderbilt career. It ends with a five-move job aid you take with you.",
    "transition": "First, what it actually is."
   },
   {
@@ -159,7 +159,7 @@
     "Run Fact or Fiction as a fast room vote, hands for A or B."
    ],
    "validate": "4+ of 5 on the trainer.",
-   "watchFor": "Privacy skepticism; point at the mechanics (no notifications, aggregate-only) and move on.",
+   "watchFor": "Privacy skepticism; point at the mechanics (no notifications, aggregate-only) and move on. If Gigs come up: they have not launched yet, teach the concept and flag that timing is to be announced.",
    "coreMinutes": 1,
    "coreNote": "Core: same minute; the trainer carries it.",
    "say": "The portal rests on three connected pieces. One: an open, ongoing growth conversation with your manager. Two: a skill map you own, the skills you have and the ones you want to grow, private to you, always. Three: Oracle, where it all runs: learning, declarations, Gigs, and requisitions posted internally first for two weeks. Leaders see only aggregate through Workforce Intelligence. Now, five claims about what this thing does. Call fact or fiction.",
@@ -194,10 +194,10 @@
     "Run Call the Next Move as a fast vote."
    ],
    "validate": "4+ of 5 on the trainer.",
-   "watchFor": "The 'guaranteed job' misread: the window guarantees first look, the interview is yours to win.",
+   "watchFor": "The 'guaranteed job' misread: the window guarantees first look, the interview is yours to win. And name the Gig caveat if asked: Gigs are still to launch; the step arrives with them.",
    "coreMinutes": 1,
    "coreNote": "Core: tracks in one breath each, trainer as one vote.",
-   "say": "Two tracks. Interest and Development: always on, private; profile, Grow plan, the Opportunity Marketplace, an optional Gig, optional advisory. Move: a requisition posts internally first, you apply and interview, and if you win it, a coordinated handoff, then your old role backfills through the same portal. One rule everyone wonders about: explore silently, and talk to your manager once you're a serious candidate.",
+   "say": "You will use the portal in two ways. Day to day, quiet building, private to you: profile, Grow plan, learning, the Opportunity Marketplace, optional advisory. Then a role opens, and the quiet work pays off: it posts internally first, you apply and interview, and if you win it, a coordinated handoff, then your old role backfills through the same portal. One rule everyone wonders about: explore silently, and talk to your manager once you're a serious candidate.",
    "transition": "Now the section that decides whether any of this works."
   },
   {
@@ -248,22 +248,22 @@
    "coreMinutes": 1,
    "coreNote": "Core: keep; it's one minute.",
    "say": "Six questions, fast. This is the systems check before the card.",
-   "transition": "Now the only part that changes anything."
+   "transition": "Now the part you take with you."
   },
   {
    "id": "s-plan",
-   "title": "Capstone · First move card",
+   "title": "Job aid · Five moves",
    "minutes": 2,
-   "purpose": "The transfer artifact: one dated move, plus the five-move warm-up.",
+   "purpose": "Send everyone out with the five-move runway and the exact Oracle screens.",
    "facilitate": [
-    "One quiet minute for the card; circulate for the stuck.",
-    "Point at the warm-up screenshots and the Talent Compass link."
+    "Walk the five moves left to right; point at the screenshots and the live links.",
+    "Name move one as the through-line: the growth conversation."
    ],
-   "validate": "Every learner builds a card (all four fields).",
-   "watchFor": "Cards without dates; no date, no commitment.",
+   "validate": "Learners know where the job aid lives and can name the move they'd take first.",
+   "watchFor": "Turning this into a planning exercise; the course educates, the moves come later.",
    "coreMinutes": 1,
-   "coreNote": "Core: protect the card minute; wave at the warm-up.",
-   "say": "Name your direction, pick one move, date it. And below your card sits the warm-up: five moves for this week, each with the exact Oracle screen pictured, including Career Preferences, your skills lists, and Careers of Interest in Grow, plus the Talent Compass Tool. The screenshots stay in the course; match your screen to the picture.",
+   "coreNote": "Core: point at the five moves and the links; done.",
+   "say": "Nothing to fill in and nothing to submit. This is the job aid: five small moves, each on a real Oracle screen, with live links that open them. Move one is the growth conversation; the rest live in Oracle, and the quick reference card carries all of it home.",
    "transition": "Last slide."
   },
   {
@@ -273,14 +273,14 @@
    "purpose": "Spoken commitments (Level 1 + the Level 3 seed), then out.",
    "facilitate": [
     "Fist to five, quick scan.",
-    "Popcorn commitment round: move and day.",
+    "Popcorn round: which of the five moves will you take first?",
     "Tell them the 7-day pulse is coming, and stop on time."
    ],
-   "validate": "A majority state a move and a day.",
+   "validate": "A majority can name the move they will take first.",
    "watchFor": "Running long; the ending IS the punctuality.",
    "coreMinutes": 1,
    "coreNote": "Core: fist to five and three voices; done.",
-   "say": "One breath: private by default, competitive by design, six doors, two tracks, and thank you for telling me. Say your move and your day out loud; spoken commitments stick.",
+   "say": "One breath: private by default, competitive by design, six doors, two tracks, and thank you for telling me. Pick your move from the job aid and say it out loud; spoken commitments stick.",
    "transition": "Go make the move."
   }
  ]

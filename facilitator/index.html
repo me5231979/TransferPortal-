@@ -53,6 +53,7 @@
   .crumbs li::before { content: counter(crumb); position: absolute; left: 0; top: .05rem; width: 1.15rem; height: 1.15rem; border-radius: 50%; border: 1px solid var(--vu-gold-flat); color: var(--vu-gold-flat); font-family: var(--font-condensed); font-weight: 700; font-size: .68rem; display: grid; place-items: center; }
   .crumbs li:not(:last-child)::after { content: ""; position: absolute; left: .55rem; top: 1.35rem; bottom: -.5rem; width: 1px; background: rgba(207,174,112,.35); }
   .crumbs__chip { display: inline-block; margin-left: .35rem; font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: .6rem; color: var(--vu-black); background: var(--vu-gold-flat); border-radius: 999px; padding: .12rem .5rem; vertical-align: 1px; }
+  .crumbs__chip--soon { background: transparent; border: 1px solid rgba(207,174,112,.7); color: var(--vu-gold-flat); }
   /* two-track process */
   .tracks { display: grid; gap: 1.25rem; grid-template-columns: 1fr; margin-top: 2rem; }
   @media (min-width: 900px) { .tracks { grid-template-columns: 1fr 1fr; } }
@@ -240,7 +241,7 @@ body.fac-hide .facshow { display: inline-flex; }
         <div class="brief__box brief__wide"><h3>06 · Tough questions, ready answers</h3><p class="brief__sub">Say each answer out loud once before you teach</p><details class="brief__q"><summary>So my manager can see everything I do in there?</summary><p>No. Your browsing, your Careers of Interest, and your skills profile are private to you. Your manager gets no notification when you declare interest, and leader-facing Workforce Intelligence shows aggregated, privacy-preserving data, never a list of who is looking. Your manager learns you applied for a role when you tell them or when the hiring process formally requires it, and the norm is that you have that conversation yourself once you are a serious candidate.</p></details><details class="brief__q"><summary>Isn't this just poaching with extra steps?</summary><p>Poaching is secret and zero-sum. This is the opposite on both counts: the marketplace is open to every unit, the releasing manager gets a planned handoff and a backfill through the same system, and the alternative to an internal move is usually an external resignation, which has no handoff and no backfill window. The research backs it: about 75% of managers admit to talent hoarding, and hoarding deters internal applications without stopping external ones (Haegele, American Economic Review, 2024).</p></details><details class="brief__q"><summary>If I take a Gig and do great work, why doesn't that guarantee me the permanent role?</summary><p>Because the Gig is development and the requisition is a competition, and keeping them separate protects you both ways. If Gigs converted automatically, every Gig would become a quiet audition and managers would guard them like headcount. Kept separate, you can stretch without betting your reputation, and when the real requisition opens, your Gig gives you evidence, relationships, and a warm start most candidates won't have.</p></details><details class="brief__q"><summary>What if my manager retaliates anyway?</summary><p>Then the program's integrity rules are on your side: blocking an application, downgrading a rating in response, or excluding someone from key work are named as serious violations, and managers are trained on that before the portal reaches them. Document what happened and bring it to your HR business partner or an employee consultant. And a candid note: the guardrails only bite because leadership enforces them, which is exactly why manager training like this session exists.</p></details><details class="brief__q"><summary>Why would I tell the truth about my skill levels? Inflating them gets me matched to better roles.</summary><p>It gets you matched to interviews you then lose. The hiring manager verifies skills in the interview, and an inflated profile spends your credibility exactly where you need it most. Honest levels do something better: they route you to roles and Gigs where you'll genuinely compete, and they turn the gaps into Grow goals instead of surprises.</p></details><details class="brief__q"><summary>We're short-staffed already. How is my unit supposed to survive its best people leaving?</summary><p>Two honest answers. First, the counterfactual: your best people already have a marketplace; it's called every other employer, and it offers no handoff, no knowledge transfer, and no internal-first backfill. The portal keeps that talent at Vanderbilt and gives you two to four weeks of coordinated transition plus first look at internal candidates for the backfill. Second, the pattern compounds: units known for developing and releasing people attract the strongest internal applicants, so the pipeline runs both directions.</p></details></div>
         <div class="brief__box brief__wide"><h3>07 · Copy-paste templates</h3><p class="brief__sub">Copy, swap the brackets, send</p><details class="brief__q"><summary>Pre-work invite (paste into the calendar invite)</summary><p>Subject: Before our Transfer Portal session. One thing to bring: one honest career curiosity, a role you wonder about, a skill you never get to use, or a team member whose growth you want to support. You will never be asked to share it, and nothing you type in the session is saved or sent. Come ready to work on it privately. That's it, no reading, no assessment.</p></details><details class="brief__q"><summary>7-day pulse (send one week after)</summary><p>Subject: One week later, did the first move happen? Three quick lines, reply whenever: 1) Did you make the move on your first move card? 2) What did you find in the portal? 3) What is your second move? Replies come to me only. Not yet? The card still works; this note is your nudge.</p></details><details class="brief__q"><summary>30-day re-poll (send a month after)</summary><p>Subject: Thirty days with the Transfer Portal. Two questions, same scale as the room: 1) Fist to five, how confident are you now about navigating your next internal move (or supporting a team member's)? 2) Has your unit had its first real portal conversation, an application, a Gig, or a career conversation, and how did it go? Reply with a number and a line. The before-and-after pair is how we know this session did more than feel good.</p></details></div>
       </div>
-      <p class="why" style="margin-top:1.5rem"><b>After the session:</b> Seven days out, send the pulse: 'Did you make the first move on your card? What did you find in the portal? What is your second move?' At 30 days, re-poll the fist-to-five confidence question from the close plus 'has your unit had its first Transfer Portal conversation, and how did it go?' The count of completed first moves is the program's headline Level 3 metric; for manager cohorts, also count completed career conversations.</p>
+      <p class="why" style="margin-top:1.5rem"><b>After the session:</b> Seven days out, send the pulse: 'Did you take your first move from the job aid? What did you find in the portal? What is your second move?' At 30 days, re-poll the fist-to-five confidence question from the close plus 'has your unit had its first Transfer Portal conversation, and how did it go?' The count of completed first moves is the program's headline Level 3 metric; for manager cohorts, also count completed career conversations.</p>
     </div>
     <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 15 min · Core 10</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Run this course</p><p class="facnote__mini">The pre-work invite. Send it with the calendar invite a week out; swap anything in [brackets] and it is ready.</p><span class="facnote__tag t-say">Invite</span><div class="facnote__invite">Subject: Before our Transfer Portal session. One thing to bring: one honest career curiosity, a role you wonder about, a skill you never get to use, or a team member whose growth you want to support. You will never be asked to share it, and nothing you type in the session is saved or sent. Come ready to work on it privately. That's it, no reading, no assessment.</div></aside>
   </section>
@@ -259,7 +260,7 @@ body.fac-hide .facshow { display: inline-flex; }
       <div class="hero__meta" data-reveal style="justify-content:center">
         <div><b>6</b> Entrances</div>
         <div><b>15</b> Minutes</div>
-        <div><b>1</b> First move you'll put a date on</div>
+        <div><b>5</b> Moves in the take-home job aid</div>
       </div>
       <div class="hero__cta" data-reveal style="justify-content:center">
         <a class="btn" href="#s-hero">We're ready, let's begin</a>
@@ -298,7 +299,7 @@ body.fac-hide .facshow { display: inline-flex; }
         <a class="btn" href="#s-what">Begin the session</a>
       </div>
     </div>
-    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 1 min · Core skip</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Set the contract in one breath.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Five things in fifteen minutes: what the portal is and what it guarantees, your entrance, the process, the manager conversation, and the numbers. Growth here means upward or lateral, inside your unit or across into another, and moving is a normal part of a Vanderbilt career. It ends with a first move card you date.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Paraphrase the objectives in one breath.</li><li>Name the anchors once: powered by Oracle, built by People, Culture and Belonging.</li></ol></div><p class="facnote__meta"><b>Validate:</b> None needed.</p><p class="facnote__meta"><b>Watch for:</b> Reading the list verbatim; paraphrase it.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;First, what it actually is.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: skip; the deck carries it.</p></aside>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 1 min · Core skip</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Set the contract in one breath.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Five things in fifteen minutes: what the portal is and what it guarantees, your entrance, the process, the manager conversation, and the numbers. Growth here means upward or lateral, inside your unit or across into another, and moving is a normal part of a Vanderbilt career. It ends with a five-move job aid you take with you.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Paraphrase the objectives in one breath.</li><li>Name the anchors once: powered by Oracle, built by People, Culture and Belonging.</li></ol></div><p class="facnote__meta"><b>Validate:</b> None needed.</p><p class="facnote__meta"><b>Watch for:</b> Reading the list verbatim; paraphrase it.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;First, what it actually is.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: skip; the deck carries it.</p></aside>
   </section>
 
   
@@ -313,7 +314,7 @@ body.fac-hide .facshow { display: inline-flex; }
       <ol class="pieces" data-reveal>
         <li><b>A conversation with your manager</b>An open, ongoing dialogue about where you want to go, what growth looks like for you, and the support to get there.</li>
         <li><b>A skill map you own</b>The skills you have and the ones you want to grow, paired with your Careers of Interest. Private to you, always.</li>
-        <li><b>Oracle, where it runs</b>Learning tied to your skills, interest and skill declarations, Gigs (short stretch assignments), and open requisitions with a two-week internal-first window. Leaders see only aggregated data, through Workforce Intelligence.</li>
+        <li><b>Oracle, where it runs</b>Learning tied to your skills, interest and skill declarations, Gigs (short stretch assignments, not yet launched), and open requisitions with a two-week internal-first window. Leaders see only aggregated data, through Workforce Intelligence.</li>
       </ol>
 
       <div class="grid grid-3" style="margin-top:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
@@ -362,7 +363,7 @@ body.fac-hide .facshow { display: inline-flex; }
         </div>
       </details>
     </div>
-    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 1 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Install the accurate model and dissolve the folklore.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;The portal rests on three connected pieces. One: an open, ongoing growth conversation with your manager. Two: a skill map you own, the skills you have and the ones you want to grow, private to you, always. Three: Oracle, where it all runs: learning, declarations, Gigs, and requisitions posted internally first for two weeks. Leaders see only aggregate through Workforce Intelligence. Now, five claims about what this thing does. Call fact or fiction.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Walk the three pieces in one breath each; land that they only work together.</li><li>Guarantee cards in one breath each.</li><li>Run Fact or Fiction as a fast room vote, hands for A or B.</li></ol></div><p class="facnote__meta"><b>Validate:</b> 4+ of 5 on the trainer.</p><p class="facnote__meta"><b>Watch for:</b> Privacy skepticism; point at the mechanics (no notifications, aggregate-only) and move on.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Which door is yours? There are six.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: same minute; the trainer carries it.</p></aside>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 1 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Install the accurate model and dissolve the folklore.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;The portal rests on three connected pieces. One: an open, ongoing growth conversation with your manager. Two: a skill map you own, the skills you have and the ones you want to grow, private to you, always. Three: Oracle, where it all runs: learning, declarations, Gigs, and requisitions posted internally first for two weeks. Leaders see only aggregate through Workforce Intelligence. Now, five claims about what this thing does. Call fact or fiction.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Walk the three pieces in one breath each; land that they only work together.</li><li>Guarantee cards in one breath each.</li><li>Run Fact or Fiction as a fast room vote, hands for A or B.</li></ol></div><p class="facnote__meta"><b>Validate:</b> 4+ of 5 on the trainer.</p><p class="facnote__meta"><b>Watch for:</b> Privacy skepticism; point at the mechanics (no notifications, aggregate-only) and move on. If Gigs come up: they have not launched yet, teach the concept and flag that timing is to be announced.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Which door is yours? There are six.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: same minute; the trainer carries it.</p></aside>
   </section>
 
   
@@ -404,13 +405,13 @@ body.fac-hide .facshow { display: inline-flex; }
             <p class="door__row"><b>You right now</b> Years of institutional knowledge, excellent reviews, and work that has started running on autopilot.</p>
             <ol class="crumbs" aria-label="The path through this entrance">
               <li>Growth conversation with your manager <span class="crumbs__chip">recommended start</span></li>
-              <li>Browse Gigs in the Opportunity Marketplace</li>
+              <li>Browse Gigs in the Opportunity Marketplace <span class="crumbs__chip crumbs__chip--soon">at launch</span></li>
               <li>Take one with a defined scope and duration, home role intact</li>
               <li>Add the new skills to your Talent Profile</li>
               <li>Compete when the right requisition opens</li>
             </ol>
             <p class="door__row"><b>Where it leads</b> Stretch and fresh relationships now, and a stronger candidacy for the bigger next chapter.</p>
-            <p class="door__row"><b>Worth knowing</b> A Gig is development with no transfer promise. Permanent moves always run through a competitive requisition.</p>
+            <p class="door__row"><b>Worth knowing</b> Gigs have not launched yet; until they arrive, start with the conversation, your skills, and Careers of Interest. A Gig is development with no transfer promise. Permanent moves always run through a competitive requisition.</p>
           </div>
         </details>
         <details class="door" data-reveal>
@@ -426,7 +427,7 @@ body.fac-hide .facshow { display: inline-flex; }
               <li>Tag every real skill at its true level in the Skills Center</li>
               <li>Point your Grow plan at the underused ones</li>
               <li>The portal surfaces roles and Gigs that need them</li>
-              <li>Apply, or take a Gig, when the fit is real</li>
+              <li>Apply when the fit is real, or take a Gig once Gigs launch</li>
             </ol>
             <p class="door__row"><b>Where it leads</b> Work that finally uses the whole toolkit, found by matching instead of luck.</p>
             <p class="door__row"><b>Worth knowing</b> The matching runs on your skills data. Honest levels beat long lists every time.</p>
@@ -527,22 +528,22 @@ body.fac-hide .facshow { display: inline-flex; }
     <div class="wrap">
       <p class="eyebrow" data-reveal>Section 03 · The Process</p>
       <h2 class="h2" data-reveal>Explore <em>privately</em>. Compete when a role opens.</h2>
-      <p class="lead" data-reveal><b>Interest &amp; Development</b> is always on and private. <b>Move</b> starts when a requisition opens, and it is competitive. Same portal; they feed each other.</p>
+      <p class="lead" data-reveal>You will use the portal in two ways. Most days you build quietly: skills, interests, learning, none of it visible to your manager. Then a role you want opens and the quiet work pays off: you apply, compete, and move with support. Each list below runs in order.</p>
 
       <div class="tracks">
         <div class="track" data-reveal>
-          <span class="tag">Track 1 · Interest &amp; Development, always on</span>
+          <span class="tag">Every day · Quiet building, private to you</span>
           <ol>
             <li><b>Build your profile.</b> In your <a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/faces/deeplink?objType=NFX_VIEW_MY_SKILLS_AND_QUAL_VB&action=NONE">Talent Profile</a> (Oracle lists it as Skills and Qualifications): Career Preferences plus both skills lists, honestly leveled in the <a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/redwood/profiles/skills/skillscenter?navigateBack=true">Skills Center</a>. Private to you.</li>
             <li><b>Set a Grow plan and flag Careers of Interest.</b> Both live in Grow: one to three goals, plus the roles you want suggestions about.</li>
             <li><b>Take the learning.</b> Courses in Oracle Learning, tied to the skills you want to grow.</li>
             <li><b>Explore.</b> Browse the <a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/redwood/internalmobility/opportunitymarketplace/search">Opportunity Marketplace</a> with the Opportunity filter set to Career Roles: you are browsing careers, with or without an open requisition. Save what interests you.</li>
-            <li><b>Take a Gig, optionally.</b> Defined scope, defined duration, real development. No transfer guarantee.</li>
+            <li><b>Take a Gig, optionally, once Gigs launch.</b> Defined scope, defined duration, real development. No transfer guarantee. Gigs are still to come; watch for the announcement.</li>
             <li><b>Ask for advisory support, optionally.</b> Confidential, on your initiative; nothing happens without your consent.</li>
           </ol>
         </div>
         <div class="track" data-reveal>
-          <span class="tag">Track 2 · Move, event-driven</span>
+          <span class="tag">When a role opens · The competitive move</span>
           <ol>
             <li><b>A requisition opens,</b> internal-first for two weeks.</li>
             <li><b>You apply.</b> Recruiters run one consistent process; the hiring manager sees what you choose to share; performance data follows policy.</li>
@@ -582,7 +583,7 @@ body.fac-hide .facshow { display: inline-flex; }
         </div>
       </details>
     </div>
-    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 2 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Make every step predictable, including disclosure timing.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Two tracks. Interest and Development: always on, private; profile, Grow plan, the Opportunity Marketplace, an optional Gig, optional advisory. Move: a requisition posts internally first, you apply and interview, and if you win it, a coordinated handoff, then your old role backfills through the same portal. One rule everyone wonders about: explore silently, and talk to your manager once you're a serious candidate.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Tracks in two breaths.</li><li>Point out the live Oracle links: Talent Profile, Skills Center, Opportunity Marketplace with Opportunity set to Career Roles.</li><li>Run Call the Next Move as a fast vote.</li></ol></div><p class="facnote__meta"><b>Validate:</b> 4+ of 5 on the trainer.</p><p class="facnote__meta"><b>Watch for:</b> The 'guaranteed job' misread: the window guarantees first look, the interview is yours to win.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Now the section that decides whether any of this works.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: tracks in one breath each, trainer as one vote.</p></aside>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 2 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Make every step predictable, including disclosure timing.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;You will use the portal in two ways. Day to day, quiet building, private to you: profile, Grow plan, learning, the Opportunity Marketplace, optional advisory. Then a role opens, and the quiet work pays off: it posts internally first, you apply and interview, and if you win it, a coordinated handoff, then your old role backfills through the same portal. One rule everyone wonders about: explore silently, and talk to your manager once you're a serious candidate.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Tracks in two breaths.</li><li>Point out the live Oracle links: Talent Profile, Skills Center, Opportunity Marketplace with Opportunity set to Career Roles.</li><li>Run Call the Next Move as a fast vote.</li></ol></div><p class="facnote__meta"><b>Validate:</b> 4+ of 5 on the trainer.</p><p class="facnote__meta"><b>Watch for:</b> The 'guaranteed job' misread: the window guarantees first look, the interview is yours to win. And name the Gig caveat if asked: Gigs are still to launch; the step arrives with them.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Now the section that decides whether any of this works.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: tracks in one breath each, trainer as one vote.</p></aside>
   </section>
 
   <!-- ============ 7 · 04 THE CULTURE SHIFT ============ -->
@@ -744,59 +745,15 @@ body.fac-hide .facshow { display: inline-flex; }
         <div id="recapResult" hidden aria-live="polite"></div>
       </div>
     </div>
-    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 1 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Score the knowledge (Level 2) before the commitment.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Six questions, fast. This is the systems check before the card.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Run it on devices; hands for 5 or better.</li><li>Thirty-second reteach on anything the room missed.</li></ol></div><p class="facnote__meta"><b>Validate:</b> Room mode at 5/6 or better.</p><p class="facnote__meta"><b>Watch for:</b> Racing; it's a check, not a contest.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Now the only part that changes anything.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: keep; it's one minute.</p></aside>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 1 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Score the knowledge (Level 2) before the commitment.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Six questions, fast. This is the systems check before the card.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Run it on devices; hands for 5 or better.</li><li>Thirty-second reteach on anything the room missed.</li></ol></div><p class="facnote__meta"><b>Validate:</b> Room mode at 5/6 or better.</p><p class="facnote__meta"><b>Watch for:</b> Racing; it's a check, not a contest.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Now the part you take with you.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: keep; it's one minute.</p></aside>
   </section>
 
   <!-- ============ 10 · FIRST MOVE CARD (capstone) ============ -->
-  <section class="slide on-dark" id="s-plan" data-title="My first move">
+  <section class="slide on-dark" id="s-plan" data-title="The job aid">
     <div class="wrap">
-      <p class="eyebrow" data-reveal>Capstone · My first move card</p>
-      <h2 class="h2" data-reveal>One direction. One move. <em>One date.</em></h2>
-      <p class="lead" data-reveal>A portal nobody opens changes nothing. Name your direction, pick your first move, put a date on it.</p>
-      <p class="why" data-reveal><b>Why this matters:</b> a named move with a date happens; "sometime" never does. Nothing you type here is saved or sent.</p>
-
-      <div class="plan" id="movePlan" data-reveal>
-        <div class="plan__form">
-          <div class="plan__field">
-            <label for="planWho"><b>1 · Your direction.</b> What are you curious about or ready for at Vanderbilt? A role family, a skill, a unit, or for managers, a team member's growth.</label>
-            <input type="text" id="planWho" maxlength="140" placeholder="e.g. project coordination roles in research administration" autocomplete="off">
-          </div>
-          <div class="plan__field">
-            <span class="plan__label"><b>2 · Your first move.</b> The one thing you'll do in the portal this week.</span>
-            <div class="plan__chips" id="planPractice" role="group" aria-label="First move">
-              <button class="opt" data-practice="explore"><span>Update my skills profile and declare a Career of Interest</span></button>
-              <button class="opt" data-practice="gig"><span>Browse Gigs and save one that fits my Grow plan</span></button>
-              <button class="opt" data-practice="req"><span>Search open internal requisitions in my target area</span></button>
-              <button class="opt" data-practice="advisory"><span>Request an employee-consultant conversation</span></button>
-              <button class="opt" data-practice="coach"><span>Manager move: hold a "what's next for you here" conversation</span></button>
-            </div>
-          </div>
-          <div class="plan__field">
-            <span class="plan__label"><b>3 · What you will NOT do.</b> The honest failure mode you're retiring.</span>
-            <div class="plan__chips" id="planNot" role="group" aria-label="Failure mode to avoid">
-              <button class="opt" data-not="drift"><span>Wait to be discovered</span></button>
-              <button class="opt" data-not="inflate"><span>Inflate my skill ratings</span></button>
-              <button class="opt" data-not="stall"><span>Put the career conversation off again</span></button>
-              <button class="opt" data-not="hoard"><span>Manager mode: guilt or slow-walk a team member's move</span></button>
-            </div>
-          </div>
-          <div class="plan__field">
-            <span class="plan__label"><b>4 · When does the move happen?</b></span>
-            <div class="plan__chips" id="planWhen" role="group" aria-label="Commitment window">
-              <button class="opt" data-when="tomorrow"><span>Tomorrow</span></button>
-              <button class="opt" data-when="threedays"><span>Within 3 days</span></button>
-              <button class="opt" data-when="week"><span>Within 7 days</span></button>
-            </div>
-          </div>
-          <div class="lab__runrow">
-            <button class="btn" id="planBuild" disabled>Build my first move card</button>
-            <span class="quiz__progress" id="planStatus">Fill in all four parts</span>
-          </div>
-        </div>
-        <div class="lab__outcome" id="planOut" hidden aria-live="polite"></div>
-      </div>
-
-      <p class="eyebrow" data-reveal style="margin-top:1rem">The warm-up · Five moves, this week</p>
+      <p class="eyebrow" data-reveal>Job aid · Your first week</p>
+      <h2 class="h2" data-reveal>Your first week, <em>mapped</em>.</h2>
+      <p class="lead" data-reveal>Nothing to fill in and nothing to submit. When you are ready to step through the portal, this is the runway: five small moves, the exact Oracle screens, and live links that open them.</p>
       <div class="warmup">
         <div class="card" data-reveal>
           <span class="tag">01 · The conversation</span>
@@ -805,7 +762,7 @@ body.fac-hide .facshow { display: inline-flex; }
         <div class="card" data-reveal>
           <span class="tag">02 · The Talent Compass Tool</span>
           <p class="muted">Map your skills and build a growth plan. Managers: evaluate the skills across your team.</p>
-          <p style="margin-top:.75rem"><a class="btn" href="https://me5231979.github.io/skill_matrix/">Open the Talent Compass Tool</a></p>
+          <p style="margin-top:.75rem"><a class="btn" href="https://vanderbilttalentcompass.vercel.app/">Open the Talent Compass Tool</a></p>
         </div>
         <div class="card" data-reveal>
           <span class="tag">03 · Career Preferences</span>
@@ -827,7 +784,7 @@ body.fac-hide .facshow { display: inline-flex; }
         </div>
       </div>
     </div>
-    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 2 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">The transfer artifact: one dated move, plus the five-move warm-up.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Name your direction, pick one move, date it. And below your card sits the warm-up: five moves for this week, each with the exact Oracle screen pictured, including Career Preferences, your skills lists, and Careers of Interest in Grow, plus the Talent Compass Tool. The screenshots stay in the course; match your screen to the picture.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>One quiet minute for the card; circulate for the stuck.</li><li>Point at the warm-up screenshots and the Talent Compass link.</li></ol></div><p class="facnote__meta"><b>Validate:</b> Every learner builds a card (all four fields).</p><p class="facnote__meta"><b>Watch for:</b> Cards without dates; no date, no commitment.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Last slide.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: protect the card minute; wave at the warm-up.</p></aside>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 2 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Send everyone out with the five-move runway and the exact Oracle screens.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Nothing to fill in and nothing to submit. This is the job aid: five small moves, each on a real Oracle screen, with live links that open them. Move one is the growth conversation; the rest live in Oracle, and the quick reference card carries all of it home.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Walk the five moves left to right; point at the screenshots and the live links.</li><li>Name move one as the through-line: the growth conversation.</li></ol></div><p class="facnote__meta"><b>Validate:</b> Learners know where the job aid lives and can name the move they'd take first.</p><p class="facnote__meta"><b>Watch for:</b> Turning this into a planning exercise; the course educates, the moves come later.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Last slide.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: point at the five moves and the links; done.</p></aside>
   </section>
 
   
@@ -839,16 +796,15 @@ body.fac-hide .facshow { display: inline-flex; }
     <div class="wrap" style="text-align:center">
       <img src="../assets/img/vu-centered-white.png" alt="Vanderbilt University" width="120" height="125" style="margin:0 auto 1.25rem;width:clamp(80px,8vw,110px);height:auto" data-reveal>
       <h2 class="h2 gold-text" data-reveal style="max-width:20ch;margin-inline:auto">Now make the first <em>move</em>.</h2>
-      <p class="lead" data-reveal style="margin:1.25rem auto 0;color:rgba(255,255,255,.82)">You know the portal, your entrance, both tracks, the conversation, and the numbers. One card leaves this room with a date on it.</p>
+      <p class="lead" data-reveal style="margin:1.25rem auto 0;color:rgba(255,255,255,.82)">You know the portal, your entrance, both tracks, the conversation, and the numbers. The job aid, one page back, maps your first week.</p>
       <div class="vidcard vidcard--feature" data-reveal style="text-align:left;max-width:680px;margin:1.25rem auto 0;cursor:default">
         <div class="vidcard__top"><span class="vidcard__src">Your one next step · This week</span><span class="vidcard__dur">Within 7 days</span></div>
-        <h3>The first move on your card, exactly as written</h3>
-        <p>Open Oracle and do the one thing you committed to. Your card page, one slide back, has the five-move warm-up with the exact screens. Afterward, write one line about what you found; it decides your second move.</p>
+        <h3>Pick one move from the job aid</h3>
+        <p>Open Oracle and take it. The job aid walks all five moves with the exact screens and live links. Afterward, write one line about what you found; it decides your second move.</p>
       </div>
-      <p class="why" data-reveal style="margin:1rem auto 0;max-width:52ch;text-align:center"><b>Before you go:</b> say your move and your day out loud, or type it in the chat. Spoken commitments stick.</p>
+      <p class="why" data-reveal style="margin:1rem auto 0;max-width:52ch;text-align:center"><b>Before you go:</b> the five moves are small on purpose. Pick the one you will take this week.</p>
       <div class="hero__cta" data-reveal style="justify-content:center;margin-top:1.25rem">
         <a class="btn" href="../cheatsheet.html" target="_blank" rel="noopener">Take the quick reference card</a>
-        <a class="btn btn--ghost" href="../worksheet.html" target="_blank" rel="noopener">Print the first move card</a>
         <a class="btn btn--ghost" href="#s-recap">Retake the quiz</a>
       </div>
     </div>
@@ -874,7 +830,7 @@ body.fac-hide .facshow { display: inline-flex; }
         <h4>Keep Learning</h4>
         <ul>
           <li><a href="#s-recap">Knowledge Check</a></li>
-          <li><a href="#s-plan">My First Move Card</a></li>
+          <li><a href="#s-plan">The Job Aid</a></li>
           <li><a href="#s-close">Your Next Step</a></li>
           <li><a href="web/">Self-paced version</a></li>
           <li><a href="https://me5231979.github.io/Course_Library/">Course Library</a></li>
@@ -888,7 +844,7 @@ body.fac-hide .facshow { display: inline-flex; }
     </div>
   </div>
 </footer>
-    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 1 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Spoken commitments (Level 1 + the Level 3 seed), then out.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;One breath: private by default, competitive by design, six doors, two tracks, and thank you for telling me. Say your move and your day out loud; spoken commitments stick.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Fist to five, quick scan.</li><li>Popcorn commitment round: move and day.</li><li>Tell them the 7-day pulse is coming, and stop on time.</li></ol></div><p class="facnote__meta"><b>Validate:</b> A majority state a move and a day.</p><p class="facnote__meta"><b>Watch for:</b> Running long; the ending IS the punctuality.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Go make the move.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: fist to five and three voices; done.</p></aside>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 1 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Spoken commitments (Level 1 + the Level 3 seed), then out.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;One breath: private by default, competitive by design, six doors, two tracks, and thank you for telling me. Pick your move from the job aid and say it out loud; spoken commitments stick.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Fist to five, quick scan.</li><li>Popcorn round: which of the five moves will you take first?</li><li>Tell them the 7-day pulse is coming, and stop on time.</li></ol></div><p class="facnote__meta"><b>Validate:</b> A majority can name the move they will take first.</p><p class="facnote__meta"><b>Watch for:</b> Running long; the ending IS the punctuality.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Go make the move.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: fist to five and three voices; done.</p></aside>
   </section>
 
 </main>
@@ -896,7 +852,7 @@ body.fac-hide .facshow { display: inline-flex; }
 
 
 <script src="../assets/js/qrcode.js?v=1"></script>
-<script src="../assets/js/main.js?v=2"></script>
+<script src="../assets/js/main.js?v=3"></script>
 
 <script>
 (function () {

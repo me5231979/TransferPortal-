@@ -40,6 +40,7 @@ s = re.sub(r'(rel="canonical" href="[^"]+?)/?"', r'\1/web/"', s, count=1)
 s = s.replace('href="assets/', 'href="../assets/')
 s = s.replace('src="assets/', 'src="../assets/')
 s = s.replace('href="cheatsheet.html"', 'href="../cheatsheet.html"')
+s = s.replace('href="jobaid.html"', 'href="../jobaid.html"')
 s = s.replace('href="worksheet.html"', 'href="../worksheet.html"')
 s = s.replace('<li><a href="web/">Self-paced version</a></li>',
               '<li><a href="../">Classroom edition (for facilitators)</a></li>')

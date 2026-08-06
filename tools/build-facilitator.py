@@ -238,7 +238,7 @@ s = s.replace('</body>', FAC_JS + '</body>')
 
 # ---- 7. footer marker ----
 s = s.replace('The Transfer Portal · A Vanderbilt learning experience',
-              'The Transfer Portal · Facilitator Edition · learner link: <a href="' + LEARNER_URL + '" style="color:rgba(255,255,255,.7);text-decoration:underline">me5231979.github.io/TransferPortal-</a>')
+              'The Transfer Portal · Facilitator Edition �� learner link: <a href="' + LEARNER_URL + '" style="color:rgba(255,255,255,.7);text-decoration:underline">me5231979.github.io/TransferPortal-</a>')
 
 out = os.path.join(ROOT, 'facilitator', 'index.html')
 open(out, 'w').write(s)
@@ -296,6 +296,12 @@ guide = f"""<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Facilitator Guide (printable) · {html.escape(notes['meta']['program'])}</title>
 <meta name="robots" content="noindex">
+
+<!-- Vercel Web Analytics -->
+<script>
+  window.va = window.va || function () {{ (window.vaq = window.vaq || []).push(arguments); }};
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 <style>
   @font-face {{ font-family: 'Libre Caslon Display'; font-weight: 400;
     src: url('../assets/fonts/libre-caslon-display-latin-400-normal.woff2') format('woff2'); }}

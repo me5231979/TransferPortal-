@@ -17,7 +17,7 @@
 <link rel="preload" href="../assets/fonts/libre-caslon-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
-<link rel="stylesheet" href="../assets/css/styles.css?v=1">
+<link rel="stylesheet" href="../assets/css/styles.css?v=2">
 <style>
   /* skill pills (course-level) */
   .skills { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-top: 1.5rem; }
@@ -32,6 +32,12 @@
   .doorgrid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 2rem; }
   .doorgrid .card h3 { margin-top: .35rem; }
   .doorgrid .card .enter { font-size: .85rem; color: var(--vu-gold-flat); margin: .5rem 0 0; }
+  @media (min-width: 1000px) {
+    .doorgrid { gap: .8rem; margin-top: 1.25rem; grid-template-columns: repeat(3, 1fr); }
+    .doorgrid .card h3 { font-size: 1rem; }
+    .doorgrid .card .muted { font-size: .85rem; }
+    .doorgrid .card .enter { font-size: .8rem; margin-top: .35rem; }
+  }
   /* two-track process */
   .tracks { display: grid; gap: 1.25rem; grid-template-columns: 1fr; margin-top: 2rem; }
   @media (min-width: 900px) { .tracks { grid-template-columns: 1fr 1fr; } }
@@ -39,12 +45,40 @@
   .on-cream .track, .on-light .track { background: rgba(255,255,255,.55); }
   .track ol { margin: .75rem 0 0; padding-left: 1.2rem; display: grid; gap: .5rem; font-size: .95rem; }
   .track ol b { font-weight: 600; }
+  @media (min-width: 1000px) {
+    .tracks { gap: 1rem; margin-top: 1.25rem; }
+    .track { padding: .9rem 1.1rem; }
+    .track ol { margin-top: .5rem; gap: .25rem; font-size: .82rem; }
+  }
   /* stat tiles */
   .stats { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); margin-top: 2rem; }
   .stats .card .big { font-family: var(--font-serif); font-size: clamp(1.7rem, 2.6vw, 2.3rem); color: var(--vu-oak); line-height: 1.1; margin: .3rem 0 .35rem; }
   .on-dark .stats .card .big { color: var(--vu-gold-flat); }
   .stats .card p { font-size: .88rem; }
   .stats .card a { color: inherit; text-decoration: underline; }
+  @media (min-width: 1000px) {
+    .stats { gap: .8rem; margin-top: 1.25rem; grid-template-columns: repeat(3, 1fr); }
+    .stats .card .big { font-size: clamp(1.4rem, 1.8vw, 1.8rem); }
+    .stats .card p { font-size: .82rem; }
+  }
+  @media (min-width: 1280px) {
+    .stats { grid-template-columns: repeat(6, 1fr); gap: .6rem; margin-top: .9rem; }
+    .stats .card { padding: .8rem .85rem; }
+    .stats .card .big { font-size: 1.3rem; }
+    .stats .card p { font-size: .76rem; }
+  }
+  @media (min-width: 1280px) {
+    .doorgrid { grid-template-columns: repeat(6, 1fr); gap: .6rem; }
+    .doorgrid .card { padding: .8rem; }
+    .doorgrid .card h3 { font-size: .92rem; }
+    .doorgrid .card .muted { font-size: .78rem; }
+    .doorgrid .card .enter { font-size: .76rem; }
+    #nextMove .quiz__options { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    #nextMove .quiz__options .opt { font-size: .85rem; align-items: start; }
+    #entrancePick .quiz__options { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    #entrancePick .quiz__options .opt { grid-template-columns: 1fr; font-size: .82rem; padding: .5rem .6rem; text-align: center; }
+    #entrancePick .quiz__options .opt .mark { display: none; }
+  }
   /* today checklist + Oracle screenshots */
   .uishot { margin: .9rem 0 0; }
   .uishot img { width: 100%; max-width: 680px; border: 1px solid rgba(28,28,28,.18); border-radius: 6px; display: block; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
@@ -52,7 +86,17 @@
   .uishot figcaption { font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase; letter-spacing: .07em; font-size: .66rem; color: var(--vu-oak); margin-top: .4rem; }
   .on-dark .uishot figcaption { color: var(--vu-gold-flat); }
   .warmup { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 1.25rem; }
+  @media (min-width: 1200px) {
+    .warmup { grid-template-columns: repeat(5, 1fr); gap: .75rem; margin-top: .75rem; }
+    .warmup .card { padding: .8rem .85rem; }
+    .warmup .card .muted { font-size: .78rem; }
+    .warmup .card .btn { padding: .55rem .9rem; font-size: .85rem; }
+  }
 </style>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 
 <style>
 /* ============ facilitator edition ============ */
@@ -129,10 +173,6 @@ body.fac-hide .facnote { display: none !important; }
 body.fac-hide .facshow { display: inline-flex; }
 </style>
 
-<script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body class="fac">
 <a class="skip-link" href="#s-what">Skip to content</a>
@@ -196,14 +236,14 @@ body.fac-hide .facshow { display: inline-flex; }
   <!-- ============ 0 · WELCOME / QR ============ -->
   <section class="slide on-dark welcome" id="s-welcome" data-title="Scan to join">
     <div class="wrap" style="text-align:center">
-      <img src="../assets/img/vu-v-icon.png" alt="Vanderbilt V" width="72" height="66" style="margin:0 auto 1.75rem;width:clamp(56px,6vw,80px);height:auto" data-reveal>
+      <img src="../assets/img/vu-v-icon.png" alt="Vanderbilt V" width="72" height="66" style="margin:0 auto 1rem;width:clamp(48px,5vw,64px);height:auto" data-reveal>
       <p class="eyebrow" data-reveal>Vanderbilt · Learning Series · People, Culture and Belonging</p>
       <h1 class="h2" data-reveal style="max-width:22ch;margin-inline:auto">Welcome. Scan to bring this session <em class="gold-text">to your seat</em>.</h1>
       <div class="qr-card" id="qrCard" data-reveal data-url="https://me5231979.github.io/TransferPortal-/">
         <div class="qr-card__code" id="qrBox" role="img" aria-label="QR code linking to this experience"></div>
         <p class="qr-card__url" id="qrUrl"></p>
       </div>
-      <p class="lead" data-reveal style="margin:1.5rem auto 0;max-width:48ch">Learners scan this code and land on the learner edition; your screen keeps the notes. Follow along on your own device. One norm up front: everything you type today stays on your screen. The portal itself works the same way.</p>
+      <p class="lead" data-reveal style="margin:1rem auto 0;max-width:48ch">Learners scan this code and land on the learner edition; your screen keeps the notes. Follow along on your own device. One norm up front: everything you type today stays on your screen. The portal itself works the same way.</p>
       <div class="hero__meta" data-reveal style="justify-content:center">
         <div><b>6</b> Entrances</div>
         <div><b>15</b> Minutes</div>
@@ -223,7 +263,7 @@ body.fac-hide .facshow { display: inline-flex; }
     <div class="wrap">
       <p class="eyebrow" data-reveal>The Transfer Portal · Vanderbilt · People, Culture and Belonging</p>
       <h1 class="h-hero" data-reveal>Stay at Vanderbilt.<br><em class="gold-text">Go somewhere new.</em></h1>
-      <p class="lead" data-reveal style="margin-top:1.5rem">One Oracle-powered place to explore roles, signal interest safely, pick up stretch work, and compete for your next chapter without leaving Vanderbilt. People who can move inside, stay. Here's how it works.</p>
+      <p class="lead" data-reveal style="margin-top:1rem">One Oracle-powered place to explore roles, signal interest safely, pick up stretch work, and compete for your next chapter without leaving Vanderbilt. People who can move inside, stay. Here's how it works.</p>
       <div class="objectives" data-reveal>
         <p class="objectives__label">By the end of this session, you will be able to</p>
         <ol class="objectives__list">
@@ -259,7 +299,7 @@ body.fac-hide .facshow { display: inline-flex; }
       <h2 class="h2" data-reveal>Your career, in <em>one</em> place.</h2>
       <p class="lead" data-reveal>One front door for internal movement: requisitions with a two-week internal-first window, Careers of Interest, your skills, Grow plans, and Gigs (short stretch assignments). In Oracle: your <b>Talent Profile</b>, the <b>Grow</b> area, and the <b>Opportunity Marketplace</b>. Leaders see only aggregated data, through <b>Workforce Intelligence</b>.</p>
 
-      <div class="grid grid-3" style="margin-top:2rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+      <div class="grid grid-3" style="margin-top:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
         <div class="card" data-reveal>
           <span class="tag">You control</span>
           <h3>What you share</h3>
@@ -277,7 +317,7 @@ body.fac-hide .facshow { display: inline-flex; }
         </div>
       </div>
 
-      <div class="quiz" id="portalFact" data-reveal style="margin-top:2.5rem">
+      <div class="quiz" id="portalFact" data-reveal style="margin-top:1rem">
         <p class="eyebrow" style="margin-bottom:.5rem">Play · Fact or fiction</p>
         <p class="why" style="margin-top:0"><b>Why this matters:</b> most of the fear comes from things the portal doesn't do. Five claims; call each one.</p>
         <p class="quiz__progress" id="pfProgress"></p>
@@ -356,7 +396,7 @@ body.fac-hide .facshow { display: inline-flex; }
         </div>
       </div>
 
-      <div class="quiz" id="entrancePick" data-reveal style="margin-top:2.5rem">
+      <div class="quiz" id="entrancePick" data-reveal style="margin-top:1rem">
         <p class="eyebrow" style="margin-bottom:.5rem">Play · Pick the entrance</p>
         <p class="why" style="margin-top:0"><b>Why this matters:</b> the doors only help if you can match them to real situations. Five colleagues; pick each one's door.</p>
         <p class="quiz__progress" id="epProgress"></p>
@@ -418,7 +458,7 @@ body.fac-hide .facshow { display: inline-flex; }
         </div>
       </div>
 
-      <div class="quiz" id="nextMove" data-reveal style="margin-top:2.5rem">
+      <div class="quiz" id="nextMove" data-reveal style="margin-top:1rem">
         <p class="eyebrow" style="margin-bottom:.5rem">Play · Call the next move</p>
         <p class="why" style="margin-top:0"><b>Why this matters:</b> the process feels safe when every next step is predictable. Five moments; call what happens.</p>
         <p class="quiz__progress" id="nmProgress"></p>
@@ -456,12 +496,11 @@ body.fac-hide .facshow { display: inline-flex; }
       <h2 class="h2" data-reveal>Let's talk about <em>poaching</em>.</h2>
       <p class="lead" data-reveal>Some managers will hear "internal mobility" and think "poaching." That reaction has been measured: about <b>three quarters of managers admit to talent hoarding</b>, and hoarding <b>deters internal applications</b> (<a href="https://www.aeaweb.org/articles?id=10.1257/aer.20220264" style="color:var(--vu-gold-flat);text-decoration:underline">Haegele, American Economic Review, 2024</a>). Left alone, the average manager suppresses exactly what this portal needs. The culture work is the work.</p>
 
-      <div class="card" data-reveal style="margin-top:2rem;border-color:rgba(207,174,112,.5)">
-        <span class="tag">The reframe every manager needs</span>
-        <p style="margin:.5rem 0 0;color:rgba(255,255,255,.9);font-size:1.05rem">When a team member grows into a new role at Vanderbilt, that is a win on your leadership record: retention we'd otherwise lose, skills landing where the university needs them, and a backfill that brings your team fresh capability.</p>
-      </div>
-
-      <div class="grid grid-3" style="margin-top:1.5rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+      <div class="grid grid-3" style="margin-top:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+        <div class="card" data-reveal style="border-color:rgba(207,174,112,.5)">
+          <span class="tag">The reframe every manager needs</span>
+          <p style="margin:.4rem 0 0;color:rgba(255,255,255,.9);font-size:.9rem">When a team member grows into a new role at Vanderbilt, that is a win on your leadership record: retention we'd otherwise lose, skills landing where the university needs them, and a backfill that brings your team fresh capability.</p>
+        </div>
         <div class="card" data-reveal>
           <span class="tag">The response that builds the culture</span>
           <p class="muted" style="font-style:italic">"Thank you for telling me. Tell me what drew you to it. What can I do to help you compete well, and whatever the outcome, what should we plan for next in your development here?"</p>
@@ -477,7 +516,7 @@ body.fac-hide .facshow { display: inline-flex; }
         </div>
       </div>
 
-      <div class="quiz" id="managerCall" data-reveal style="margin-top:2.5rem">
+      <div class="quiz" id="managerCall" data-reveal style="margin-top:1rem">
         <p class="eyebrow" style="margin-bottom:.5rem">Play · Judge the response</p>
         <p class="why" style="margin-top:0"><b>Why this matters:</b> the program lives or dies in the sixty seconds after "I've applied for something." Five responses; call each one.</p>
         <p class="quiz__progress" id="mcProgress"></p>
@@ -515,7 +554,8 @@ body.fac-hide .facshow { display: inline-flex; }
       <h2 class="h2" data-reveal>The case, in <em>numbers</em>.</h2>
       <p class="lead" data-reveal>Built to be borrowed: every claim is cited and linked. First, test your instincts.</p>
 
-      <div class="quiz" id="statGuess" data-reveal style="margin-top:2rem">
+      <div class="duo">
+      <div class="quiz" id="statGuess" data-reveal style="margin-top:1.25rem">
         <p class="eyebrow" style="margin-bottom:.5rem">Play · Guess the number</p>
         <p class="why" style="margin-top:0"><b>Why this matters:</b> a number you guessed at and missed sticks. Five findings; call each before the reveal.</p>
         <p class="quiz__progress" id="sgProgress"></p>
@@ -526,6 +566,16 @@ body.fac-hide .facshow { display: inline-flex; }
           <button class="btn btn--dark" id="sgNext" style="visibility:hidden">Next finding</button>
         </div>
         <div id="sgResult" hidden aria-live="polite"></div>
+      </div>
+      <div class="quiz" data-quiz data-reveal style="margin-top:1.5rem">
+        <p class="quiz__q">Quick check: These outcomes are real, and they still won't happen at Vanderbilt automatically. Which finding explains why?</p>
+        <div class="quiz__options">
+          <button class="opt" data-correct="1" data-why="Roughly 75% of managers self-report hoarding, and hoarding deters internal applications. The portal delivers only if the culture work in Section 04 counteracts that pull."><span class="mark">A</span><span>Most managers self-report talent hoarding, and hoarding deters internal applications</span></button>
+          <button class="opt" data-correct="0" data-why="Industry data points the other way: internal-hire rates have fallen to roughly 24% of all hires since 2020, so drift runs against mobility, never toward it."><span class="mark">B</span><span>Internal mobility rises on its own once the software launches</span></button>
+          <button class="opt" data-correct="0" data-why="Demand is real: employees keep telling researchers that career development drives their decision to stay. The bottleneck is the culture around managers, which is why Section 04 exists."><span class="mark">C</span><span>Staff mostly prefer to change employers rather than roles</span></button>
+        </div>
+        <p class="quiz__feedback" aria-live="polite"></p>
+      </div>
       </div>
 
       <div class="stats">
@@ -561,16 +611,6 @@ body.fac-hide .facshow { display: inline-flex; }
         </div>
       </div>
 
-      <div class="quiz" data-quiz data-reveal style="margin-top:2.5rem">
-        <p class="quiz__q">Quick check: These outcomes are real, and they still won't happen at Vanderbilt automatically. Which finding explains why?</p>
-        <div class="quiz__options">
-          <button class="opt" data-correct="1" data-why="Roughly 75% of managers self-report hoarding, and hoarding deters internal applications. The portal delivers only if the culture work in Section 04 counteracts that pull."><span class="mark">A</span><span>Most managers self-report talent hoarding, and hoarding deters internal applications</span></button>
-          <button class="opt" data-correct="0" data-why="Industry data points the other way: internal-hire rates have fallen to roughly 24% of all hires since 2020, so drift runs against mobility, never toward it."><span class="mark">B</span><span>Internal mobility rises on its own once the software launches</span></button>
-          <button class="opt" data-correct="0" data-why="Demand is real: employees keep telling researchers that career development drives their decision to stay. The bottleneck is the culture around managers, which is why Section 04 exists."><span class="mark">C</span><span>Staff mostly prefer to change employers rather than roles</span></button>
-        </div>
-        <p class="quiz__feedback" aria-live="polite"></p>
-      </div>
-
       <details class="deeper" data-reveal>
         <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
         <div class="deeper__body">
@@ -593,7 +633,7 @@ body.fac-hide .facshow { display: inline-flex; }
   <section class="slide on-cream" id="s-recap" data-title="Recap quiz">
     <div class="wrap">
       <p class="eyebrow" data-reveal>Check your understanding</p>
-      <h2 class="h2" data-reveal style="margin-bottom:2rem">The <em>recap</em>.</h2>
+      <h2 class="h2" data-reveal style="margin-bottom:1rem">The <em>recap</em>.</h2>
       <div class="quiz" id="recap" data-reveal>
         <div id="recapPanel">
           <p class="quiz__progress" id="recapProgress"></p>
@@ -659,7 +699,7 @@ body.fac-hide .facshow { display: inline-flex; }
         <div class="lab__outcome" id="planOut" hidden aria-live="polite"></div>
       </div>
 
-      <p class="eyebrow" data-reveal style="margin-top:2.5rem">The warm-up · Five moves, this week</p>
+      <p class="eyebrow" data-reveal style="margin-top:1rem">The warm-up · Five moves, this week</p>
       <div class="warmup">
         <div class="card" data-reveal>
           <span class="tag">01 · The conversation</span>
@@ -697,16 +737,16 @@ body.fac-hide .facshow { display: inline-flex; }
   <!-- ============ 12 · CLOSING ============ -->
   <section class="slide on-dark" id="s-close" data-title="Wrap-up">
     <div class="wrap" style="text-align:center">
-      <img src="../assets/img/vu-centered-white.png" alt="Vanderbilt University" width="120" height="125" style="margin:0 auto 2rem;width:clamp(96px,10vw,130px);height:auto" data-reveal>
+      <img src="../assets/img/vu-centered-white.png" alt="Vanderbilt University" width="120" height="125" style="margin:0 auto 1.25rem;width:clamp(80px,8vw,110px);height:auto" data-reveal>
       <h2 class="h2 gold-text" data-reveal style="max-width:20ch;margin-inline:auto">Now make the first <em>move</em>.</h2>
       <p class="lead" data-reveal style="margin:1.25rem auto 0;color:rgba(255,255,255,.82)">You know the portal, your entrance, both tracks, the conversation, and the numbers. One card leaves this room with a date on it.</p>
-      <div class="vidcard vidcard--feature" data-reveal style="text-align:left;max-width:680px;margin:2.25rem auto 0;cursor:default">
+      <div class="vidcard vidcard--feature" data-reveal style="text-align:left;max-width:680px;margin:1.25rem auto 0;cursor:default">
         <div class="vidcard__top"><span class="vidcard__src">Your one next step · This week</span><span class="vidcard__dur">Within 7 days</span></div>
         <h3>The first move on your card, exactly as written</h3>
         <p>Open Oracle and do the one thing you committed to. Your card page, one slide back, has the five-move warm-up with the exact screens. Afterward, write one line about what you found; it decides your second move.</p>
       </div>
-      <p class="why" data-reveal style="margin:1.5rem auto 0;max-width:52ch;text-align:center"><b>Before you go:</b> say your move and your day out loud, or type it in the chat. Spoken commitments stick.</p>
-      <div class="hero__cta" data-reveal style="justify-content:center;margin-top:1.75rem">
+      <p class="why" data-reveal style="margin:1rem auto 0;max-width:52ch;text-align:center"><b>Before you go:</b> say your move and your day out loud, or type it in the chat. Spoken commitments stick.</p>
+      <div class="hero__cta" data-reveal style="justify-content:center;margin-top:1.25rem">
         <a class="btn" href="../cheatsheet.html" target="_blank" rel="noopener">Take the quick reference card</a>
         <a class="btn btn--ghost" href="../worksheet.html" target="_blank" rel="noopener">Print the first move card</a>
         <a class="btn btn--ghost" href="#s-recap">Retake the quiz</a>

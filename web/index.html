@@ -53,6 +53,7 @@
   .crumbs li::before { content: counter(crumb); position: absolute; left: 0; top: .05rem; width: 1.15rem; height: 1.15rem; border-radius: 50%; border: 1px solid var(--vu-gold-flat); color: var(--vu-gold-flat); font-family: var(--font-condensed); font-weight: 700; font-size: .68rem; display: grid; place-items: center; }
   .crumbs li:not(:last-child)::after { content: ""; position: absolute; left: .55rem; top: 1.35rem; bottom: -.5rem; width: 1px; background: rgba(207,174,112,.35); }
   .crumbs__chip { display: inline-block; margin-left: .35rem; font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: .6rem; color: var(--vu-black); background: var(--vu-gold-flat); border-radius: 999px; padding: .12rem .5rem; vertical-align: 1px; }
+  .crumbs__chip--soon { background: transparent; border: 1px solid rgba(207,174,112,.7); color: var(--vu-gold-flat); }
   /* two-track process */
   .tracks { display: grid; gap: 1.25rem; grid-template-columns: 1fr; margin-top: 2rem; }
   @media (min-width: 900px) { .tracks { grid-template-columns: 1fr 1fr; } }
@@ -195,7 +196,7 @@
       <ol class="pieces" data-reveal>
         <li><b>A conversation with your manager</b>An open, ongoing dialogue about where you want to go, what growth looks like for you, and the support to get there.</li>
         <li><b>A skill map you own</b>The skills you have and the ones you want to grow, paired with your Careers of Interest. Private to you, always.</li>
-        <li><b>Oracle, where it runs</b>Learning tied to your skills, interest and skill declarations, Gigs (short stretch assignments), and open requisitions with a two-week internal-first window. Leaders see only aggregated data, through Workforce Intelligence.</li>
+        <li><b>Oracle, where it runs</b>Learning tied to your skills, interest and skill declarations, Gigs (short stretch assignments, not yet launched), and open requisitions with a two-week internal-first window. Leaders see only aggregated data, through Workforce Intelligence.</li>
       </ol>
 
       <div class="grid grid-3" style="margin-top:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
@@ -279,13 +280,13 @@
             <p class="door__row"><b>You right now</b> Years of institutional knowledge, excellent reviews, and work that has started running on autopilot.</p>
             <ol class="crumbs" aria-label="The path through this entrance">
               <li>Growth conversation with your manager <span class="crumbs__chip">recommended start</span></li>
-              <li>Browse Gigs in the Opportunity Marketplace</li>
+              <li>Browse Gigs in the Opportunity Marketplace <span class="crumbs__chip crumbs__chip--soon">at launch</span></li>
               <li>Take one with a defined scope and duration, home role intact</li>
               <li>Add the new skills to your Talent Profile</li>
               <li>Compete when the right requisition opens</li>
             </ol>
             <p class="door__row"><b>Where it leads</b> Stretch and fresh relationships now, and a stronger candidacy for the bigger next chapter.</p>
-            <p class="door__row"><b>Worth knowing</b> A Gig is development with no transfer promise. Permanent moves always run through a competitive requisition.</p>
+            <p class="door__row"><b>Worth knowing</b> Gigs have not launched yet; until they arrive, start with the conversation, your skills, and Careers of Interest. A Gig is development with no transfer promise. Permanent moves always run through a competitive requisition.</p>
           </div>
         </details>
         <details class="door" data-reveal>
@@ -301,7 +302,7 @@
               <li>Tag every real skill at its true level in the Skills Center</li>
               <li>Point your Grow plan at the underused ones</li>
               <li>The portal surfaces roles and Gigs that need them</li>
-              <li>Apply, or take a Gig, when the fit is real</li>
+              <li>Apply when the fit is real, or take a Gig once Gigs launch</li>
             </ol>
             <p class="door__row"><b>Where it leads</b> Work that finally uses the whole toolkit, found by matching instead of luck.</p>
             <p class="door__row"><b>Worth knowing</b> The matching runs on your skills data. Honest levels beat long lists every time.</p>
@@ -405,7 +406,7 @@
             <li><b>Set a Grow plan and flag Careers of Interest.</b> Both live in Grow: one to three goals, plus the roles you want suggestions about.</li>
             <li><b>Take the learning.</b> Courses in Oracle Learning, tied to the skills you want to grow.</li>
             <li><b>Explore.</b> Browse the <a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/redwood/internalmobility/opportunitymarketplace/search">Opportunity Marketplace</a> with the Opportunity filter set to Career Roles: you are browsing careers, with or without an open requisition. Save what interests you.</li>
-            <li><b>Take a Gig, optionally.</b> Defined scope, defined duration, real development. No transfer guarantee.</li>
+            <li><b>Take a Gig, optionally, once Gigs launch.</b> Defined scope, defined duration, real development. No transfer guarantee. Gigs are still to come; watch for the announcement.</li>
             <li><b>Ask for advisory support, optionally.</b> Confidential, on your initiative; nothing happens without your consent.</li>
           </ol>
         </div>
@@ -611,7 +612,7 @@
             <span class="plan__label"><b>2 · Your first move.</b> The one thing you'll do in the portal this week.</span>
             <div class="plan__chips" id="planPractice" role="group" aria-label="First move">
               <button class="opt" data-practice="explore"><span>Update my skills profile and declare a Career of Interest</span></button>
-              <button class="opt" data-practice="gig"><span>Browse Gigs and save one that fits my Grow plan</span></button>
+              <button class="opt" data-practice="gig"><span>Point my Grow plan at a stretch skill, ready for Gigs at launch</span></button>
               <button class="opt" data-practice="req"><span>Search open internal requisitions in my target area</span></button>
               <button class="opt" data-practice="advisory"><span>Request an employee-consultant conversation</span></button>
               <button class="opt" data-practice="coach"><span>Manager move: hold a "what's next for you here" conversation</span></button>
@@ -740,6 +741,6 @@
 
 
 <script src="../assets/js/qrcode.js?v=1"></script>
-<script src="../assets/js/main.js?v=2"></script>
+<script src="../assets/js/main.js?v=3"></script>
 </body>
 </html>

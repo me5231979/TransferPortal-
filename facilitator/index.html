@@ -53,6 +53,7 @@
   .crumbs li::before { content: counter(crumb); position: absolute; left: 0; top: .05rem; width: 1.15rem; height: 1.15rem; border-radius: 50%; border: 1px solid var(--vu-gold-flat); color: var(--vu-gold-flat); font-family: var(--font-condensed); font-weight: 700; font-size: .68rem; display: grid; place-items: center; }
   .crumbs li:not(:last-child)::after { content: ""; position: absolute; left: .55rem; top: 1.35rem; bottom: -.5rem; width: 1px; background: rgba(207,174,112,.35); }
   .crumbs__chip { display: inline-block; margin-left: .35rem; font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: .6rem; color: var(--vu-black); background: var(--vu-gold-flat); border-radius: 999px; padding: .12rem .5rem; vertical-align: 1px; }
+  .crumbs__chip--soon { background: transparent; border: 1px solid rgba(207,174,112,.7); color: var(--vu-gold-flat); }
   /* two-track process */
   .tracks { display: grid; gap: 1.25rem; grid-template-columns: 1fr; margin-top: 2rem; }
   @media (min-width: 900px) { .tracks { grid-template-columns: 1fr 1fr; } }
@@ -313,7 +314,7 @@ body.fac-hide .facshow { display: inline-flex; }
       <ol class="pieces" data-reveal>
         <li><b>A conversation with your manager</b>An open, ongoing dialogue about where you want to go, what growth looks like for you, and the support to get there.</li>
         <li><b>A skill map you own</b>The skills you have and the ones you want to grow, paired with your Careers of Interest. Private to you, always.</li>
-        <li><b>Oracle, where it runs</b>Learning tied to your skills, interest and skill declarations, Gigs (short stretch assignments), and open requisitions with a two-week internal-first window. Leaders see only aggregated data, through Workforce Intelligence.</li>
+        <li><b>Oracle, where it runs</b>Learning tied to your skills, interest and skill declarations, Gigs (short stretch assignments, not yet launched), and open requisitions with a two-week internal-first window. Leaders see only aggregated data, through Workforce Intelligence.</li>
       </ol>
 
       <div class="grid grid-3" style="margin-top:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
@@ -362,7 +363,7 @@ body.fac-hide .facshow { display: inline-flex; }
         </div>
       </details>
     </div>
-    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 1 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Install the accurate model and dissolve the folklore.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;The portal rests on three connected pieces. One: an open, ongoing growth conversation with your manager. Two: a skill map you own, the skills you have and the ones you want to grow, private to you, always. Three: Oracle, where it all runs: learning, declarations, Gigs, and requisitions posted internally first for two weeks. Leaders see only aggregate through Workforce Intelligence. Now, five claims about what this thing does. Call fact or fiction.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Walk the three pieces in one breath each; land that they only work together.</li><li>Guarantee cards in one breath each.</li><li>Run Fact or Fiction as a fast room vote, hands for A or B.</li></ol></div><p class="facnote__meta"><b>Validate:</b> 4+ of 5 on the trainer.</p><p class="facnote__meta"><b>Watch for:</b> Privacy skepticism; point at the mechanics (no notifications, aggregate-only) and move on.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Which door is yours? There are six.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: same minute; the trainer carries it.</p></aside>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 1 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Install the accurate model and dissolve the folklore.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;The portal rests on three connected pieces. One: an open, ongoing growth conversation with your manager. Two: a skill map you own, the skills you have and the ones you want to grow, private to you, always. Three: Oracle, where it all runs: learning, declarations, Gigs, and requisitions posted internally first for two weeks. Leaders see only aggregate through Workforce Intelligence. Now, five claims about what this thing does. Call fact or fiction.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Walk the three pieces in one breath each; land that they only work together.</li><li>Guarantee cards in one breath each.</li><li>Run Fact or Fiction as a fast room vote, hands for A or B.</li></ol></div><p class="facnote__meta"><b>Validate:</b> 4+ of 5 on the trainer.</p><p class="facnote__meta"><b>Watch for:</b> Privacy skepticism; point at the mechanics (no notifications, aggregate-only) and move on. If Gigs come up: they have not launched yet, teach the concept and flag that timing is to be announced.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Which door is yours? There are six.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: same minute; the trainer carries it.</p></aside>
   </section>
 
   
@@ -404,13 +405,13 @@ body.fac-hide .facshow { display: inline-flex; }
             <p class="door__row"><b>You right now</b> Years of institutional knowledge, excellent reviews, and work that has started running on autopilot.</p>
             <ol class="crumbs" aria-label="The path through this entrance">
               <li>Growth conversation with your manager <span class="crumbs__chip">recommended start</span></li>
-              <li>Browse Gigs in the Opportunity Marketplace</li>
+              <li>Browse Gigs in the Opportunity Marketplace <span class="crumbs__chip crumbs__chip--soon">at launch</span></li>
               <li>Take one with a defined scope and duration, home role intact</li>
               <li>Add the new skills to your Talent Profile</li>
               <li>Compete when the right requisition opens</li>
             </ol>
             <p class="door__row"><b>Where it leads</b> Stretch and fresh relationships now, and a stronger candidacy for the bigger next chapter.</p>
-            <p class="door__row"><b>Worth knowing</b> A Gig is development with no transfer promise. Permanent moves always run through a competitive requisition.</p>
+            <p class="door__row"><b>Worth knowing</b> Gigs have not launched yet; until they arrive, start with the conversation, your skills, and Careers of Interest. A Gig is development with no transfer promise. Permanent moves always run through a competitive requisition.</p>
           </div>
         </details>
         <details class="door" data-reveal>
@@ -426,7 +427,7 @@ body.fac-hide .facshow { display: inline-flex; }
               <li>Tag every real skill at its true level in the Skills Center</li>
               <li>Point your Grow plan at the underused ones</li>
               <li>The portal surfaces roles and Gigs that need them</li>
-              <li>Apply, or take a Gig, when the fit is real</li>
+              <li>Apply when the fit is real, or take a Gig once Gigs launch</li>
             </ol>
             <p class="door__row"><b>Where it leads</b> Work that finally uses the whole toolkit, found by matching instead of luck.</p>
             <p class="door__row"><b>Worth knowing</b> The matching runs on your skills data. Honest levels beat long lists every time.</p>
@@ -537,7 +538,7 @@ body.fac-hide .facshow { display: inline-flex; }
             <li><b>Set a Grow plan and flag Careers of Interest.</b> Both live in Grow: one to three goals, plus the roles you want suggestions about.</li>
             <li><b>Take the learning.</b> Courses in Oracle Learning, tied to the skills you want to grow.</li>
             <li><b>Explore.</b> Browse the <a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/redwood/internalmobility/opportunitymarketplace/search">Opportunity Marketplace</a> with the Opportunity filter set to Career Roles: you are browsing careers, with or without an open requisition. Save what interests you.</li>
-            <li><b>Take a Gig, optionally.</b> Defined scope, defined duration, real development. No transfer guarantee.</li>
+            <li><b>Take a Gig, optionally, once Gigs launch.</b> Defined scope, defined duration, real development. No transfer guarantee. Gigs are still to come; watch for the announcement.</li>
             <li><b>Ask for advisory support, optionally.</b> Confidential, on your initiative; nothing happens without your consent.</li>
           </ol>
         </div>
@@ -582,7 +583,7 @@ body.fac-hide .facshow { display: inline-flex; }
         </div>
       </details>
     </div>
-    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 2 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Make every step predictable, including disclosure timing.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Two tracks. Interest and Development: always on, private; profile, Grow plan, the Opportunity Marketplace, an optional Gig, optional advisory. Move: a requisition posts internally first, you apply and interview, and if you win it, a coordinated handoff, then your old role backfills through the same portal. One rule everyone wonders about: explore silently, and talk to your manager once you're a serious candidate.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Tracks in two breaths.</li><li>Point out the live Oracle links: Talent Profile, Skills Center, Opportunity Marketplace with Opportunity set to Career Roles.</li><li>Run Call the Next Move as a fast vote.</li></ol></div><p class="facnote__meta"><b>Validate:</b> 4+ of 5 on the trainer.</p><p class="facnote__meta"><b>Watch for:</b> The 'guaranteed job' misread: the window guarantees first look, the interview is yours to win.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Now the section that decides whether any of this works.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: tracks in one breath each, trainer as one vote.</p></aside>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 2 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Make every step predictable, including disclosure timing.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Two tracks. Interest and Development: always on, private; profile, Grow plan, the Opportunity Marketplace, an optional Gig, optional advisory. Move: a requisition posts internally first, you apply and interview, and if you win it, a coordinated handoff, then your old role backfills through the same portal. One rule everyone wonders about: explore silently, and talk to your manager once you're a serious candidate.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Tracks in two breaths.</li><li>Point out the live Oracle links: Talent Profile, Skills Center, Opportunity Marketplace with Opportunity set to Career Roles.</li><li>Run Call the Next Move as a fast vote.</li></ol></div><p class="facnote__meta"><b>Validate:</b> 4+ of 5 on the trainer.</p><p class="facnote__meta"><b>Watch for:</b> The 'guaranteed job' misread: the window guarantees first look, the interview is yours to win. And name the Gig caveat if asked: Gigs are still to launch; the step arrives with them.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Now the section that decides whether any of this works.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: tracks in one breath each, trainer as one vote.</p></aside>
   </section>
 
   <!-- ============ 7 · 04 THE CULTURE SHIFT ============ -->
@@ -765,7 +766,7 @@ body.fac-hide .facshow { display: inline-flex; }
             <span class="plan__label"><b>2 · Your first move.</b> The one thing you'll do in the portal this week.</span>
             <div class="plan__chips" id="planPractice" role="group" aria-label="First move">
               <button class="opt" data-practice="explore"><span>Update my skills profile and declare a Career of Interest</span></button>
-              <button class="opt" data-practice="gig"><span>Browse Gigs and save one that fits my Grow plan</span></button>
+              <button class="opt" data-practice="gig"><span>Point my Grow plan at a stretch skill, ready for Gigs at launch</span></button>
               <button class="opt" data-practice="req"><span>Search open internal requisitions in my target area</span></button>
               <button class="opt" data-practice="advisory"><span>Request an employee-consultant conversation</span></button>
               <button class="opt" data-practice="coach"><span>Manager move: hold a "what's next for you here" conversation</span></button>
@@ -896,7 +897,7 @@ body.fac-hide .facshow { display: inline-flex; }
 
 
 <script src="../assets/js/qrcode.js?v=1"></script>
-<script src="../assets/js/main.js?v=2"></script>
+<script src="../assets/js/main.js?v=3"></script>
 
 <script>
 (function () {

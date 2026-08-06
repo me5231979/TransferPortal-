@@ -23,7 +23,7 @@ catalog at me5231979/Course_Library. Same engine, same standing principles.
    Oracle as the operating layer for learning, declarations, Gigs, and
    requisitions); growth means upward or lateral, within or across units,
    and mobility is a normal part of a Vanderbilt career; two-week
-   internal-first window; Gigs are development with no transfer guarantee;
+   internal-first window; Gigs are development with no transfer guarantee (and have NOT launched yet: the copy carries a caveat in section 01, door B, Track 1, the capstone chip, and the cheatsheet; remove those when Gigs go live);
    advisory activates only on request; no auto-notification to managers
    and no forced career conversations; recruiters support competitive
    application; internal application is competitive, never entitled;

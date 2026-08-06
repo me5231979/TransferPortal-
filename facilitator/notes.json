@@ -159,7 +159,7 @@
     "Run Fact or Fiction as a fast room vote, hands for A or B."
    ],
    "validate": "4+ of 5 on the trainer.",
-   "watchFor": "Privacy skepticism; point at the mechanics (no notifications, aggregate-only) and move on.",
+   "watchFor": "Privacy skepticism; point at the mechanics (no notifications, aggregate-only) and move on. If Gigs come up: they have not launched yet, teach the concept and flag that timing is to be announced.",
    "coreMinutes": 1,
    "coreNote": "Core: same minute; the trainer carries it.",
    "say": "The portal rests on three connected pieces. One: an open, ongoing growth conversation with your manager. Two: a skill map you own, the skills you have and the ones you want to grow, private to you, always. Three: Oracle, where it all runs: learning, declarations, Gigs, and requisitions posted internally first for two weeks. Leaders see only aggregate through Workforce Intelligence. Now, five claims about what this thing does. Call fact or fiction.",
@@ -194,7 +194,7 @@
     "Run Call the Next Move as a fast vote."
    ],
    "validate": "4+ of 5 on the trainer.",
-   "watchFor": "The 'guaranteed job' misread: the window guarantees first look, the interview is yours to win.",
+   "watchFor": "The 'guaranteed job' misread: the window guarantees first look, the interview is yours to win. And name the Gig caveat if asked: Gigs are still to launch; the step arrives with them.",
    "coreMinutes": 1,
    "coreNote": "Core: tracks in one breath each, trainer as one vote.",
    "say": "Two tracks. Interest and Development: always on, private; profile, Grow plan, the Opportunity Marketplace, an optional Gig, optional advisory. Move: a requisition posts internally first, you apply and interview, and if you win it, a coordinated handoff, then your old role backfills through the same portal. One rule everyone wonders about: explore silently, and talk to your manager once you're a serious candidate.",

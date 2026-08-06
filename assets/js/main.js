@@ -360,7 +360,7 @@
     });
     var PRACTICE = {
       explore: { name: 'Profile and interests', move: 'Open the Transfer Portal, tag your skills at their honest levels, and declare at least one Career of Interest. Private to you; the suggestions start from there.' },
-      gig: { name: 'The Gig browse', move: 'Search current Gig postings, save one that fits a Grow goal, and note what the application would need from you.' },
+      gig: { name: 'The Gig warm-up', move: 'Set one Grow goal around a stretch skill now, so the day Gigs launch you can search the postings and save the one that fits it.' },
       req: { name: 'The requisition search', move: 'Search open internal requisitions in your target area, save the closest match, and read its requirements against your profile. Gaps become Grow goals.' },
       advisory: { name: 'The advisory conversation', move: 'Request an employee-consultant conversation and bring one honest question about your direction. It stays confidential, and nothing happens without your consent.' },
       coach: { name: 'The manager conversation', move: 'Hold the "what\'s next for you at Vanderbilt" conversation with one team member this week, before any requisition holds it for you. Thank first, coach forward.' }

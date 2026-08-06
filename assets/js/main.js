@@ -216,7 +216,7 @@
     labels: ['Fact', 'Fiction'],
     items: [
       { q: '"The moment you declare a Career of Interest, your manager gets a notification."',
-        answer: 1, why: 'Fiction, and this is the guarantee the whole experience rests on: declarations are silent by default. You decide when and whether to disclose.' },
+        answer: 1, why: 'Fiction, and it is the load-bearing guarantee: declarations are silent by default. You decide when to disclose.' },
       { q: '"Eligible open roles post internally for two weeks before they can post externally."',
         answer: 0, why: 'Fact. The internal-first window is the structural advantage staff get: you see opportunity before the outside world does.' },
       { q: '"A Gig is basically a trial run; do well and the permanent transfer follows."',
@@ -275,7 +275,7 @@
         answer: 1, why: 'A coordinated, respectful handoff, usually two to four weeks depending on role complexity. The releasing manager is a partner in the plan, never an obstacle to it.' },
       { q: 'You have moved. What happens to the role you left behind?',
         opts: ['It posts to the same portal, giving the releasing team the same internal-first look you just used', 'It is absorbed and disappears', 'It goes straight to external posting to speed things up'],
-        answer: 0, why: 'The backfill cascade: your old role opens internally first, so one move becomes opportunity for the next person too. That is how a marketplace compounds instead of drains.' }
+        answer: 0, why: 'The backfill cascade: your old role opens internally first, so one move becomes the next person\'s opportunity.' }
     ]
   });
 
@@ -292,13 +292,13 @@
       { q: '"Thank you for telling me. What drew you to it? And whatever happens, let\'s make sure the next step in your development here is real."',
         answer: 0, why: 'The model response, whole: gratitude first, curiosity second, development regardless of outcome. This is the sixty seconds the program depends on.' },
       { q: '"After everything I\'ve invested in you? I have to say, the timing feels a little disloyal."',
-        answer: 1, why: 'The guilt lever is textbook hoarding. Haegele\'s research shows exactly this pressure deters internal applications, which quietly pushes people to apply somewhere Vanderbilt can\'t retain them at all.' },
+        answer: 1, why: 'The guilt lever is textbook hoarding: it deters internal applications and pushes people to the external market instead.' },
       { q: '"I hear you. Honestly though, you\'re too critical to this project right now. Let\'s revisit after the fiscal year, and maybe the one after."',
-        answer: 1, why: 'Softer voice, same hoard: an open-ended stall that treats the manager\'s deadline as senior to the employee\'s career. "Not now" without a date is "no" wearing a calendar.' },
+        answer: 1, why: 'Softer voice, same hoard. "Not now" without a date is "no" wearing a calendar.' },
       { q: '"Understood. I\'ll ask HR to hold your application until we\'ve delivered Q3; I\'m sure they can pause these things."',
-        answer: 2, why: 'Attempting to block or delay an internal application crosses the program\'s brightest line. There is no workflow for managers to pause someone else\'s career, and asking for one is itself the violation.' },
+        answer: 2, why: 'Blocking or delaying an application is the program\'s brightest line, and asking HR for a workaround is itself the violation.' },
       { q: '"Noted. I\'ll remember this at review time; commitment to this team matters to me."',
-        answer: 2, why: 'A rating threat is retaliation, full stop, and a serious violation of the program\'s integrity. One sentence like this teaches an entire unit to move secretly or leave outright.' }
+        answer: 2, why: 'A rating threat is retaliation, full stop. One sentence like this teaches a whole unit to move secretly or leave.' }
     ]
   });
 

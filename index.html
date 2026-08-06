@@ -28,6 +28,12 @@
     padding: .3rem .65rem; border-radius: 999px; border: 1px solid rgba(207,174,112,.55);
     color: rgba(255,255,255,.85); }
   .skillpill--core { background: var(--vu-gold-flat); border-color: var(--vu-gold-flat); color: var(--vu-black); }
+  /* the three connected pieces (section 01) */
+  .pieces { list-style: none; margin: 1.1rem 0 0; padding: 0; counter-reset: piece; display: grid; gap: .7rem; }
+  @media (min-width: 900px) { .pieces { grid-template-columns: repeat(3, 1fr); gap: .8rem; } }
+  .pieces li { counter-increment: piece; position: relative; padding: .15rem 0 0 2.1rem; font-size: .88rem; line-height: 1.5; color: var(--vu-gray-dark); }
+  .pieces li::before { content: counter(piece); position: absolute; left: 0; top: .1rem; width: 1.5rem; height: 1.5rem; border-radius: 50%; border: 1px solid var(--vu-gold-flat); color: var(--vu-oak); font-family: var(--font-condensed); font-weight: 700; font-size: .85rem; display: grid; place-items: center; }
+  .pieces li b { display: block; font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: .78rem; color: var(--vu-black); margin-bottom: .15rem; }
   /* entrance doors (expanding) */
   .doors { margin-top: 1.5rem; display: grid; gap: .6rem; }
   @media (min-width: 900px) { .doors { grid-template-columns: 1fr 1fr; gap: .6rem .9rem; align-items: start; } }
@@ -172,7 +178,7 @@
     <div class="wrap">
       <p class="eyebrow" data-reveal>The Transfer Portal · Vanderbilt · People, Culture and Belonging</p>
       <h1 class="h-hero" data-reveal>Stay at Vanderbilt.<br><em class="gold-text">Go somewhere new.</em></h1>
-      <p class="lead" data-reveal style="margin-top:1rem">One Oracle-powered place to explore roles, signal interest safely, pick up stretch work, and compete for your next chapter without leaving Vanderbilt. People who can move inside, stay. Here's how it works.</p>
+      <p class="lead" data-reveal style="margin-top:1rem">A clear, supported path to grow upward or laterally, inside your unit or across into another, without apprehension or penalty. Explore roles, signal interest safely, pick up stretch work, and compete for your next chapter. At Vanderbilt, moving is a normal part of a career, never a departure.</p>
       <div class="objectives" data-reveal>
         <p class="objectives__label">By the end of this session, you will be able to</p>
         <ol class="objectives__list">
@@ -204,7 +210,13 @@
     <div class="wrap">
       <p class="eyebrow" data-reveal>Section 01 · What It Is</p>
       <h2 class="h2" data-reveal>One <em>private</em> portal for every internal move.</h2>
-      <p class="lead" data-reveal>One front door for internal movement: requisitions with a two-week internal-first window, Careers of Interest, your skills, Grow plans, and Gigs (short stretch assignments). In Oracle: your <b>Talent Profile</b>, the <b>Grow</b> area, and the <b>Opportunity Marketplace</b>. Leaders see only aggregated data, through <b>Workforce Intelligence</b>.</p>
+      <p class="lead" data-reveal>The front door for internal movement rests on three connected pieces, and they only work together.</p>
+
+      <ol class="pieces" data-reveal>
+        <li><b>A conversation with your manager</b>An open, ongoing dialogue about where you want to go, what growth looks like for you, and the support to get there.</li>
+        <li><b>A skill map you own</b>The skills you have and the ones you want to grow, paired with your Careers of Interest. Private to you, always.</li>
+        <li><b>Oracle, where it runs</b>Learning tied to your skills, interest and skill declarations, Gigs (short stretch assignments), and open requisitions with a two-week internal-first window. Leaders see only aggregated data, through Workforce Intelligence.</li>
+      </ol>
 
       <div class="grid grid-3" style="margin-top:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
         <div class="card" data-reveal>
@@ -215,7 +227,7 @@
         <div class="card" data-reveal>
           <span class="tag">HR guarantees</span>
           <h3>Privacy by default</h3>
-          <p class="muted">No auto-notification to your manager. Two weeks of internal-first posting. Advisory support only when you ask.</p>
+          <p class="muted">No auto-notification to your manager and no forced career conversation. Two weeks of internal-first posting. Advisory support only when you ask.</p>
         </div>
         <div class="card" data-reveal>
           <span class="tag">Managers commit</span>
@@ -423,6 +435,7 @@
           <ol>
             <li><b>Build your profile.</b> In your <a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/faces/deeplink?objType=NFX_VIEW_MY_SKILLS_AND_QUAL_VB&action=NONE">Talent Profile</a> (Oracle lists it as Skills and Qualifications): Career Preferences plus both skills lists, honestly leveled in the <a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/redwood/profiles/skills/skillscenter?navigateBack=true">Skills Center</a>. Private to you.</li>
             <li><b>Set a Grow plan and flag Careers of Interest.</b> Both live in Grow: one to three goals, plus the roles you want suggestions about.</li>
+            <li><b>Take the learning.</b> Courses in Oracle Learning, tied to the skills you want to grow.</li>
             <li><b>Explore.</b> Browse the <a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/redwood/internalmobility/opportunitymarketplace/search">Opportunity Marketplace</a> with the Opportunity filter set to Career Roles: you are browsing careers, with or without an open requisition. Save what interests you.</li>
             <li><b>Take a Gig, optionally.</b> Defined scope, defined duration, real development. No transfer guarantee.</li>
             <li><b>Ask for advisory support, optionally.</b> Confidential, on your initiative; nothing happens without your consent.</li>
@@ -432,7 +445,7 @@
           <span class="tag">Track 2 · Move, event-driven</span>
           <ol>
             <li><b>A requisition opens,</b> internal-first for two weeks.</li>
-            <li><b>You apply.</b> The hiring manager sees what you choose to share; performance data follows policy.</li>
+            <li><b>You apply.</b> Recruiters run one consistent process; the hiring manager sees what you choose to share; performance data follows policy.</li>
             <li><b>You interview,</b> in the same process every candidate gets.</li>
             <li><b>Transition is coordinated.</b> HR and both managers plan the handoff, typically two to four weeks.</li>
             <li><b>You onboard fast;</b> your institutional knowledge comes with you.</li>

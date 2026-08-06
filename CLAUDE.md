@@ -17,11 +17,17 @@ catalog at me5231979/Course_Library. Same engine, same standing principles.
    interest declarations, and the course itself mirrors it: the capstone and
    all typed input stay on-screen, saved nowhere, and learner-visible copy
    SAYS so. Never add telemetry, storage, or sharing.
-3. **Never contradict the program facts:** two-week internal-first window;
-   Gigs are development with no transfer guarantee; advisory activates only
-   on request; no auto-notification to managers; internal application is
-   competitive, never entitled; retaliation and surveillance are named
-   violations.
+3. **Never contradict the program facts:** the program rests on three
+   connected pieces (an ongoing growth conversation with your manager,
+   recommended never required; a private skill map the staff member owns;
+   Oracle as the operating layer for learning, declarations, Gigs, and
+   requisitions); growth means upward or lateral, within or across units,
+   and mobility is a normal part of a Vanderbilt career; two-week
+   internal-first window; Gigs are development with no transfer guarantee;
+   advisory activates only on request; no auto-notification to managers
+   and no forced career conversations; recruiters support competitive
+   application; internal application is competitive, never entitled;
+   retaliation and surveillance are named violations.
 4. **Facilitator edition is generated, never hand-edited** — run
    `python3 tools/build-web.py` and `python3 tools/build-facilitator.py`
    after ANY change to index.html or notes.json. The QR encodes the

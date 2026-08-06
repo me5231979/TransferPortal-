@@ -22,8 +22,8 @@ catalog at me5231979/Course_Library. Same engine, same standing principles.
    recommended never required; a private skill map the staff member owns;
    Oracle as the operating layer for learning, declarations, Gigs, and
    requisitions); growth means upward or lateral, within or across units, the six entrances are common examples rather than the only ways in,
-   and mobility is a normal part of a Vanderbilt career; two-week
-   internal-first window; Gigs are development with no transfer guarantee (and have NOT launched yet: the copy carries a caveat in section 01, door B, Track 1, the capstone chip, and the cheatsheet; remove those when Gigs go live);
+   and mobility is a normal part of a Vanderbilt career; FIVE-BUSINESS-DAY
+   internal-first window (an internal hiring freeze; it is NOT two weeks); Gigs are development with no transfer guarantee, and a Gig requires the manager's approval so managers always know about their directs' Gigs (and have NOT launched yet: the copy carries a caveat in section 01, door B, Track 1, the capstone chip, and the cheatsheet; remove those when Gigs go live);
    advisory activates only on request; no auto-notification to managers
    and no forced career conversations; recruiters support competitive
    application; internal application is competitive, never entitled;

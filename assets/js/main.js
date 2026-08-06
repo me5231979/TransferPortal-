@@ -598,17 +598,25 @@
   });
 
 
-  // wheel advances the deck when the current screen has nothing left to scroll
-  var wheelLock = 0;
+  // wheel advances the deck only when a FRESH scroll gesture starts at the
+  // slide's edge; momentum from scrolling inside the slide never advances.
+  // A gesture is fresh after a 350ms pause in wheel events.
+  var wheelLock = 0, lastWheel = 0, armedNext = false, armedPrev = false;
   window.addEventListener('wheel', function (e) {
     var s = slides[current];
     if (!s) return;
     var now = Date.now();
+    var fresh = now - lastWheel > 350;
+    lastWheel = now;
     if (now - wheelLock < 900) return;
     var atBottom = s.scrollTop + s.clientHeight >= s.scrollHeight - 4;
     var atTop = s.scrollTop <= 4;
-    if (e.deltaY > 24 && atBottom) { wheelLock = now; goTo(current + 1); }
-    else if (e.deltaY < -24 && atTop && current > 0) { wheelLock = now; goTo(current - 1); }
+    if (fresh) { armedNext = atBottom; armedPrev = atTop; }
+    if (e.deltaY > 24 && atBottom && armedNext) {
+      wheelLock = now; armedNext = false; armedPrev = false; goTo(current + 1);
+    } else if (e.deltaY < -24 && atTop && armedPrev && current > 0) {
+      wheelLock = now; armedNext = false; armedPrev = false; goTo(current - 1);
+    }
   }, { passive: true });
 
 

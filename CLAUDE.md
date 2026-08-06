@@ -45,6 +45,8 @@ catalog at me5231979/Course_Library. Same engine, same standing principles.
 ## Layout (10 slides)
 
 Welcome/QR (privacy norm) → Hero (5 objectives) →
+The chancellor's charge (institutional why, requested addition; no
+data-count so teaching sections stay 01-05) →
 01 What it is (Fact or Fiction) → 02 Six entrances (Pick the Entrance) →
 03 The process, two tracks (Call the Next Move) → 04 The culture shift
 (Judge the Response) → 05 The evidence (Guess the Number + stat tiles) →

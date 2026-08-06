@@ -253,7 +253,7 @@
     {
       "id": "s-process",
       "title": "03 · The process",
-      "minutes": 13,
+      "minutes": 12,
       "purpose": "Install the two-track model (Interest & Development always on and private; Move competitive and event-driven) and make every step predictable through the trainer, including disclosure timing.",
       "facilitate": [
         "Walk Track 1's five steps: profile, Grow plan, explore, optional Gig, optional advisory. Stress: always on, private, unhurried.",
@@ -282,7 +282,7 @@
     {
       "id": "s-culture",
       "title": "04 · The culture shift",
-      "minutes": 18,
+      "minutes": 16,
       "purpose": "The session's center of gravity: name talent hoarding as a measured, incentive-driven pattern, install the mobility-is-development reframe, and drill the manager response the whole program depends on.",
       "facilitate": [
         "Land the research first and slowly: about 75% of managers self-report hoarding, it's worst under team-performance incentives with large teams and visible talent, and it deters internal applications (Haegele, AER 2024).",
@@ -296,7 +296,7 @@
       ],
       "validate": "4+ of 5 on the trainer; the room can distinguish hoarding (guilt, stalling) from guardrail violations (blocking, retaliation); every manager leaves with two drafted sentences.",
       "watchFor": "Two failure modes: manager shame (the research says incentives, so keep it structural and blame-free) and staff glee (the point is partnership, so pull it back to the backfill cascade: today's releasing manager is next month's hiring manager). If a real manager-staff pair sits together, don't force them to exchange drafts; let them choose.",
-      "coreMinutes": 12,
+      "coreMinutes": 11,
       "coreNote": "Core: research and reframe in three minutes, both script cards read aloud, trainer stays in full (it IS the section), drafting shrinks to a solo two-minute write with one volunteer read-out.",
       "say": "Here's the sentence some managers are already thinking: 'this is poaching.' Let's take it seriously, because it isn't irrational. Researchers got personnel records from a major firm and measured what managers actually do: about three quarters admit to talent hoarding, holding onto their best people instead of releasing them to grow. It's worst exactly where good management is rewarded: team performance incentives, big teams, visible stars. And it works, in the worst way: hoarding measurably deters people from applying internally. It does nothing to stop them applying externally. So the real choice was never 'keep them or lose them.' It's 'lose them to the third floor, with a handoff and a backfill, or lose them to another employer with two weeks' notice.' When a team member grows into a new role at Vanderbilt, that is a win on your leadership record. And there's one moment where that either becomes true or dies: the moment they tell you they've applied.",
       "ask": {
@@ -314,7 +314,7 @@
     {
       "id": "s-evidence",
       "title": "05 · The evidence",
-      "minutes": 11,
+      "minutes": 10,
       "purpose": "Arm every learner with cited, linked research they can quote: retention, tenure, engagement, speed, cost, and the hoarding warning that makes the culture work non-optional.",
       "facilitate": [
         "Frame the section: built to be borrowed, every claim linked to its source.",
@@ -325,7 +325,7 @@
       ],
       "validate": "4+ of 5 on the trainer; in the debrief, learners can quote at least two numbers with their source without looking.",
       "watchFor": "A methodology skeptic litigating one study. Don't defend a single number; the case is convergence: retention, tenure, engagement, speed, cost, and quality all point one direction across independent sources. Park deep methodology questions with a promise to send the links.",
-      "coreMinutes": 7,
+      "coreMinutes": 6,
       "coreNote": "Core: trainer as a fast room vote, tiles in one sweep, quick check stays, pitch drill becomes one volunteer pitching the room for sixty seconds.",
       "say": "Everything until now was mechanics and culture. This section is ammunition. Employees promoted within three years of hire: seventy percent chance of staying. Never moved: forty-five. High-mobility organizations keep people five point four years against two point nine. Internal hires reach full speed twenty to twenty-five percent faster, and external hiring can cost three to five times more all-in. Cornell found internal hires flat outperform external ones. Every one of those claims is linked on this slide to its source, so you can hand it to the most skeptical person you know. But start with the game; I want your instincts on record first.",
       "ask": {
@@ -385,6 +385,34 @@
         "respond": "The busy week: 'that's why the date field exists; calendar it before you stand up.' The disloyalty fear: 'exploring is invisible by design; that was Section 01's whole point.' The manager fear: 'the research says the opposite: people who can talk about their future with you stay longer. Silence is what sends them to the external market.'"
       },
       "debrief": "One field of the university is about to get a more honest version of your career data, and one move is on your calendar. That's how a marketplace starts: one profile at a time.",
+      "transition": "Your card has one move on it. The next page turns it into a checklist with pictures."
+    },
+    {
+      "id": "s-today",
+      "title": "Do this today",
+      "minutes": 4,
+      "purpose": "Convert the capstone's single move into a concrete five-action warm-up, anchored to the real Oracle screens and the Talent Compass Tool, so nobody leaves unsure where to click.",
+      "facilitate": [
+        "Walk the five actions in order, pointing at each Oracle screenshot as you go: the growth conversation, the Talent Compass plan, Career Preferences, the two skills lists, and Careers of Interest in Grow plus the Opportunity Marketplace.",
+        "Open the Talent Compass Tool live if time allows; thirty seconds of the real screen beats a minute of description.",
+        "Tell managers explicitly which versions are theirs: the growth conversation with a team member, and the Talent Compass as a team skills evaluation.",
+        "Point out that the screenshots stay in the course, so nobody needs to memorize the navigation now."
+      ],
+      "validate": "Ask for a show of hands: 'who can name which Oracle screen holds Career Preferences?' The answer is the Talent Profile; if hands are thin, point at the screenshot once more.",
+      "watchFor": "The room treating this as homework to forget. Tie each action back to the card they just built: action three, four, or five IS most people's committed first move, so today's list is a head start, never extra credit.",
+      "coreMinutes": 2,
+      "coreNote": "Core: walk the five actions in one pass with the screenshots on screen; skip the live tool demo.",
+      "say": "Your card names one move. Here's the full warm-up, five actions, and none of them need guesswork. One: the growth conversation, with your manager or, if you lead people, with a team member. Two: the Talent Compass Tool, linked right on this page, to build your plan or map your team's skills. Three: Career Preferences in your Oracle Talent Profile, and that screenshot is the exact screen. Four: both skills lists, up to date and honest. Five: flag your Careers of Interest in the Grow area and browse the Opportunity Marketplace. Every screenshot stays in this course, so you can come back and match your screen to the picture.",
+      "ask": {
+        "q": "Which of the five will you do first, and which one have you been avoiding?",
+        "expect": [
+          "Skills updates named as first, the easy win",
+          "The growth conversation named as the avoided one, by both staff and managers",
+          "Someone asks whether the Talent Compass replaces the Oracle profile (it doesn't; it feeds it)"
+        ],
+        "respond": "Land the pattern: 'The easy wins are how you warm up; the avoided one is where the growth is. And no, the Talent Compass doesn't replace Oracle; use it to figure out what's true, then put what's true into your profile.'"
+      },
+      "debrief": "Five actions, every screen pictured, one tool linked. The distance between this session and the real portal is now zero clicks of mystery.",
       "transition": "Reference shelf in one breath, and then the send-off."
     },
     {

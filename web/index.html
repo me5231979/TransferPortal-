@@ -45,6 +45,10 @@
   .on-dark .stats .card .big { color: var(--vu-gold-flat); }
   .stats .card p { font-size: .88rem; }
   .stats .card a { color: inherit; text-decoration: underline; }
+  /* today checklist + Oracle screenshots */
+  .uishot { margin: .9rem 0 0; }
+  .uishot img { width: 100%; max-width: 680px; border: 1px solid rgba(28,28,28,.18); border-radius: 6px; display: block; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+  .uishot figcaption { font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase; letter-spacing: .07em; font-size: .66rem; color: var(--vu-oak); margin-top: .4rem; }
 </style>
 </head>
 <body>
@@ -77,7 +81,7 @@
   <span class="bottombar__title" id="barTitle"></span>
   <div class="dots" id="dots" role="navigation" aria-label="Slide navigation"></div>
   <div class="bottombar__ctrl">
-    <span class="bottombar__count" id="deckCount">1 / 12</span>
+    <span class="bottombar__count" id="deckCount">1 / 13</span>
     <button id="deckPrev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
     <button id="deckNext" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
   </div>
@@ -141,7 +145,7 @@
     <div class="wrap">
       <p class="eyebrow" data-reveal>Section 01 · What It Is</p>
       <h2 class="h2" data-reveal>Your career, in <em>one</em> place.</h2>
-      <p class="lead" data-reveal>The Transfer Portal brings internal career movement into a single Oracle-powered experience: open internal requisitions with a two-week internal-first window, Careers of Interest, your skills profile, Grow development plans, performance history, succession slates, and Gigs, which are short-term stretch assignments. Leaders see the same underlying data through <b>Workforce Intelligence</b>, aggregated and privacy-preserving, built for workforce planning rather than watching individuals.</p>
+      <p class="lead" data-reveal>The Transfer Portal brings internal career movement into a single Oracle-powered experience: open internal requisitions with a two-week internal-first window, Careers of Interest, your skills profile, Grow development plans, performance history, succession slates, and Gigs, which are short-term stretch assignments. In Oracle, you'll meet these as your <b>Talent Profile</b> (Career Preferences and Skills), the <b>Grow</b> area, and the <b>Opportunity Marketplace</b>. Leaders see the same underlying data through <b>Workforce Intelligence</b>, aggregated and privacy-preserving, built for workforce planning rather than watching individuals.</p>
 
       <div class="grid grid-3" style="margin-top:2rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
         <div class="card" data-reveal>
@@ -274,9 +278,9 @@
         <div class="track" data-reveal>
           <span class="tag">Track 1 · Interest &amp; Development, always on</span>
           <ol>
-            <li><b>Build your profile.</b> Skills tagged at honest levels, Careers of Interest marked. Private to you; rolls up only in aggregate.</li>
-            <li><b>Set a Grow plan.</b> One to three development goals tied to a role, skill, or stretch you want.</li>
-            <li><b>Explore.</b> Browse requisitions, pathways, and Gig postings. Save what interests you.</li>
+            <li><b>Build your profile.</b> In your Oracle Talent Profile: update Career Preferences and tag both skills lists (Skills I have, Skills I'm developing) at honest levels. Private to you; rolls up only in aggregate.</li>
+            <li><b>Set a Grow plan and flag your Careers of Interest.</b> Both live in the Grow area: one to three development goals, plus the career roles you want suggestions about.</li>
+            <li><b>Explore.</b> Browse the Opportunity Marketplace: requisitions, career roles, pathways, and Gig postings. Save what interests you.</li>
             <li><b>Take a Gig, optionally.</b> Defined scope, defined duration, real development. Never a trial for a transfer, never a guarantee.</li>
             <li><b>Ask for advisory support, optionally.</b> An employee-consultant conversation, on your initiative. Nothing you share triggers action without your consent.</li>
           </ol>
@@ -515,7 +519,26 @@
     </div>
   </section>
 
-  <!-- ============ 11 · GLOSSARY ============ -->
+  <!-- ============ 11 · DO THIS TODAY ============ -->
+  <section class="slide on-light" id="s-today" data-title="Do this today">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Apply it · Today</p>
+      <h2 class="h2" data-reveal>Five moves, <em>today</em>.</h2>
+      <p class="lead" data-reveal>Your card names the one move you committed to. Here is the full warm-up: five concrete actions, with the exact Oracle screens to look for so nothing requires guessing.</p>
+      <ol class="agenda" style="margin-top:1.5rem">
+        <li data-reveal><span class="num">01</span><div><h3>Have the growth conversation</h3><p>Talk with your manager about your growth: where you want to stretch, and what support looks like. Managers: hold that same conversation with a team member, before a requisition holds it for you.</p></div></li>
+        <li data-reveal><span class="num">02</span><div><h3>Build your plan with the Talent Compass Tool</h3><p>Map your skills and build a growth plan. Managers: use it to evaluate the skills across your team.</p><p style="margin-top:.5rem"><a class="btn btn--dark" href="https://me5231979.github.io/skill_matrix/">Open the Talent Compass Tool</a></p></div></li>
+        <li data-reveal><span class="num">03</span><div><h3>Update your Career Preferences in Oracle</h3><p>In your Talent Profile, set your next career move, preferred job function and family, and state your aspirations in the comments.</p>
+          <figure class="uishot"><img src="../assets/img/oracle-career-preferences.png" alt="Oracle Career Preferences screen with Next Career Move, Preferred Job Function, Preferred Job Family, and a comments box" loading="lazy" onerror="this.closest('figure').hidden=true"><figcaption>Oracle · Talent Profile · Career Preferences</figcaption></figure></div></li>
+        <li data-reveal><span class="num">04</span><div><h3>Make sure your skills are up to date</h3><p>Check both lists, Skills I have and Skills I'm developing, and tag levels honestly; the matching runs on this data.</p>
+          <figure class="uishot"><img src="../assets/img/oracle-skills.png" alt="Oracle skills screen showing Skills I'm developing and Skills I have with endorsement counts" loading="lazy" onerror="this.closest('figure').hidden=true"><figcaption>Oracle · Talent Profile · Skills</figcaption></figure></div></li>
+        <li data-reveal><span class="num">05</span><div><h3>Flag your Careers of Interest in Grow</h3><p>In the Grow area of Oracle, flag the career roles that interest you, then browse the Opportunity Marketplace and use Update Interests to keep suggestions flowing. Private to you, remember.</p>
+          <figure class="uishot"><img src="../assets/img/oracle-marketplace.png" alt="Oracle Opportunity Marketplace showing career role cards with job openings and an Update Interests button" loading="lazy" onerror="this.closest('figure').hidden=true"><figcaption>Oracle · Grow · Opportunity Marketplace</figcaption></figure></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 12 · GLOSSARY ============ -->
   <section class="slide on-cream" id="s-glossary" data-title="Glossary">
     <div class="wrap wrap-wide">
       <p class="eyebrow" data-reveal>Reference · Flip to reveal</p>
@@ -524,8 +547,8 @@
         <button class="flip" data-reveal aria-label="Transfer Portal, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Transfer Portal</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Vanderbilt's staff-facing front door for internal career movement, powered by Oracle. Private by default, competitive by design, owned by you.</p></div></div></button>
         <button class="flip" data-reveal aria-label="Workforce Intelligence, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Workforce Intelligence</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>The leader-side view of the same data: aggregated, privacy-preserving, built for workforce planning rather than watching individuals.</p></div></div></button>
         <button class="flip" data-reveal aria-label="Gig, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Gig</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>A short-term stretch assignment in another unit with defined scope and duration, held alongside your home role. Development, with no promise of a permanent move.</p></div></div></button>
-        <button class="flip" data-reveal aria-label="Careers of Interest, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Careers of Interest</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Your private declaration of the directions you're drawn to. Feeds tailored role and learning suggestions. Notifies no one.</p></div></div></button>
-        <button class="flip" data-reveal aria-label="Skills profile, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Skills Profile</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Your skills, tagged at honest levels. The matching engine runs on it, so it works exactly as well as the data you give it.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Careers of Interest, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Careers of Interest</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Your private flags on the career roles you're drawn to, set in the Grow area of Oracle. Feeds tailored role and learning suggestions. Notifies no one.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Skills profile, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Skills Profile</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Two lists in your Oracle Talent Profile, Skills I have and Skills I'm developing, tagged at honest levels. The matching engine runs on this data, so it works exactly as well as what you give it.</p></div></div></button>
         <button class="flip" data-reveal aria-label="Grow, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Grow</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>The development planning tool: one to three goals tied to a role, skill, or stretch experience you want next.</p></div></div></button>
         <button class="flip" data-reveal aria-label="Internal-first window, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Internal-First Window</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Every eligible open role posts internally for two weeks before it can post externally. Staff see opportunity first.</p></div></div></button>
         <button class="flip" data-reveal aria-label="Requisition, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Requisition</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>An approved open role. The Move track starts when one posts, and internal candidates compete through the standard interview process.</p></div></div></button>
@@ -546,7 +569,7 @@
       <div class="vidcard vidcard--feature" data-reveal style="text-align:left;max-width:680px;margin:2.25rem auto 0;cursor:default">
         <div class="vidcard__top"><span class="vidcard__src">Your one next step · This week</span><span class="vidcard__dur">Within 7 days</span></div>
         <h3>The first move on your card, exactly as written</h3>
-        <p>Open the Transfer Portal and do the one thing you committed to: the profile update, the saved Gig, the requisition search, the advisory request, or the career conversation with your team member. Afterward, write one line about what you found; that line decides your second move.</p>
+        <p>Open Oracle and do the one thing you committed to: the profile update, the saved Gig, the requisition search, the advisory request, or the career conversation with your team member. The Do This Today page one slide back has the five-move warm-up with the exact screens. Afterward, write one line about what you found; that line decides your second move.</p>
       </div>
       <p class="why" data-reveal style="margin:1.5rem auto 0;max-width:52ch;text-align:center"><b>Before you go:</b> say your move and your day out loud, or type it in the chat. Spoken commitments stick.</p>
       <div class="hero__cta" data-reveal style="justify-content:center;margin-top:1.75rem">
@@ -579,6 +602,7 @@
           <li><a href="#s-glossary">Glossary</a></li>
           <li><a href="#s-recap">Knowledge Check</a></li>
           <li><a href="#s-plan">My First Move Card</a></li>
+          <li><a href="#s-today">Do This Today</a></li>
           <li><a href="#s-close">Your Next Step</a></li>
           <li><a href="../">Classroom edition (for facilitators)</a></li>
           <li><a href="https://me5231979.github.io/Course_Library/">Course Library</a></li>

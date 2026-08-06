@@ -36,14 +36,21 @@ catalog at me5231979/Course_Library. Same engine, same standing principles.
 7. **No frameworks.** One CSS file, one JS file, vendored QR lib,
    self-hosted fonts; hero uses the particle canvas (no video montage).
 
-## Layout (13 slides)
+## Layout (14 slides)
 
 Welcome/QR (privacy norm) → Hero (5 objectives) → Agenda →
 01 What it is (Fact or Fiction) → manifesto ("Talent that can move inside,
 stays inside.") → 02 Six entrances (Pick the Entrance) → 03 The process,
 two tracks (Call the Next Move) → 04 The culture shift (Judge the
 Response) → 05 The evidence (Guess the Number + stat tiles) → Recap quiz →
-Capstone First Move Card → Glossary → Closing.
+Capstone First Move Card → Do This Today (five actions, Oracle screenshots,
+Talent Compass Tool link) → Glossary → Closing.
+
+Oracle screenshots live at `assets/img/oracle-career-preferences.png`,
+`oracle-skills.png`, `oracle-marketplace.png`; the figures hide gracefully
+via onerror if a file is missing. Keep course terms matched to the real
+Oracle UI: Talent Profile (Career Preferences, Skills I have / I'm
+developing), Grow (Careers of Interest), Opportunity Marketplace.
 
 ## Editing map
 

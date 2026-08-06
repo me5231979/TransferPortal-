@@ -336,9 +336,14 @@
     var pick = { practice: null, not: null, when: null };
     var whoIn = $('#planWho'), buildBtn = $('#planBuild'), statusEl2 = $('#planStatus'), outEl2 = $('#planOut');
     function planReady() {
-      var ok = whoIn.value.trim().length >= 8 && pick.practice && pick.not && pick.when;
+      var missing = [];
+      if (whoIn.value.trim().length < 3) missing.push('your direction (1)');
+      if (!pick.practice) missing.push('a first move (2)');
+      if (!pick.not) missing.push('a NOT (3)');
+      if (!pick.when) missing.push('a date (4)');
+      var ok = missing.length === 0;
       buildBtn.disabled = !ok;
-      statusEl2.textContent = ok ? 'Ready, build it' : 'Fill in all four parts';
+      statusEl2.textContent = ok ? 'Ready, build it' : 'Still needed: ' + missing.join(', ');
       return ok;
     }
     whoIn.addEventListener('input', planReady);

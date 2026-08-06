@@ -180,7 +180,7 @@
    "watchFor": "Protect anyone who picked E; nobody reveals that pick.",
    "coreMinutes": 1,
    "coreNote": "Core: one door opened, trainer as one vote, hands stay.",
-   "say": "Six doors: curious, plateaued, hidden skills, post-reorg, at risk, and ready to apply. Every one opens best the same way, a growth conversation with your manager, recommended and never required. Tap your door to see the whole trail, first conversation to landed move. One is yours today, and you can change lanes any time.",
+   "say": "Six doors, and they are examples: curious, plateaued, hidden skills, post-reorg, at risk, and ready to apply. Your situation may be a blend or something else entirely. Every door opens best the same way, a growth conversation with your manager, recommended and never required. Tap a door to see one full trail, first conversation to landed move.",
    "transition": "Behind every door, the same process."
   },
   {
@@ -194,10 +194,10 @@
     "Run Call the Next Move as a fast vote."
    ],
    "validate": "4+ of 5 on the trainer.",
-   "watchFor": "The 'guaranteed job' misread: the window guarantees first look, the interview is yours to win. And name the Gig caveat if asked: Gigs are still to launch; the step arrives with them.",
+   "watchFor": "The 'guaranteed job' misread: the window guarantees first look, the interview is yours to win. If privacy versus openness comes up: both are true, the conversation is the culture and the privacy is the guarantee. And the Gig caveat if asked: Gigs are still to launch.",
    "coreMinutes": 1,
    "coreNote": "Core: tracks in one breath each, trainer as one vote.",
-   "say": "You will use the portal in two ways. Day to day, quiet building, private to you: profile, Grow plan, learning, the Opportunity Marketplace, optional advisory. Then a role opens, and the quiet work pays off: it posts internally first, you apply and interview, and if you win it, a coordinated handoff, then your old role backfills through the same portal. One rule everyone wonders about: explore silently, and talk to your manager once you're a serious candidate.",
+   "say": "Growth here is a conversation, never a surprise. Whatever your goal, keep developing, and keep your manager in the story; nobody should be caught off guard. The portal gives growth two gears. Day to day: profile, Grow plan, learning, the Opportunity Marketplace, optional advisory, with privacy guaranteed when you need it. Then a role opens: it posts internally first, you apply and interview, and if you win it, a coordinated handoff, then your old role backfills through the same portal.",
    "transition": "Now the section that decides whether any of this works."
   },
   {

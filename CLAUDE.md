@@ -21,7 +21,7 @@ catalog at me5231979/Course_Library. Same engine, same standing principles.
    connected pieces (an ongoing growth conversation with your manager,
    recommended never required; a private skill map the staff member owns;
    Oracle as the operating layer for learning, declarations, Gigs, and
-   requisitions); growth means upward or lateral, within or across units,
+   requisitions); growth means upward or lateral, within or across units, the six entrances are common examples rather than the only ways in,
    and mobility is a normal part of a Vanderbilt career; two-week
    internal-first window; Gigs are development with no transfer guarantee (and have NOT launched yet: the copy carries a caveat in section 01, door B, Track 1, the capstone chip, and the cheatsheet; remove those when Gigs go live);
    advisory activates only on request; no auto-notification to managers
@@ -48,8 +48,9 @@ Welcome/QR (privacy norm) → Hero (5 objectives) →
 01 What it is (Fact or Fiction) → 02 Six entrances (Pick the Entrance) →
 03 The process, two tracks (Call the Next Move) → 04 The culture shift
 (Judge the Response) → 05 The evidence (Guess the Number + stat tiles) →
-Recap quiz → Capstone First Move Card + five-move warm-up (Oracle
-screenshots, Talent Compass Tool link) → Closing.
+Recap quiz → Job aid: five moves with Oracle screenshots, deep links,
+and the Talent Compass Tool link (the interactive First Move Card was
+retired: the course educates, it does not plan a move) → Closing.
 
 Deliberately no agenda, manifesto, or glossary slides; the deck was
 consolidated to teaching pages only. Don't reintroduce filler pages.
@@ -67,7 +68,7 @@ developing), Grow (Careers of Interest), Opportunity Marketplace.
   managerCall, statGuess)
 - Capstone maps: `PRACTICE` / `NOT` / `WHEN` in main.js (id `movePlan`)
 - Runbook: `facilitator/notes.json` (timing must sum: Full 15 / Core 10)
-- Printables: `cheatsheet.html` (quick reference), `worksheet.html`
-  (first move card)
+- Printables: `cheatsheet.html` (quick reference); `worksheet.html` is
+  retired and no longer linked
 - Source doc: "The Transfer Portal: A Training Guide for Staff and
   Managers," VU People, Culture and Belonging, v1.0 August 2026.

@@ -149,6 +149,22 @@
    "transition": "First, what it actually is."
   },
   {
+   "id": "s-charge",
+   "title": "The chancellor's charge",
+   "minutes": 1,
+   "purpose": "Tie the portal to the institutional vision: dare to grow.",
+   "facilitate": [
+    "One breath on the vision; land Crescere aude, dare to grow.",
+    "Connect it: a university that dares to grow needs people who can."
+   ],
+   "validate": "None needed.",
+   "watchFor": "Lingering; this is context, and the course lives in the pages ahead.",
+   "coreMinutes": 0,
+   "coreNote": "Core: skip; the deck carries it.",
+   "say": "One page of why. The Chancellor's charge is to define the great university of the 21st century and be it, at uncommon speed, agility, and scale. Our motto is the dare, Crescere aude, dare to grow. The Transfer Portal is that dare applied to careers: a university that dares to grow needs people who can.",
+   "transition": "So here is what it actually is."
+  },
+  {
    "id": "s-what",
    "title": "01 · What it is",
    "minutes": 1,
@@ -253,7 +269,7 @@
   {
    "id": "s-plan",
    "title": "Job aid · Five moves",
-   "minutes": 2,
+   "minutes": 1,
    "purpose": "Send everyone out with the five-move runway and the exact Oracle screens.",
    "facilitate": [
     "Walk the five moves left to right; point at the screenshots and the live links.",

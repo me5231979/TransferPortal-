@@ -157,10 +157,10 @@ em, .italic { font-style: italic; }
 .slide[data-count]::before {
   counter-increment: slide;
   content: counter(slide, decimal-leading-zero);
-  position: absolute; top: calc(var(--nav-h) + 1.5rem); left: var(--pad-x);
+  position: absolute; top: calc(var(--nav-h) + 0.3rem); left: var(--pad-x);
   font-family: var(--font-condensed); font-weight: 700;
-  font-size: 0.875rem; letter-spacing: .08em;
-  color: var(--vu-gold-flat); opacity: .8;
+  font-size: 0.8rem; letter-spacing: .08em;
+  color: var(--vu-gold-flat); opacity: .55;
 }
 
 /* ---------- 5. Nav ---------- */

@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Transfer Portal · Facilitator Edition | Vanderbilt</title>
+<meta name="description" content="An interactive training for Vanderbilt staff and managers on the Transfer Portal: what it is, the six entrances, the two-track process, the culture work that makes it succeed, and the research case for internal mobility.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Transfer Portal | Vanderbilt Learning Series">
+<meta property="og:description" content="Vanderbilt's staff-facing front door for internal career movement: private by default, competitive by design, and backed by the internal mobility research.">
+<meta property="og:url" content="https://me5231979.github.io/TransferPortal-/">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../assets/img/favicon-96.png">
+<link rel="apple-touch-icon" href="../assets/img/favicon-96.png">
+
+<link rel="preload" href="../assets/fonts/libre-caslon-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="stylesheet" href="../assets/css/styles.css?v=1">
+<style>
+  /* skill pills (course-level) */
+  .skills { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-top: 1.5rem; }
+  .skills__label { font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase;
+    letter-spacing: .08em; font-size: .7rem; color: var(--vu-gold-flat); margin-right: .25rem; }
+  .skillpill { display: inline-block; font-family: var(--font-condensed); font-weight: 700;
+    text-transform: uppercase; letter-spacing: .06em; font-size: .68rem; line-height: 1.3;
+    padding: .3rem .65rem; border-radius: 999px; border: 1px solid rgba(207,174,112,.55);
+    color: rgba(255,255,255,.85); }
+  .skillpill--core { background: var(--vu-gold-flat); border-color: var(--vu-gold-flat); color: var(--vu-black); }
+  /* entrance cards */
+  .doorgrid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 2rem; }
+  .doorgrid .card h3 { margin-top: .35rem; }
+  .doorgrid .card .enter { font-size: .85rem; color: var(--vu-gold-flat); margin: .5rem 0 0; }
+  /* two-track process */
+  .tracks { display: grid; gap: 1.25rem; grid-template-columns: 1fr; margin-top: 2rem; }
+  @media (min-width: 900px) { .tracks { grid-template-columns: 1fr 1fr; } }
+  .track { border: 1px solid rgba(207,174,112,.35); border-radius: 6px; padding: 1.25rem 1.4rem; }
+  .on-cream .track, .on-light .track { background: rgba(255,255,255,.55); }
+  .track ol { margin: .75rem 0 0; padding-left: 1.2rem; display: grid; gap: .5rem; font-size: .95rem; }
+  .track ol b { font-weight: 600; }
+  /* stat tiles */
+  .stats { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); margin-top: 2rem; }
+  .stats .card .big { font-family: var(--font-serif); font-size: clamp(1.7rem, 2.6vw, 2.3rem); color: var(--vu-oak); line-height: 1.1; margin: .3rem 0 .35rem; }
+  .on-dark .stats .card .big { color: var(--vu-gold-flat); }
+  .stats .card p { font-size: .88rem; }
+  .stats .card a { color: inherit; text-decoration: underline; }
+</style>
+
+<style>
+/* ============ facilitator edition ============ */
+.fac__badge { font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase;
+  letter-spacing: .08em; font-size: .7rem; color: var(--vu-black); background: var(--vu-gold-flat);
+  padding: .3rem .55rem; border-radius: 3px; margin-left: .9rem; white-space: nowrap; }
+@media (min-width: 1200px) {
+  body.fac .slide { display: grid; grid-template-columns: minmax(0,1fr) 350px; align-items: center; column-gap: 0; overflow-y: auto; overflow-x: hidden; }
+  body.fac .slide > .wrap { grid-column: 1; }
+  body.fac .slide > .hero__video, body.fac .slide > .hero__canvas, body.fac .slide > .hero__scrim { grid-column: 1 / -1; }
+  body.fac .facnote { grid-column: 2; align-self: start; position: sticky; top: calc(var(--nav-h) + 16px);
+    margin: 0 18px 0 0; }
+  body.fac .dots { display: none; } /* rail replaces the dot rail on the right */
+}
+.facnote {
+  background: rgba(20,20,20,.96); color: rgba(255,255,255,.85); border: 1px solid rgba(207,174,112,.45);
+  border-left: 3px solid var(--vu-gold-flat); border-radius: 6px; padding: 1rem 1.1rem;
+  font-size: .82rem; line-height: 1.5; max-height: calc(100vh - var(--nav-h) - 48px); overflow: auto; z-index: 5;
+}
+@media (max-width: 1199px) { .facnote { margin: 1.5rem var(--pad-x) 0; } }
+.facnote__head { display: flex; justify-content: space-between; gap: .5rem; align-items: baseline;
+  font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase; letter-spacing: .07em;
+  font-size: .68rem; color: var(--vu-gold-flat); border-bottom: 1px solid rgba(207,174,112,.3);
+  padding-bottom: .5rem; margin-bottom: .6rem; }
+.facnote__purpose { margin: 0 0 .6rem; color: #fff; font-weight: 500; }
+.facnote__steps { margin: 0 0 .6rem; padding-left: 1.05rem; display: grid; gap: .35rem; }
+.facnote__meta { margin: .35rem 0 0; color: rgba(255,255,255,.75); }
+.facnote__meta b { color: var(--vu-gold-flat); font-weight: 600; }
+.facnote__core { border-top: 1px dashed rgba(207,174,112,.35); padding-top: .5rem; }
+.facnote__blk { margin: .55rem 0 0; }
+.facnote__tag { display: inline-block; font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase;
+  letter-spacing: .08em; font-size: .6rem; padding: .15rem .4rem; border-radius: 2px; margin-bottom: .25rem; }
+.t-say { background: var(--vu-gold-flat); color: var(--vu-black); }
+.t-do  { background: rgba(179,201,205,.9); color: var(--vu-black); }
+.t-ask { background: rgba(139,161,142,.9); color: var(--vu-black); }
+.t-deb { background: rgba(236,183,72,.9); color: var(--vu-black); }
+.t-tra { background: rgba(255,255,255,.25); color: #fff; }
+.facnote__script { margin: 0; font-family: var(--font-serif); font-style: italic; font-size: .88rem; color: #fff; }
+.facnote__mini { margin: .25rem 0 0; font-size: .78rem; color: rgba(255,255,255,.75); }
+.brief__grid { display: grid; gap: 1rem; grid-template-columns: 1fr; margin-top: 1.5rem; }
+@media (min-width: 980px) { .brief__grid { grid-template-columns: repeat(2, 1fr); } }
+.brief__box { background: #262626; border: 1px solid rgba(207,174,112,.3); border-radius: 6px; padding: 1.1rem 1.25rem; font-size: .92rem; }
+.brief__box h3 { font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+  font-size: .8rem; color: var(--vu-gold-flat); margin-bottom: .6rem; }
+.brief__box ol, .brief__box ul { margin: 0; padding-left: 1.1rem; display: grid; gap: .4rem; color: rgba(255,255,255,.85); }
+.brief__wide { grid-column: 1 / -1; }
+.brief__row { padding: .45rem 0; border-bottom: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.85); }
+.brief__row b { color: var(--vu-gold-flat); }
+.brief__q { border-bottom: 1px solid rgba(255,255,255,.08); padding: .4rem 0; }
+.brief__q summary { cursor: pointer; font-weight: 500; color: #fff; }
+.brief__q p { margin: .4rem 0 .2rem; color: rgba(255,255,255,.8); font-size: .9rem; }
+.brief__youarehere { font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase;
+  letter-spacing: .09em; font-size: .68rem; color: rgba(255,255,255,.55); margin-bottom: 1rem; }
+.brief__sub { font-weight: 600; color: #fff; margin: 0 0 .6rem; font-size: 1rem; }
+.brief__printnote { color: rgba(255,255,255,.7); font-size: .9rem; max-width: 62ch; margin-top: .75rem; }
+.brief__box ol.checks, .brief__box ul.checks { list-style: none; padding-left: 0; }
+.brief__box .checks li { position: relative; padding-left: 1.4rem; }
+.brief__box .checks li::before { content: "\2713"; position: absolute; left: 0; color: var(--vu-gold-flat); font-weight: 700; }
+.facnote__invite { border: 1px solid rgba(255,255,255,.18); border-radius: 5px; padding: .8rem .9rem;
+  margin-top: .5rem; font-size: .8rem; color: rgba(255,255,255,.85); white-space: pre-wrap; }
+/* hide/show the facilitator script */
+.facnote__hide { font-family: var(--font-body, Inter, sans-serif); font-weight: 600; font-size: .72rem;
+  color: #fff; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.3);
+  border-radius: 5px; padding: .3rem .7rem; cursor: pointer; text-transform: none; letter-spacing: 0; }
+.facnote__hide:hover { border-color: var(--vu-gold-flat); }
+body.fac-hide .facnote { display: none !important; }
+@media (min-width: 1200px) { body.fac.fac-hide .slide { grid-template-columns: 1fr; } }
+.facshow { position: fixed; right: clamp(14px, 2vw, 28px); top: calc(var(--nav-h) + 14px); z-index: 96;
+  display: none; align-items: center; gap: .45rem;
+  font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase;
+  letter-spacing: .09em; font-size: .68rem; color: var(--vu-gold-flat);
+  background: rgba(20,20,20,.92); border: 1px solid rgba(207,174,112,.45); border-radius: 4px;
+  padding: .5rem .75rem; cursor: pointer; }
+body.fac-hide .facshow { display: inline-flex; }
+</style>
+
+</head>
+<body class="fac">
+<a class="skip-link" href="#s-agenda">Skip to content</a>
+
+<!-- reading progress -->
+<div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top" aria-label="Vanderbilt University, home">
+    <img class="nav__lockup" src="../assets/img/vu-lockup-white.png" alt="Vanderbilt University" width="250" height="65">
+    <img class="nav__vicon" src="../assets/img/vu-v-icon-nav.png" alt="Vanderbilt University" width="34" height="25">
+    <span class="fac__badge">Facilitator Edition</span>
+  </a>
+  <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navlinks">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+  <nav class="nav__links" id="navlinks" aria-label="Sections">
+    <a href="#s-what">What It Is</a>
+    <a href="#s-entrances">Entrances</a>
+    <a href="#s-process">The Process</a>
+    <a href="#s-culture">For Managers</a>
+    <a href="#s-evidence">The Evidence</a>
+    <a class="btn" href="#s-recap">Take the Quiz</a>
+  </nav>
+</header>
+
+<!-- bottom navigation bar -->
+<div class="bottombar" role="group" aria-label="Presentation controls">
+  <span class="bottombar__title" id="barTitle"></span>
+  <div class="dots" id="dots" role="navigation" aria-label="Slide navigation"></div>
+  <div class="bottombar__ctrl">
+    <span class="bottombar__count" id="deckCount">1 / 13</span>
+    <button id="deckPrev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <button id="deckNext" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+  </div>
+</div>
+<button class="scrollhint" id="scrollHint" type="button" aria-label="Scroll for more on this screen">Scroll for more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="12" height="12" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+
+<main class="deck" id="top">
+
+  <section class="slide on-dark" id="s-briefing" data-title="Facilitator briefing">
+    <div class="wrap wrap-wide">
+      <p class="brief__youarehere">You are here: the facilitator prep page. Learners start on the next page.</p>
+      <p class="eyebrow">Run this course / 00 · Facilitator only</p>
+      <h2 class="h2">Before the room <em>fills</em>.</h2>
+      <p class="lead">Two paths: Full (90 min) or Core (60 min). Every page ahead carries your script in the right rail: Say, Do, Ask with expected answers, Debrief, and a Transition into the next page, with the Core cut named at the bottom of each card. This page is everything that happens before and around the room. Learners never see this edition; the welcome QR on the next page sends them to their own.</p>
+      <div class="hero__cta" style="margin-top:1.25rem"><a class="btn" href="guide.html" target="_blank" rel="noopener">Print the facilitator guide &#128424;</a></div>
+      <p class="brief__printnote">One paper packet: this prep page, the run of show, the tough-questions bank, and every section script with its slide pictured beside the notes. Print it or choose Save as PDF.</p>
+      <div class="brief__grid"><div class="brief__box"><h3>01 · A week before</h3><p class="brief__sub">Learn the course by taking it</p><ol class="checks"><li>Read this guide end to end, then run BOTH editions start to finish, doing every exercise, including building your own first move card. You will be asked whether you have used the portal yourself; a real answer plays better than a deflection.</li><li>Confirm the current state of the actual Transfer Portal rollout with People, Culture and Belonging: what is live, what is coming, and who staff contact for help. Write those three facts where you can reach them mid-session.</li><li>Send the pre-work invite (template on this page) with the calendar invite: come with one honest career curiosity, held privately.</li><li>Decide your path now: Full (90-minute slot) or Core (60). Mark your cuts from the coreNotes.</li><li>If your audience is heavily managers, re-read Section 04 twice; it is the session's center of gravity for them, and the tough-questions bank leans that way.</li></ol></div><div class="brief__box"><h3>02 · The day before</h3><p class="brief__sub">Test everything a learner touches</p><ol class="checks"><li>Test the projector with the facilitator link; confirm the notes rail is readable from where you'll stand.</li><li>Scan the welcome QR from the back of the room with your own phone; it must land on the learner edition.</li><li>Run every trainer once so no reveal surprises you, especially Judge the Response; you want the two guardrail items ready in your own words.</li><li>Print 5 to 10 quick reference cards and first move cards.</li><li>Re-read the tough-questions bank; say the 'so my manager can see everything I do in there?' answer out loud once.</li></ol></div><div class="brief__box"><h3>03 · 30 minutes before</h3><p class="brief__sub">Set the room, set the tone</p><ol class="checks"><li>Welcome slide up as people arrive; it does the enrolling for you.</li><li>Close every other tab and app; silence the machine.</li><li>Test arrow-key navigation and one interaction (run a round of Fact or Fiction).</li><li>Arrange seating so pairs can form without furniture-moving theater; mixed manager and staff pairs are gold if the room allows.</li><li>Write 'PARKING LOT' and 'OPEN QUESTIONS FOR HR' on the whiteboard where the room can see them.</li></ol></div>
+        <div class="brief__box"><h3>04 · Materials</h3><p class="brief__sub">Have these in hand</p><ul class="checks"><li>Projector or large display and the facilitator link open (this edition)</li><li>Facilitator laptop with arrow keys or clicker; all notifications off</li><li>Learner devices (BYOD) joining via the welcome-slide QR</li><li>A few printed quick reference cards (cheatsheet.html) for anyone without a device</li><li>Printed first move cards (worksheet.html) as the no-device and projector-failure fallback</li><li>Whiteboard or flip chart for the parking lot and collected open questions for HR</li><li>The current Transfer Portal launch timeline and support contacts from People, Culture and Belonging, so you can answer 'when' and 'who do I call'</li></ul></div>
+        <div class="brief__box brief__wide"><h3>05 · When things go sideways</h3><p class="brief__sub">If it breaks, you have a move</p><div class="brief__row"><b>If Projector or the site fails mid-session:</b> Teach from the printed quick reference: the guarantees, the six entrances, the two tracks, and the manager script all work on a whiteboard. The pair activities never needed a screen; the capstone moves to the printed card.</div><div class="brief__row"><b>If Learner devices can't join (wifi or filters):</b> Run facilitator-only: the trainers play well on the projector with the room voting A/B/C by hands, and the capstone moves to paper. You lose typing, not learning.</div><div class="brief__row"><b>If You're 10+ minutes behind by the culture section (04):</b> Declare the Core path silently: trainers stay, pair debriefs shrink to one voice, glossary is pointed at. Never cut Section 04's trainer, the recap, or the capstone; they carry the program's success.</div><div class="brief__row"><b>If Someone shares a live, painful situation, a role elimination or a conflict with their manager:</b> Honor it and bound it: 'That's real, and you deserve a better answer than a training room can give. Entrance E and the employee-consultant conversation exist for exactly this; let's connect after.' Follow up privately with the People, Culture and Belonging contact you prepped. Keep names off the whiteboard.</div><div class="brief__row"><b>If A manager pushes back hard: 'so HR built a tool to raid my team':</b> Don't argue; go to evidence. Ask them what it costs to backfill an external departure, then show the retention numbers and the hoarding research: the choice is between losing people to another Vanderbilt unit or to another employer. Then land the backfill cascade: their next great hire comes through the same portal.</div><div class="brief__row"><b>If The room distrusts the privacy claims ('HR always says that'):</b> Slow down and be concrete: interest declarations trigger no notifications, data reaches leaders only aggregated through Workforce Intelligence, and asking HR to work around that is itself a violation managers are trained on. Then write the residual doubts on the open-questions board and commit to written answers; skeptics convert on follow-through, not reassurance.</div></div>
+        <div class="brief__box brief__wide"><h3>06 · Tough questions, ready answers</h3><p class="brief__sub">Say each answer out loud once before you teach</p><details class="brief__q"><summary>So my manager can see everything I do in there?</summary><p>No. Your browsing, your Careers of Interest, and your skills profile are private to you. Your manager gets no notification when you declare interest, and leader-facing Workforce Intelligence shows aggregated, privacy-preserving data, never a list of who is looking. Your manager learns you applied for a role when you tell them or when the hiring process formally requires it, and the norm is that you have that conversation yourself once you are a serious candidate.</p></details><details class="brief__q"><summary>Isn't this just poaching with extra steps?</summary><p>Poaching is secret and zero-sum. This is the opposite on both counts: the marketplace is open to every unit, the releasing manager gets a planned handoff and a backfill through the same system, and the alternative to an internal move is usually an external resignation, which has no handoff and no backfill window. The research backs it: about 75% of managers admit to talent hoarding, and hoarding deters internal applications without stopping external ones (Haegele, American Economic Review, 2024).</p></details><details class="brief__q"><summary>If I take a Gig and do great work, why doesn't that guarantee me the permanent role?</summary><p>Because the Gig is development and the requisition is a competition, and keeping them separate protects you both ways. If Gigs converted automatically, every Gig would become a quiet audition and managers would guard them like headcount. Kept separate, you can stretch without betting your reputation, and when the real requisition opens, your Gig gives you evidence, relationships, and a warm start most candidates won't have.</p></details><details class="brief__q"><summary>What if my manager retaliates anyway?</summary><p>Then the program's integrity rules are on your side: blocking an application, downgrading a rating in response, or excluding someone from key work are named as serious violations, and managers are trained on that before the portal reaches them. Document what happened and bring it to your HR business partner or an employee consultant. And a candid note: the guardrails only bite because leadership enforces them, which is exactly why manager training like this session exists.</p></details><details class="brief__q"><summary>Why would I tell the truth about my skill levels? Inflating them gets me matched to better roles.</summary><p>It gets you matched to interviews you then lose. The hiring manager verifies skills in the interview, and an inflated profile spends your credibility exactly where you need it most. Honest levels do something better: they route you to roles and Gigs where you'll genuinely compete, and they turn the gaps into Grow goals instead of surprises.</p></details><details class="brief__q"><summary>We're short-staffed already. How is my unit supposed to survive its best people leaving?</summary><p>Two honest answers. First, the counterfactual: your best people already have a marketplace; it's called every other employer, and it offers no handoff, no knowledge transfer, and no internal-first backfill. The portal keeps that talent at Vanderbilt and gives you two to four weeks of coordinated transition plus first look at internal candidates for the backfill. Second, the pattern compounds: units known for developing and releasing people attract the strongest internal applicants, so the pipeline runs both directions.</p></details></div>
+        <div class="brief__box brief__wide"><h3>07 · Copy-paste templates</h3><p class="brief__sub">Copy, swap the brackets, send</p><details class="brief__q"><summary>Pre-work invite (paste into the calendar invite)</summary><p>Subject: Before our Transfer Portal session. One thing to bring: one honest career curiosity, a role you wonder about, a skill you never get to use, or a team member whose growth you want to support. You will never be asked to share it, and nothing you type in the session is saved or sent. Come ready to work on it privately. That's it, no reading, no assessment.</p></details><details class="brief__q"><summary>7-day pulse (send one week after)</summary><p>Subject: One week later, did the first move happen? Three quick lines, reply whenever: 1) Did you make the move on your first move card? 2) What did you find in the portal? 3) What is your second move? Replies come to me only. Not yet? The card still works; this note is your nudge.</p></details><details class="brief__q"><summary>30-day re-poll (send a month after)</summary><p>Subject: Thirty days with the Transfer Portal. Two questions, same scale as the room: 1) Fist to five, how confident are you now about navigating your next internal move (or supporting a team member's)? 2) Has your unit had its first real portal conversation, an application, a Gig, or a career conversation, and how did it go? Reply with a number and a line. The before-and-after pair is how we know this session did more than feel good.</p></details></div>
+      </div>
+      <p class="why" style="margin-top:1.5rem"><b>After the session:</b> Seven days out, send the pulse: 'Did you make the first move on your card? What did you find in the portal? What is your second move?' At 30 days, re-poll the fist-to-five confidence question from the close plus 'has your unit had its first Transfer Portal conversation, and how did it go?' The count of completed first moves is the program's headline Level 3 metric; for manager cohorts, also count completed career conversations.</p>
+    </div>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 90 min · Core 60</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Run this course</p><p class="facnote__mini">The pre-work invite. Send it with the calendar invite a week out; swap anything in [brackets] and it is ready.</p><span class="facnote__tag t-say">Invite</span><div class="facnote__invite">Subject: Before our Transfer Portal session. One thing to bring: one honest career curiosity, a role you wonder about, a skill you never get to use, or a team member whose growth you want to support. You will never be asked to share it, and nothing you type in the session is saved or sent. Come ready to work on it privately. That's it, no reading, no assessment.</div></aside>
+  </section>
+
+  <!-- ============ 0 · WELCOME / QR ============ -->
+  <section class="slide on-dark welcome" id="s-welcome" data-title="Scan to join">
+    <div class="wrap" style="text-align:center">
+      <img src="../assets/img/vu-v-icon.png" alt="Vanderbilt V" width="72" height="66" style="margin:0 auto 1.75rem;width:clamp(56px,6vw,80px);height:auto" data-reveal>
+      <p class="eyebrow" data-reveal>Vanderbilt · Learning Series · People, Culture and Belonging</p>
+      <h1 class="h2" data-reveal style="max-width:22ch;margin-inline:auto">Welcome. Scan to bring this session <em class="gold-text">to your seat</em>.</h1>
+      <div class="qr-card" id="qrCard" data-reveal data-url="https://me5231979.github.io/TransferPortal-/">
+        <div class="qr-card__code" id="qrBox" role="img" aria-label="QR code linking to this experience"></div>
+        <p class="qr-card__url" id="qrUrl"></p>
+      </div>
+      <p class="lead" data-reveal style="margin:1.5rem auto 0;max-width:48ch">Learners scan this code and land on the learner edition; your screen keeps the notes. Follow along on your own device. Today is about your career at Vanderbilt, so one norm up front: everything you type in this session stays on your screen, and the portal itself works the same way. Private by default.</p>
+      <div class="hero__meta" data-reveal style="justify-content:center">
+        <div><b>6</b> Entrances</div>
+        <div><b>90</b> Minutes (60 core)</div>
+        <div><b>1</b> First move you'll put a date on</div>
+      </div>
+      <div class="hero__cta" data-reveal style="justify-content:center">
+        <a class="btn" href="#s-hero">We're ready, let's begin</a>
+      </div>
+    </div>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 3 min · Core 2</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Get every learner into the experience on their own device and establish the session's load-bearing norm: this experience, like the portal itself, is private by default.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Welcome. Point your camera at that code before we start. Today is about careers, specifically yours, staying at Vanderbilt while still going somewhere new. Because that topic is personal, one ground rule: everything you type today stays on your screen. Nothing is saved or sent. And here's the preview of the whole session: the tool we're about to tour makes you the same promise.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Have this slide projected as people arrive.</li><li>Point at the QR and get phones up before you say anything else.</li><li>State the privacy norm explicitly: nothing typed today is saved or sent, and the portal works the same way.</li><li>Confirm by show of hands that most of the room has the site open before advancing.</li></ol></div><div class="facnote__blk"><span class="facnote__tag t-ask">Ask</span><p class="facnote__script">&ldquo;Quick calibration, shout it out: when you hear 'internal mobility program,' what's your honest first reaction: real opportunity, HR paperwork, or a way to get in trouble with my boss?&rdquo;</p><p class="facnote__mini">Expect:</p><ul class="facnote__steps"><li>A mix, with at least one honest 'my boss would kill me'</li><li>Skeptical 'we've had career sites before'</li><li>Managers half-joking about losing their best people</li></ul><p class="facnote__mini">Respond: Welcome all three out loud: 'Perfect. The nervous ones, the skeptics, and the managers are each getting a whole section today. Keep your reaction in mind; we'll check it again at the end.'</p></div><p class="facnote__meta"><b>Validate:</b> 80%+ of the room has the deck open on a device; the room can repeat the privacy norm back to you.</p><p class="facnote__meta"><b>Watch for:</b> Staff sitting next to their own manager and visibly self-censoring. Name it warmly: nobody will be asked to reveal a career plan today; every personal exercise stays on their own screen.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Here's exactly what you'll walk out able to do.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: one scan prompt, the norm stated once, move on.</p></aside>
+  </section>
+
+  <!-- ============ 1 · HERO ============ -->
+  <section class="slide on-dark hero" id="s-hero" data-title="Objectives">
+    <canvas class="hero__canvas" aria-hidden="true"></canvas>
+    <div class="hero__scrim" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>The Transfer Portal · Vanderbilt · People, Culture and Belonging</p>
+      <h1 class="h-hero" data-reveal>Stay at Vanderbilt.<br><em class="gold-text">Go somewhere new.</em></h1>
+      <p class="lead" data-reveal style="margin-top:1.5rem">The Transfer Portal is Vanderbilt's staff-facing front door for internal career movement: one Oracle-powered place to explore roles, signal interest safely, pick up stretch work, and compete for your next chapter without leaving the university. The research says people who can move inside, stay. This session shows you how it works and how we make it work culturally.</p>
+      <div class="objectives" data-reveal>
+        <p class="objectives__label">By the end of this session, you will be able to</p>
+        <ol class="objectives__list">
+          <li>Explain what the Transfer Portal is, what it is not, and the privacy guarantees built into it</li>
+          <li>Identify which of the six entrances fits your situation today</li>
+          <li>Apply the two-track process, from private exploration through a coordinated handoff</li>
+          <li>Reframe the "this is poaching" objection using the talent hoarding research and a change management lens</li>
+          <li>Articulate the evidence for internal mobility, with sources, to a skeptical colleague or executive</li>
+        </ol>
+      </div>
+      <div class="skills" data-reveal aria-label="Skills this course builds">
+        <span class="skills__label">Skills you'll build</span>
+        <span class="skillpill skillpill--core">Grows self and others</span>
+        <span class="skillpill skillpill--core">Develops and implements University strategy</span>
+        <span class="skillpill">Career Development</span>
+        <span class="skillpill">Change Management</span>
+        <span class="skillpill">Talent Management</span>
+      </div>
+      <div class="hero__cta" data-reveal>
+        <a class="btn" href="#s-what">Begin the session</a>
+        <a class="btn btn--ghost" href="#s-recap">Jump to the quiz</a>
+      </div>
+    </div>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 2 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Set the contract: five capabilities, ending in one dated first move inside the actual portal.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Five things by the end: you'll know what the Transfer Portal is and exactly what it guarantees you. You'll know which of its six entrances fits your situation today. You'll be able to walk both tracks of the process, from private browsing to a coordinated handoff. You'll have the words for the hardest conversation in the whole program, the one where someone tells their manager. And you'll be able to make the case for internal mobility with real numbers to anyone who calls it poaching. It all lands in one artifact: a first move card with a date on it.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Read the five objectives briskly, in plain language.</li><li>Land on the capstone: this session ends with a REAL first move card, one direction, one move, one date.</li><li>Name the credibility anchors once: powered by Oracle, backed by published research, built by People, Culture and Belonging.</li></ol></div><p class="facnote__meta"><b>Validate:</b> Learners can say what the capstone will be (one dated move in the portal).</p><p class="facnote__meta"><b>Watch for:</b> Reading the objectives verbatim in a monotone; paraphrase like a human or lose the room by slide three.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Five ideas, in a deliberate order.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: objectives 1 and 5 out loud; the rest on screen.</p></aside>
+  </section>
+
+  <!-- ============ 2 · AGENDA ============ -->
+  <section class="slide on-cream" id="s-agenda" data-title="The plan">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>What we'll cover</p>
+      <h2 class="h2" data-reveal>Five ideas, in <em>order</em>.</h2>
+      <ol class="agenda">
+        <li data-reveal><span class="num">01</span><div><h3>What it is</h3><p>The front door, what lives behind it, and the guarantees that make it safe to use.</p></div></li>
+        <li data-reveal><span class="num">02</span><div><h3>Six entrances</h3><p>From "just curious" to "my role may be at risk": the door that matches your situation.</p></div></li>
+        <li data-reveal><span class="num">03</span><div><h3>The process</h3><p>Two tracks: Interest &amp; Development, always on and private, and Move, competitive and event-driven.</p></div></li>
+        <li data-reveal><span class="num">04</span><div><h3>The culture shift</h3><p>Talent hoarding, the "poaching" reflex, and the manager conversation this whole program depends on.</p></div></li>
+        <li data-reveal><span class="num">05</span><div><h3>The evidence</h3><p>Retention, engagement, speed, and cost: the published research, ready for any briefing.</p></div></li>
+      </ol>
+    </div>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 1 min · Core skip</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Show the arc once so learners can place each piece as it arrives: the thing, the doors, the process, the culture, the proof.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;The arc is simple: first the thing itself and its guarantees, then the six doors into it, then the process end to end, then the culture work, which is where programs like this live or die, and finally the evidence, so you can defend it in any meeting.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Walk the five items in one breath each.</li><li>Point out the shape: what it is (01), how you enter (02), how it works (03), what makes it succeed (04), and why it's worth it (05).</li></ol></div><p class="facnote__meta"><b>Validate:</b> None needed; this is orientation.</p><p class="facnote__meta"><b>Watch for:</b> Don't teach here; every concept has its own slide.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Start with what it actually is, because most of the fear about it comes from what it isn't.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: skip entirely; the deck's structure carries it.</p></aside>
+  </section>
+
+  <!-- ============ 3 · 01 WHAT IT IS ============ -->
+  <section class="slide on-light" id="s-what" data-count data-title="What it is">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Section 01 · What It Is</p>
+      <h2 class="h2" data-reveal>Your career, in <em>one</em> place.</h2>
+      <p class="lead" data-reveal>The Transfer Portal brings internal career movement into a single Oracle-powered experience: open internal requisitions with a two-week internal-first window, Careers of Interest, your skills profile, Grow development plans, performance history, succession slates, and Gigs, which are short-term stretch assignments. Leaders see the same underlying data through <b>Workforce Intelligence</b>, aggregated and privacy-preserving, built for workforce planning rather than watching individuals.</p>
+
+      <div class="grid grid-3" style="margin-top:2rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+        <div class="card" data-reveal>
+          <span class="tag">You control</span>
+          <h3>What you share</h3>
+          <p class="muted">Your profile, your Careers of Interest, your Gig and requisition applications, and when you tell your manager. Declaring interest notifies no one.</p>
+        </div>
+        <div class="card" data-reveal>
+          <span class="tag">HR guarantees</span>
+          <h3>Privacy by default</h3>
+          <p class="muted">No auto-notification to your manager, a two-week internal-first window on eligible requisitions, and advisory support that activates only when you ask.</p>
+        </div>
+        <div class="card" data-reveal>
+          <span class="tag">Managers commit</span>
+          <h3>A fair marketplace</h3>
+          <p class="muted">No retaliation, no surveillance, coaching conversations, respectful handoffs, and partnership on the backfill.</p>
+        </div>
+      </div>
+
+      <div class="quiz" id="portalFact" data-reveal style="margin-top:2.5rem">
+        <p class="eyebrow" style="margin-bottom:.5rem">Play · Fact or fiction</p>
+        <p class="why" style="margin-top:0"><b>Why this matters:</b> most of the fear around internal mobility comes from things the portal does not actually do. Five claims; call each one before the reveal.</p>
+        <p class="quiz__progress" id="pfProgress"></p>
+        <p class="quiz__q" id="pfQ" style="margin-top:.4rem"></p>
+        <div class="quiz__options" id="pfOptions" role="group" aria-label="Fact or fiction choices"></div>
+        <p class="quiz__feedback" id="pfFeedback" aria-live="polite"></p>
+        <div class="quiz__nav">
+          <button class="btn btn--dark" id="pfNext" style="visibility:hidden">Next claim</button>
+        </div>
+        <div id="pfResult" hidden aria-live="polite"></div>
+      </div>
+
+      <details class="deeper" data-reveal>
+        <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
+        <div class="deeper__body">
+          <div><h4>In practice</h4><p>The clean way to hold it: the Transfer Portal is a competitive internal marketplace, and the word that matters is <b>yours</b>. It is a supported path with clear norms rather than a way around your manager. Gigs are optional stretch work, and permanent moves run through real requisitions. Interest declarations roll up to People, Culture and Belonging only in aggregate. And nothing HR-initiated happens to you through it: advisory support activates when you ask, never before.</p></div>
+          <div class="deeper__ask"><h4><span class="mode">As a group</span> · 4 min</h4>
+          <p class="why"><b>Why this matters:</b> naming your worries out loud, then checking them against the guarantees, is the fastest way to find out which fears are real and which are folklore.</p>
+          <ol class="steps">
+            <li>In pairs: each name the one thing you'd be most nervous about if you used the portal tomorrow.</li>
+            <li>Check each worry against the guarantee cards above. Covered, or genuinely open?</li>
+            <li>Bring the genuinely open ones to the room; the facilitator collects them for HR.</li>
+          </ol>
+          <p class="why" style="margin-top:.6rem"><b>Flying solo?</b> Write down your one worry, then find the guarantee that covers it. If none does, that's a real question worth sending to People, Culture and Belonging.</p></div>
+        </div>
+      </details>
+    </div>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 10 min · Core 7</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Install an accurate mental model of the Transfer Portal (one front door, Oracle-powered, Workforce Intelligence on the leader side) and dissolve the folklore with the fact-or-fiction trainer.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;The Transfer Portal is one front door for internal career movement, powered by Oracle. Behind it: every eligible open role, posted internally for two weeks before the outside world sees it. Your skills profile. Careers of Interest you declare privately. Grow, for development planning. And Gigs, short-term stretch assignments in other units. On the other side of the wall, leaders see Workforce Intelligence: the same data, but aggregated and privacy-preserving, for planning the workforce rather than watching you. Now, the important part is what it is NOT, and that's a game.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Walk the lead: everything career-related in one place, and name each piece (requisitions, Careers of Interest, skills, Grow, Gigs, succession, performance history).</li><li>Explain Workforce Intelligence in one line: same data, aggregated and privacy-preserving, for planning rather than surveillance.</li><li>Walk the three guarantee cards: what you control, what HR guarantees, what managers commit to.</li><li>Run Fact or Fiction on devices, or as a room vote on the projector; call for votes out loud before each reveal.</li><li>Run the pair activity from Go deeper: name your worry, check it against the guarantees, collect the genuinely open ones on the whiteboard for HR.</li></ol></div><div class="facnote__blk"><span class="facnote__tag t-ask">Ask</span><p class="facnote__script">&ldquo;Which of the guarantees on this slide would change your actual behavior if you fully believed it?&rdquo;</p><p class="facnote__mini">Expect:</p><ul class="facnote__steps"><li>'No notification to my manager' wins most rooms</li><li>The two-week internal window, especially from frequent external applicants</li><li>Managers name the backfill partnership</li></ul><p class="facnote__mini">Respond: Anchor the winner: 'Notice what you just told each other: the barrier was never the software. It was who might find out. Hold that thought; Section 04 is about exactly that.'</p></div><div class="facnote__blk"><span class="facnote__tag t-deb">Debrief</span><p class="facnote__mini">Private by default, competitive by design, advisory only when you ask. Every fear the trainer just tested traces back to one of those three, and all three are guarantees, not aspirations.</p></div><p class="facnote__meta"><b>Validate:</b> 4+ of 5 on the trainer for most of the room; the open-questions board has real questions on it (an empty board means people are being polite, so ask again).</p><p class="facnote__meta"><b>Watch for:</b> The room treating the privacy guarantees as marketing. Don't oversell; point at the concrete mechanics (no notifications, aggregate-only rollup) and put the rest on the open-questions board with a promise of written answers.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;So that's the building. Now, which door do you personally walk in through? There are six, and one of them is yours. First, the whole program in eight words.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: cards fast, trainer stays on devices, the worry activity becomes a 60-second silent write and a show of hands for 'covered or open.'</p></aside>
+  </section>
+
+  <!-- ============ 4 · MANIFESTO ============ -->
+  <section class="slide on-cream manifesto" id="s-belief" data-title="One idea">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>The core idea</p>
+      <p>Talent that can move inside, stays inside.</p>
+    </div>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 1 min · Core skip</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">One beat of stillness to lock the session's core idea before the entrances arrive.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Talent that can move inside, stays inside.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Let the line animate word by word. Say nothing until it finishes.</li><li>Read it once, slowly, then advance.</li></ol></div><p class="facnote__meta"><b>Validate:</b> None; this is pacing.</p><p class="facnote__meta"><b>Watch for:</b> The urge to talk over it. Don't.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Everything today unpacks that sentence. Here are the six doors.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: skip; say the line yourself as you pass it.</p></aside>
+  </section>
+
+  <!-- ============ 5 · 02 SIX ENTRANCES ============ -->
+  <section class="slide on-dark" id="s-entrances" data-count data-title="Six entrances">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Section 02 · Entrances</p>
+      <h2 class="h2" data-reveal>Six entrances, one <em>portal</em>.</h2>
+      <p class="lead" data-reveal>People arrive at a career question from different places, so the portal has more than one door. Find the one that sounds like you today. You can change lanes any time.</p>
+
+      <div class="doorgrid">
+        <div class="card" data-reveal>
+          <span class="tag">A · The Explorer</span>
+          <h3>"I'm curious, but not ready to move"</h3>
+          <p class="muted">Generally happy, wondering what else exists here.</p>
+          <p class="enter"><b>Enter through:</b> Careers of Interest and your skills profile. You browse and declare privately; tailored role and learning suggestions start arriving. Your manager is not notified.</p>
+        </div>
+        <div class="card" data-reveal>
+          <span class="tag">B · The Tenured High Performer</span>
+          <h3>"I need a new challenge"</h3>
+          <p class="muted">Deep institutional knowledge, plateaued in the current role.</p>
+          <p class="enter"><b>Enter through:</b> Gigs plus Careers of Interest. A short-term stretch assignment in another unit, while keeping your home role. Gigs count as development and never promise a permanent move.</p>
+        </div>
+        <div class="card" data-reveal>
+          <span class="tag">C · The Underutilized Contributor</span>
+          <h3>"I have skills I never get to use"</h3>
+          <p class="muted">Hired for one thing, grew into others, no outlet.</p>
+          <p class="enter"><b>Enter through:</b> a skills profile update plus requisition search. Tag skills at their true level and the portal surfaces roles and Gigs that need them.</p>
+        </div>
+        <div class="card" data-reveal>
+          <span class="tag">D · The Post-Reorg Realigner</span>
+          <h3>"My role feels misaligned"</h3>
+          <p class="muted">Team, mission, or manager just changed materially.</p>
+          <p class="enter"><b>Enter through:</b> an employee-consultant conversation plus requisitions. An advisor helps you clarify what you want next; you apply competitively. Advisory starts when you ask, never before.</p>
+        </div>
+        <div class="card" data-reveal>
+          <span class="tag">E · The At-Risk Employee</span>
+          <h3>"I've heard my role may be at risk"</h3>
+          <p class="muted">Restructure, elimination, or budget pressure looming.</p>
+          <p class="enter"><b>Enter through:</b> advisory plus priority requisition matching. Proactive support to find roles where your skills transfer, with expedited internal review.</p>
+        </div>
+        <div class="card" data-reveal>
+          <span class="tag">F · The Direct Applicant</span>
+          <h3>"There's an open job I want"</h3>
+          <p class="muted">Knows the role, knows they're ready.</p>
+          <p class="enter"><b>Enter through:</b> the internal requisition listing. Apply inside the two-week internal window, interview competitively, and if selected, transition with a coordinated handoff.</p>
+        </div>
+      </div>
+
+      <div class="quiz" id="entrancePick" data-reveal style="margin-top:2.5rem">
+        <p class="eyebrow" style="margin-bottom:.5rem">Play · Pick the entrance</p>
+        <p class="why" style="margin-top:0"><b>Why this matters:</b> the entrances only help if you can match one to a real situation, including your own. Five colleagues; pick each one's best first door.</p>
+        <p class="quiz__progress" id="epProgress"></p>
+        <p class="quiz__q" id="epQ" style="margin-top:.4rem"></p>
+        <div class="quiz__options" id="epOptions" role="group" aria-label="Entrance choices"></div>
+        <p class="quiz__feedback" id="epFeedback" aria-live="polite"></p>
+        <div class="quiz__nav">
+          <button class="btn" id="epNext" style="visibility:hidden">Next colleague</button>
+        </div>
+        <div id="epResult" hidden aria-live="polite"></div>
+      </div>
+
+      <details class="deeper" data-reveal>
+        <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
+        <div class="deeper__body">
+          <div><h4>In practice</h4><p>The entrances describe situations, never categories of people, and nobody is assigned one. Most staff will use two or three over a career: Explorer this year, Direct Applicant in three. The two advisory entrances (D and E) deserve a special word: the employee-consultant conversation is confidential, initiated by you, and nothing you share starts any action without your consent. For at-risk situations, entrance E adds priority matching and expedited review, which is the program working hardest exactly when someone needs it most.</p></div>
+          <div class="deeper__ask"><h4><span class="mode">As a group</span> · 5 min</h4>
+          <p class="why"><b>Why this matters:</b> claiming an entrance out loud turns an org chart into a personal plan, and hearing the room's spread proves every door gets used.</p>
+          <ol class="steps">
+            <li>Everyone privately picks the entrance closest to their situation today.</li>
+            <li>Show of hands, A through F. Notice the spread; every room has all six.</li>
+            <li>Pairs: tell your partner which you picked and what the first click would be.</li>
+          </ol>
+          <p class="why" style="margin-top:.6rem"><b>Flying solo?</b> Write down your entrance letter and the first thing you'd do inside it. Keep it; the capstone will ask for exactly this.</p></div>
+        </div>
+      </details>
+    </div>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 13 min · Core 9</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Make the portal personal: every learner identifies the entrance that matches their situation today and can route other real situations to the right door.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;People arrive at a career question from six different places, so the portal has six doors. The Explorer is curious with no urgency: Careers of Interest, declared privately. The tenured high performer needs a stretch: Gigs, real work in another unit while keeping the home role. The underutilized contributor grew past the job description: tag the real skills and let the portal do the matching. The post-reorg realigner's world just shifted: a confidential advisory conversation, then competitive applications. The at-risk employee gets the program at its most protective: priority matching and expedited review. And the direct applicant already knows the posting: straight to the requisition, inside the two-week window. One of these is you, today. It may be a different one next year, and that's the design working.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Walk the six cards briskly, one breath of persona and one of mechanics each. A is curiosity, B is the plateaued high performer, C is hidden skills, D is post-reorg, E is at risk, F is the direct applicant.</li><li>Give entrances D and E an extra beat: advisory is confidential, initiated by the employee, and E adds priority matching and expedited review.</li><li>Send them to Pick the Entrance: five colleagues, route each to a door.</li><li>Run the group activity: private pick, show of hands A through F, then pairs share their entrance and first click.</li><li>Note the spread out loud; every room has all six, and that's the point of six doors.</li></ol></div><div class="facnote__blk"><span class="facnote__tag t-ask">Ask</span><p class="facnote__script">&ldquo;Show of hands, A through F: which entrance is yours today?&rdquo;</p><p class="facnote__mini">Expect:</p><ul class="facnote__steps"><li>A heavy cluster on A and C in general audiences</li><li>Managers surprised at how many hands are up at all</li><li>A few honest B hands from long-tenured staff, often with laughter</li></ul><p class="facnote__mini">Respond: Count the spread out loud and land it: 'Look around. That many colleagues are already thinking about their next chapter here. The portal didn't create that; it gives it somewhere safe to go. Managers, remember this vote in two sections.'</p></div><div class="facnote__blk"><span class="facnote__tag t-deb">Debrief</span><p class="facnote__mini">Six situations, six doors, zero assignments. The pick you just made privately is the seed of your first move card at the end.</p></div><p class="facnote__meta"><b>Validate:</b> 4+ of 5 on the trainer; every learner has privately picked an entrance (it feeds the capstone).</p><p class="facnote__meta"><b>Watch for:</b> People treating the personas as boxes ('I'm a B forever'). Say it directly: entrances are situations, most careers use two or three of them, and you can change lanes any time. Also protect anyone who picked E; nobody should have to reveal that pick in the pair share.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;You've picked a door. Here's what happens after you walk through it, in two tracks.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: cards in three breaths, trainer on devices, hands-up spread stays (it's fast and it lands), pair share drops.</p></aside>
+  </section>
+
+  <!-- ============ 6 · 03 THE PROCESS ============ -->
+  <section class="slide on-cream" id="s-process" data-count data-title="The process">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Section 03 · The Process</p>
+      <h2 class="h2" data-reveal>Two tracks, both <em>yours</em>.</h2>
+      <p class="lead" data-reveal>Everything in the portal runs on one of two tracks. <b>Interest &amp; Development</b> is always on, private, and unhurried. <b>Move</b> starts when a requisition opens, and it is competitive. They live in the same place and feed each other.</p>
+
+      <div class="tracks">
+        <div class="track" data-reveal>
+          <span class="tag">Track 1 · Interest &amp; Development, always on</span>
+          <ol>
+            <li><b>Build your profile.</b> Skills tagged at honest levels, Careers of Interest marked. Private to you; rolls up only in aggregate.</li>
+            <li><b>Set a Grow plan.</b> One to three development goals tied to a role, skill, or stretch you want.</li>
+            <li><b>Explore.</b> Browse requisitions, pathways, and Gig postings. Save what interests you.</li>
+            <li><b>Take a Gig, optionally.</b> Defined scope, defined duration, real development. Never a trial for a transfer, never a guarantee.</li>
+            <li><b>Ask for advisory support, optionally.</b> An employee-consultant conversation, on your initiative. Nothing you share triggers action without your consent.</li>
+          </ol>
+        </div>
+        <div class="track" data-reveal>
+          <span class="tag">Track 2 · Move, event-driven</span>
+          <ol>
+            <li><b>A requisition opens</b> and posts internally for two weeks before going external.</li>
+            <li><b>You apply.</b> The hiring manager sees what you choose to share. Performance data follows Vanderbilt policy; it is never surfaced casually.</li>
+            <li><b>You interview,</b> in the same process internal and external candidates get.</li>
+            <li><b>Transition is coordinated.</b> HR and both managers plan the handoff, typically two to four weeks. The releasing manager is a partner.</li>
+            <li><b>You onboard fast,</b> because your institutional knowledge comes with you.</li>
+            <li><b>Your old role backfills</b> through the same portal, so the releasing team gets the same first look you just used.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="quiz" id="nextMove" data-reveal style="margin-top:2.5rem">
+        <p class="eyebrow" style="margin-bottom:.5rem">Play · Call the next move</p>
+        <p class="why" style="margin-top:0"><b>Why this matters:</b> knowing what happens next, at each step, is what makes the portal feel safe enough to actually use. Five moments in a real move; call what the process does.</p>
+        <p class="quiz__progress" id="nmProgress"></p>
+        <p class="quiz__q" id="nmQ" style="margin-top:.4rem"></p>
+        <div class="quiz__options" id="nmOptions" role="group" aria-label="Next move choices"></div>
+        <p class="quiz__feedback" id="nmFeedback" aria-live="polite"></p>
+        <div class="quiz__nav">
+          <button class="btn btn--dark" id="nmNext" style="visibility:hidden">Next moment</button>
+        </div>
+        <div id="nmResult" hidden aria-live="polite"></div>
+      </div>
+
+      <details class="deeper" data-reveal>
+        <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
+        <div class="deeper__body">
+          <div><h4>In practice</h4><p>The disclosure question deserves a straight answer. You are never required to tell your manager the day you declare an interest, browse a role, or update your skills. You are expected to have a professional conversation once you are a serious candidate, before your manager learns about it from a requisition workflow. That timing is yours to choose, and choosing it well is part of competing respectfully. The other quiet rule: internal application never equals internal entitlement. The window gives you first look; the interview is still yours to win.</p></div>
+          <div class="deeper__ask"><h4><span class="mode">As a group</span> · 5 min</h4>
+          <p class="why"><b>Why this matters:</b> the two-track model clicks when you trace one imaginary colleague all the way through it.</p>
+          <ol class="steps">
+            <li>Pairs: invent a colleague (role, not a real name) and pick their entrance from Section 02.</li>
+            <li>Walk them through Track 1: what would they build, save, or ask for this month?</li>
+            <li>Now a requisition opens that fits. Walk Track 2 to the handoff. Where would it wobble, and who fixes it?</li>
+          </ol>
+          <p class="why" style="margin-top:.6rem"><b>Flying solo?</b> Trace yourself instead: your Track 1 this month, and the Track 2 you'd want ready if the right posting appeared next quarter.</p></div>
+        </div>
+      </details>
+    </div>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 13 min · Core 9</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Install the two-track model (Interest &amp; Development always on and private; Move competitive and event-driven) and make every step predictable through the trainer, including disclosure timing.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Everything in the portal runs on one of two tracks. Track one is Interest and Development: always on, private, no clock. You build a profile, set a Grow plan, browse, maybe take a Gig, maybe talk to an advisor. Nothing on this track notifies anyone or commits you to anything. Track two is Move, and it starts when a requisition posts: internal staff get it for two weeks before the outside world. You apply, sharing what you choose. You interview in the same process anyone would. If you win it, HR and both managers coordinate a handoff, usually two to four weeks, and your old role posts to the same portal you just used. One more thing, because everyone wonders and nobody asks: you do NOT owe your manager an announcement when you start exploring. You DO owe them a professional conversation once you're a serious candidate, and you get to choose that moment.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Walk Track 1's five steps: profile, Grow plan, explore, optional Gig, optional advisory. Stress: always on, private, unhurried.</li><li>Walk Track 2's six steps: requisition posts internally first, you apply sharing what you choose, one consistent interview process, coordinated two-to-four-week handoff, fast onboarding, and the backfill through the same portal.</li><li>Send them to Call the Next Move: five moments, call what the process does.</li><li>Debrief the disclosure question from Go deeper: no announcement needed to explore; a professional conversation once you're a serious candidate.</li><li>Run the pair trace: invent a colleague, walk both tracks, find where it would wobble.</li></ol></div><div class="facnote__blk"><span class="facnote__tag t-ask">Ask</span><p class="facnote__script">&ldquo;Where in these two tracks would a real move at Vanderbilt most likely wobble, and who's responsible for catching it?&rdquo;</p><p class="facnote__mini">Expect:</p><ul class="facnote__steps"><li>The handoff: the old team's workload during transition</li><li>The disclosure conversation going badly</li><li>Managers ask who pays for overlap or backfill gaps</li></ul><p class="facnote__mini">Respond: Sort the answers into the structure: the handoff has an owner (HR plus both managers, on a timeline), the disclosure conversation is the next section entirely, and the resourcing questions go on the open-questions board for People, Culture and Belonging with a promised written answer.</p></div><div class="facnote__blk"><span class="facnote__tag t-deb">Debrief</span><p class="facnote__mini">Private until you act, competitive when you do, coordinated when you win. If you can say those three phrases, you can walk both tracks.</p></div><p class="facnote__meta"><b>Validate:</b> 4+ of 5 on the trainer; pairs can name where a move would wobble and who fixes it (usually the handoff, fixed by HR plus both managers).</p><p class="facnote__meta"><b>Watch for:</b> The 'guaranteed job' misread and its mirror, 'so applying is pointless.' The correction is the same sentence both times: the window guarantees you first look, and the interview is still yours to win. Also watch for Gig-equals-tryout creeping back; the trainer addresses it, but repeat it if you hear it in the pairs.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Everything so far works on paper. Whether it works at Vanderbilt comes down to one conversation, and one word managers keep using about it.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: tracks in two breaths each, trainer on devices, disclosure norm stated plainly by you, pair trace drops.</p></aside>
+  </section>
+
+  <!-- ============ 7 · 04 THE CULTURE SHIFT ============ -->
+  <section class="slide on-dark" id="s-culture" data-count data-title="The culture shift">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Section 04 · The Culture Shift</p>
+      <h2 class="h2" data-reveal>Let's talk about <em>poaching</em>.</h2>
+      <p class="lead" data-reveal>Some managers will hear "internal mobility" and think "poaching." That reaction is predictable, and it has been measured: in the first large-scale study of talent hoarding, about <b>three quarters of managers admitted to hoarding</b>, it was strongest where managers are judged on team performance, and it measurably <b>deters people from applying internally</b> (<a href="https://www.aeaweb.org/articles?id=10.1257/aer.20220264" style="color:var(--vu-gold-flat);text-decoration:underline">Haegele, American Economic Review, 2024</a>). If we do nothing, the average manager will quietly suppress the exact behavior this portal exists to enable. So the culture work is the work.</p>
+
+      <div class="card" data-reveal style="margin-top:2rem;border-color:rgba(207,174,112,.5)">
+        <span class="tag">The reframe every manager needs</span>
+        <p style="margin:.5rem 0 0;color:rgba(255,255,255,.9);font-size:1.05rem">When a team member grows into a new role at Vanderbilt, that is a win for your leadership record. Every internal move is retention we would otherwise have lost to an outside offer, skills recombining where the university needs them, and a backfill that brings your own team fresh capability.</p>
+      </div>
+
+      <div class="grid grid-3" style="margin-top:1.5rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+        <div class="card" data-reveal>
+          <span class="tag">The response that builds the culture</span>
+          <p class="muted" style="font-style:italic">"Thank you for telling me. Tell me what drew you to it. What can I do to help you compete well, and whatever the outcome, what should we plan for next in your development here?"</p>
+        </div>
+        <div class="card" data-reveal>
+          <span class="tag">The response the culture cannot survive</span>
+          <p class="muted" style="font-style:italic">"After everything I've invested in you?"</p>
+          <p class="muted" style="margin-top:.5rem">The first response builds a career at Vanderbilt. The second builds a resume for somewhere else.</p>
+        </div>
+        <div class="card" data-reveal>
+          <span class="tag">Manager guardrails</span>
+          <p class="muted"><b>No retaliation:</b> blocking an application, downgrading a rating, or sidelining someone who applied is a serious violation. <b>No surveillance:</b> you are not notified of interest declarations; asking HR to work around that is off the table. <b>Do coach:</b> hold the "what's next for you here" conversation before a requisition holds it for you.</p>
+        </div>
+      </div>
+
+      <div class="quiz" id="managerCall" data-reveal style="margin-top:2.5rem">
+        <p class="eyebrow" style="margin-bottom:.5rem">Play · Judge the response</p>
+        <p class="why" style="margin-top:0"><b>Why this matters:</b> the whole program lives or dies in the sixty seconds after a team member says "I've applied for something." Five manager responses; call each one.</p>
+        <p class="quiz__progress" id="mcProgress"></p>
+        <p class="quiz__q" id="mcQ" style="margin-top:.4rem"></p>
+        <div class="quiz__options" id="mcOptions" role="group" aria-label="Response judgments"></div>
+        <p class="quiz__feedback" id="mcFeedback" aria-live="polite"></p>
+        <div class="quiz__nav">
+          <button class="btn" id="mcNext" style="visibility:hidden">Next response</button>
+        </div>
+        <div id="mcResult" hidden aria-live="polite"></div>
+      </div>
+
+      <details class="deeper" data-reveal>
+        <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
+        <div class="deeper__body">
+          <div><h4>In practice</h4><p>Hoarding is rarely villainy; it is incentives. Haegele's research found it worst where managers are evaluated on team performance, teams are large, and talent is visible, which describes most of us on a normal Tuesday. So the rollout counters structure with structure, following Kotter's change model: urgency built from retention risk and vacancy costs, champion managers in every unit who volunteer to release talent and get celebrated for it, barriers removed through the internal-first window and structured handoffs, early anonymized "first mover" stories, and eventually a manager release rate on leader scorecards. Staff hold guardrails too: honest skill ratings, respectful competition, and a professional disclosure conversation once you're a serious candidate.</p></div>
+          <div class="deeper__ask"><h4><span class="mode">As a group</span> · 6 min</h4>
+          <p class="why"><b>Why this matters:</b> drafting the words before the moment arrives is what makes the good response the one that actually comes out.</p>
+          <ol class="steps">
+            <li>Managers: draft the two sentences you'll say the next time a team member tells you they've applied. Staff: draft how you'd open the disclosure conversation with your manager.</li>
+            <li>Pairs, one of each where possible: read them to each other. Does the manager line pass the "thank you first" test? Does the staff line land before the requisition would?</li>
+            <li>Volunteers read the best lines to the room. Collect them; they become the unit's shared script.</li>
+          </ol>
+          <p class="why" style="margin-top:.6rem"><b>Flying solo?</b> Draft both lines anyway, whichever chair you sit in today. You will eventually sit in the other one.</p></div>
+        </div>
+      </details>
+    </div>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 18 min · Core 12</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">The session's center of gravity: name talent hoarding as a measured, incentive-driven pattern, install the mobility-is-development reframe, and drill the manager response the whole program depends on.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Here's the sentence some managers are already thinking: 'this is poaching.' Let's take it seriously, because it isn't irrational. Researchers got personnel records from a major firm and measured what managers actually do: about three quarters admit to talent hoarding, holding onto their best people instead of releasing them to grow. It's worst exactly where good management is rewarded: team performance incentives, big teams, visible stars. And it works, in the worst way: hoarding measurably deters people from applying internally. It does nothing to stop them applying externally. So the real choice was never 'keep them or lose them.' It's 'lose them to the third floor, with a handoff and a backfill, or lose them to another employer with two weeks' notice.' When a team member grows into a new role at Vanderbilt, that is a win on your leadership record. And there's one moment where that either becomes true or dies: the moment they tell you they've applied.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Land the research first and slowly: about 75% of managers self-report hoarding, it's worst under team-performance incentives with large teams and visible talent, and it deters internal applications (Haegele, AER 2024).</li><li>Say the implication plainly: unmanaged, the average manager suppresses exactly the behavior the portal needs. Nobody has to be a villain for the program to fail.</li><li>Walk the reframe card: an internal move is retention we'd have lost, skills recombining, and a backfill opportunity, all three at once.</li><li>Read both script cards aloud, the culture-building response and the killer, and let the second one sit in silence for a beat.</li><li>Walk the guardrails: no retaliation, no surveillance, do coach. Name them as integrity rules with teeth, not suggestions.</li><li>Send them to Judge the Response: five manager replies, call each one.</li><li>Run the drafting activity: managers draft their two sentences, staff draft their disclosure opener, pairs exchange, volunteers read to the room.</li><li>In the debrief, mention the structural counterweights from Go deeper: Kotter-style rollout, champion managers, first mover stories, release rate on scorecards.</li></ol></div><div class="facnote__blk"><span class="facnote__tag t-ask">Ask</span><p class="facnote__script">&ldquo;Managers, honestly: what makes the generous response hard in the actual moment, even when you believe in it?&rdquo;</p><p class="facnote__mini">Expect:</p><ul class="facnote__steps"><li>The immediate coverage problem: who does the work</li><li>It genuinely feels personal after years of investment</li><li>Fear of a cascade: one leaves and three follow</li></ul><p class="facnote__mini">Respond: Honor all three, then sort them: coverage has structure behind it (the handoff timeline and internal-first backfill). The personal sting is real, and it's exactly what the reframe retrains. The cascade fear inverts under the research: units that develop and release people attract internal talent; units that trap them create the exodus they feared.</p></div><div class="facnote__blk"><span class="facnote__tag t-deb">Debrief</span><p class="facnote__mini">Hoarding is incentives, so the fix is structure plus one practiced sentence: thank you for telling me. The guardrails hold the floor, the reframe raises the ceiling, and the backfill cascade pays the bill.</p></div><p class="facnote__meta"><b>Validate:</b> 4+ of 5 on the trainer; the room can distinguish hoarding (guilt, stalling) from guardrail violations (blocking, retaliation); every manager leaves with two drafted sentences.</p><p class="facnote__meta"><b>Watch for:</b> Two failure modes: manager shame (the research says incentives, so keep it structural and blame-free) and staff glee (the point is partnership, so pull it back to the backfill cascade: today's releasing manager is next month's hiring manager). If a real manager-staff pair sits together, don't force them to exchange drafts; let them choose.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;You now have the words. For the meeting where you'll need ammunition instead, here are the numbers.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: research and reframe in three minutes, both script cards read aloud, trainer stays in full (it IS the section), drafting shrinks to a solo two-minute write with one volunteer read-out.</p></aside>
+  </section>
+
+  <!-- ============ 8 · 05 THE EVIDENCE ============ -->
+  <section class="slide on-light" id="s-evidence" data-count data-title="The evidence">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Section 05 · The Evidence</p>
+      <h2 class="h2" data-reveal>The case, in <em>numbers</em>.</h2>
+      <p class="lead" data-reveal>This section is built to be borrowed: every claim is published, cited, and linked, ready for an executive briefing or a hallway debate. First, see how well your instincts match the research.</p>
+
+      <div class="quiz" id="statGuess" data-reveal style="margin-top:2rem">
+        <p class="eyebrow" style="margin-bottom:.5rem">Play · Guess the number</p>
+        <p class="why" style="margin-top:0"><b>Why this matters:</b> a number you guessed at and missed sticks far better than one you were shown. Five findings; call each before the reveal.</p>
+        <p class="quiz__progress" id="sgProgress"></p>
+        <p class="quiz__q" id="sgQ" style="margin-top:.4rem"></p>
+        <div class="quiz__options" id="sgOptions" role="group" aria-label="Number choices"></div>
+        <p class="quiz__feedback" id="sgFeedback" aria-live="polite"></p>
+        <div class="quiz__nav">
+          <button class="btn btn--dark" id="sgNext" style="visibility:hidden">Next finding</button>
+        </div>
+        <div id="sgResult" hidden aria-live="polite"></div>
+      </div>
+
+      <div class="stats">
+        <div class="card" data-reveal>
+          <span class="tag">Retention</span>
+          <p class="big">70% vs 45%</p>
+          <p class="muted">Odds of staying for employees promoted within three years of hire, versus those who never moved. Lateral moves land at 62%. <a href="https://www.shrm.org/topics-tools/news/talent-acquisition/study-internal-mobility-boosts-retention" target="_blank" rel="noopener">SHRM / LinkedIn, 32 million profiles</a>.</p>
+        </div>
+        <div class="card" data-reveal>
+          <span class="tag">Tenure</span>
+          <p class="big">5.4 vs 2.9 years</p>
+          <p class="muted">Average tenure at high-mobility organizations versus low. Internal movers are 40% more likely to stay three years or more. <a href="https://inop.ai/the-link-between-internal-mobility-and-employee-retention/" target="_blank" rel="noopener">Inop.ai benchmark synthesis</a>; <a href="https://www.beltcourse.com/blog/hiring-and-promotion-trends-2024-research-summary-emphasis-on-continuous-improvement" target="_blank" rel="noopener">LinkedIn Global Talent Trends 2024</a>.</p>
+        </div>
+        <div class="card" data-reveal>
+          <span class="tag">Engagement</span>
+          <p class="big">~60% higher</p>
+          <p class="muted">Engagement scores reported by employees after an internal move, plus a meta-analysis of 56 studies (N = 284,086) tying rotation to satisfaction, commitment, and lower burnout. <a href="https://inop.ai/the-link-between-internal-mobility-and-employee-retention/" target="_blank" rel="noopener">Inop.ai</a>; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8044787/" target="_blank" rel="noopener">Mlekus &amp; Maier</a>.</p>
+        </div>
+        <div class="card" data-reveal>
+          <span class="tag">Speed</span>
+          <p class="big">20 to 25% faster</p>
+          <p class="muted">How much sooner internal hires reach full competency; internal-first hiring also cuts time-to-hire by roughly 10 to 20 days. <a href="https://www.beltcourse.com/blog/hiring-and-promotion-trends-2024-research-summary-emphasis-on-continuous-improvement" target="_blank" rel="noopener">LinkedIn Workplace Learning Report</a>; <a href="https://joshbersin.com/internal-hiring-factbook/" target="_blank" rel="noopener">Bersin Factbook</a>.</p>
+        </div>
+        <div class="card" data-reveal>
+          <span class="tag">Cost</span>
+          <p class="big">Up to 3 to 5x</p>
+          <p class="muted">Full cost of hiring externally once time and lost productivity count; direct costs alone run 18 to 20% higher. <a href="https://joshbersin.com/internal-hiring-factbook/" target="_blank" rel="noopener">Bersin</a>; <a href="https://www.beltcourse.com/blog/hiring-and-promotion-trends-2024-research-summary-emphasis-on-continuous-improvement" target="_blank" rel="noopener">SHRM 2024 benchmarking</a>.</p>
+        </div>
+        <div class="card" data-reveal>
+          <span class="tag">Quality</span>
+          <p class="big">Internal &gt; external</p>
+          <p class="muted">Cornell ILR: internal hires outperform external hires and stay longer, and the best internal hires are the likeliest to remain. Rotation-heavy firms are also disproportionately the innovative ones. <a href="https://news.cornell.edu/stories/2021/01/ilr-study-tests-why-internal-hires-outperform-external-hires" target="_blank" rel="noopener">Cornell ILR</a>; <a href="https://media.economics.uconn.edu/working/1998-02.pdf" target="_blank" rel="noopener">Eriksson &amp; Ortega</a>.</p>
+        </div>
+      </div>
+
+      <div class="quiz" data-quiz data-reveal style="margin-top:2.5rem">
+        <p class="quiz__q">Quick check: These outcomes are real, and they still won't happen at Vanderbilt automatically. Which finding explains why?</p>
+        <div class="quiz__options">
+          <button class="opt" data-correct="1" data-why="Roughly 75% of managers self-report hoarding, and hoarding deters internal applications. The portal delivers only if the culture work in Section 04 counteracts that pull."><span class="mark">A</span><span>Most managers self-report talent hoarding, and hoarding deters internal applications</span></button>
+          <button class="opt" data-correct="0" data-why="Industry data points the other way: internal-hire rates have fallen to roughly 24% of all hires since 2020, so drift runs against mobility, never toward it."><span class="mark">B</span><span>Internal mobility rises on its own once the software launches</span></button>
+          <button class="opt" data-correct="0" data-why="Demand is real: employees keep telling researchers that career development drives their decision to stay. The bottleneck is the culture around managers, which is why Section 04 exists."><span class="mark">C</span><span>Staff mostly prefer to change employers rather than roles</span></button>
+        </div>
+        <p class="quiz__feedback" aria-live="polite"></p>
+      </div>
+
+      <details class="deeper" data-reveal>
+        <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg> Go deeper</summary>
+        <div class="deeper__body">
+          <div><h4>In practice</h4><p>The one-sentence pitch, ready for an executive: <em>"The Transfer Portal is Vanderbilt's staff-facing internal talent marketplace, a private, Oracle-powered experience where employees see internal opportunities first, signal interest safely, and compete for stretch work or new roles, while leaders see aggregated readiness and risk through Workforce Intelligence."</em> Two more numbers for the skeptic: 93% of employees stay longer at organizations that invest in their careers (<a href="https://www.beltcourse.com/blog/hiring-and-promotion-trends-2024-research-summary-emphasis-on-continuous-improvement" target="_blank" rel="noopener" style="text-decoration:underline">LinkedIn Workplace Learning Report</a>), and industry internal-hire rates have slumped to about 24% from a 2020 peak near 40% (<a href="https://www.weareams.com/news/internal-hiring-boosts-retention-and-saves-money-yet-has-slumped-post-pandemic-new-research-finds/" target="_blank" rel="noopener" style="text-decoration:underline">AMS</a>), which is the gap Vanderbilt gets to win in.</p></div>
+          <div class="deeper__ask"><h4><span class="mode">As a group</span> · 4 min</h4>
+          <p class="why"><b>Why this matters:</b> you retain what you can say out loud, with a source attached, under mild social pressure.</p>
+          <ol class="steps">
+            <li>Pairs: one of you is a skeptical department head with sixty seconds. The other makes the case for the portal using at least two cited numbers.</li>
+            <li>Swap roles with two different numbers.</li>
+            <li>Room debrief: which single statistic moved your skeptic most? Hands for retention, cost, speed, or the hoarding warning.</li>
+          </ol>
+          <p class="why" style="margin-top:.6rem"><b>Flying solo?</b> Write your own sixty-second version with the two numbers you'd actually use, and keep it where you can find it before your next leadership meeting.</p></div>
+        </div>
+      </details>
+    </div>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 11 min · Core 7</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Arm every learner with cited, linked research they can quote: retention, tenure, engagement, speed, cost, and the hoarding warning that makes the culture work non-optional.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Everything until now was mechanics and culture. This section is ammunition. Employees promoted within three years of hire: seventy percent chance of staying. Never moved: forty-five. High-mobility organizations keep people five point four years against two point nine. Internal hires reach full speed twenty to twenty-five percent faster, and external hiring can cost three to five times more all-in. Cornell found internal hires flat outperform external ones. Every one of those claims is linked on this slide to its source, so you can hand it to the most skeptical person you know. But start with the game; I want your instincts on record first.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Frame the section: built to be borrowed, every claim linked to its source.</li><li>Run Guess the Number: five findings, call each before the reveal. Room votes work as well as devices here.</li><li>Walk the six stat tiles briskly, one line each, pointing at the linked sources.</li><li>Run the quick check: why these outcomes aren't automatic (the hoarding finding).</li><li>Run the sixty-second pitch drill from Go deeper: skeptical department head, two cited numbers, swap.</li></ol></div><div class="facnote__blk"><span class="facnote__tag t-ask">Ask</span><p class="facnote__script">&ldquo;After the pitch drill: which single number moved your skeptic most, and why that one?&rdquo;</p><p class="facnote__mini">Expect:</p><ul class="facnote__steps"><li>The 3-to-5x cost figure, especially with budget owners</li><li>70 versus 45 retention, the cleanest story</li><li>The 75% hoarding stat, because it explains lived experience</li></ul><p class="facnote__mini">Respond: Point out the pattern in their answers: cost moves finance brains, retention moves operators, and the hoarding number moves anyone who has watched a great colleague leave. Matching the number to the listener IS the skill; they just practiced it.</p></div><div class="facnote__blk"><span class="facnote__tag t-deb">Debrief</span><p class="facnote__mini">Six converging bodies of research, one direction. And the warning label: none of it happens automatically, because hoarding is the default. That's why Section 04 was the long one.</p></div><p class="facnote__meta"><b>Validate:</b> 4+ of 5 on the trainer; in the debrief, learners can quote at least two numbers with their source without looking.</p><p class="facnote__meta"><b>Watch for:</b> A methodology skeptic litigating one study. Don't defend a single number; the case is convergence: retention, tenure, engagement, speed, cost, and quality all point one direction across independent sources. Park deep methodology questions with a promise to send the links.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;That's the whole case. Six questions to check it's loaded, then the card that turns it into a move.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: trainer as a fast room vote, tiles in one sweep, quick check stays, pitch drill becomes one volunteer pitching the room for sixty seconds.</p></aside>
+  </section>
+
+  <!-- ============ 9 · RECAP QUIZ ============ -->
+  <section class="slide on-cream" id="s-recap" data-title="Recap quiz">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Check your understanding</p>
+      <h2 class="h2" data-reveal style="margin-bottom:2rem">The <em>recap</em>.</h2>
+      <div class="quiz" id="recap" data-reveal>
+        <div id="recapPanel">
+          <p class="quiz__progress" id="recapProgress"></p>
+          <p class="quiz__q" id="recapQ" style="margin-top:.5rem"></p>
+          <div class="quiz__options" id="recapOptions" role="group" aria-label="Answer choices"></div>
+          <p class="quiz__feedback" id="recapFeedback" aria-live="polite"></p>
+          <div class="quiz__nav">
+            <button class="btn btn--dark" id="recapNext" style="visibility:hidden">Next question</button>
+          </div>
+        </div>
+        <div id="recapResult" hidden aria-live="polite"></div>
+      </div>
+    </div>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 5 min · Core 5</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Score the session's knowledge against the five objectives before the capstone applies it (Kirkpatrick Level 2).</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Six questions, one per big idea. This is the systems check before you write the card that leaves the room with you.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Everyone takes it on their own device, all six questions.</li><li>Ask for hands on 5-or-better; celebrate briefly.</li><li>For any question the room visibly missed, do a 30-second reteach from the relevant slide, not a lecture.</li></ol></div><p class="facnote__meta"><b>Validate:</b> Room mode at 5/6 or better. The quiz maps onto the objectives, so misses tell you exactly what to reteach.</p><p class="facnote__meta"><b>Watch for:</b> Racing. Frame it as a check before the commitment, not a race.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Now the only part of today that changes anything.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: keep at full length; this is the objectives' evidence.</p></aside>
+  </section>
+
+  <!-- ============ 10 · FIRST MOVE CARD (capstone) ============ -->
+  <section class="slide on-dark" id="s-plan" data-title="My first move">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Capstone · My first move card</p>
+      <h2 class="h2" data-reveal>One direction. One move. <em>One date.</em></h2>
+      <p class="lead" data-reveal>A portal nobody opens changes nothing. Name the direction you're curious about, pick your first concrete move inside the Transfer Portal, and put a date on it.</p>
+      <p class="why" data-reveal><b>Why this matters:</b> a named move with a date attached actually happens; "I should look into that sometime" never does. Nothing you type here is saved or sent anywhere.</p>
+
+      <div class="plan" id="movePlan" data-reveal>
+        <div class="plan__form">
+          <div class="plan__field">
+            <label for="planWho"><b>1 · Your direction.</b> What are you curious about or ready for at Vanderbilt? A role family, a skill, a unit, or for managers, a team member's growth.</label>
+            <input type="text" id="planWho" maxlength="140" placeholder="e.g. project coordination roles in research administration" autocomplete="off">
+          </div>
+          <div class="plan__field">
+            <span class="plan__label"><b>2 · Your first move.</b> The one thing you'll do in the portal this week.</span>
+            <div class="plan__chips" id="planPractice" role="group" aria-label="First move">
+              <button class="opt" data-practice="explore"><span>Update my skills profile and declare a Career of Interest</span></button>
+              <button class="opt" data-practice="gig"><span>Browse Gigs and save one that fits my Grow plan</span></button>
+              <button class="opt" data-practice="req"><span>Search open internal requisitions in my target area</span></button>
+              <button class="opt" data-practice="advisory"><span>Request an employee-consultant conversation</span></button>
+              <button class="opt" data-practice="coach"><span>Manager move: hold a "what's next for you here" conversation</span></button>
+            </div>
+          </div>
+          <div class="plan__field">
+            <span class="plan__label"><b>3 · What you will NOT do.</b> The honest failure mode you're retiring.</span>
+            <div class="plan__chips" id="planNot" role="group" aria-label="Failure mode to avoid">
+              <button class="opt" data-not="drift"><span>Wait to be discovered</span></button>
+              <button class="opt" data-not="inflate"><span>Inflate my skill ratings</span></button>
+              <button class="opt" data-not="stall"><span>Put the career conversation off again</span></button>
+              <button class="opt" data-not="hoard"><span>Manager mode: guilt or slow-walk a team member's move</span></button>
+            </div>
+          </div>
+          <div class="plan__field">
+            <span class="plan__label"><b>4 · When does the move happen?</b></span>
+            <div class="plan__chips" id="planWhen" role="group" aria-label="Commitment window">
+              <button class="opt" data-when="tomorrow"><span>Tomorrow</span></button>
+              <button class="opt" data-when="threedays"><span>Within 3 days</span></button>
+              <button class="opt" data-when="week"><span>Within 7 days</span></button>
+            </div>
+          </div>
+          <div class="lab__runrow">
+            <button class="btn" id="planBuild" disabled>Build my first move card</button>
+            <span class="quiz__progress" id="planStatus">Fill in all four parts</span>
+          </div>
+        </div>
+        <div class="lab__outcome" id="planOut" hidden aria-live="polite"></div>
+      </div>
+    </div>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 8 min · Core 6</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Convert the session into one dated action inside the actual portal: a direction, a first move, a named failure mode, and a date. The transfer artifact and the Level 3 seed.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;A portal nobody opens changes nothing, so here's the deal we're closing: name the direction you're honestly curious about, a role family, a skill, a unit, or if you lead people, a team member's growth. Pick your one first move: the profile and a Career of Interest, a saved Gig, a requisition search, an advisory request, or the career conversation with your team member. Then the honest field: the thing you will NOT do, because you know your own failure mode, whether that's waiting to be discovered or, for managers, slow-walking someone's move. And a date. A named move with a date happens. 'I should look into that sometime' never does.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Frame it: a portal nobody opens changes nothing. One direction, one move, one date.</li><li>Repeat the privacy norm before anyone types: nothing here is saved or sent.</li><li>Give quiet time; this is individual work. Circulate for stuck learners: the entrance they picked in Section 02 is the raw material.</li><li>Point managers at their own versions of the chips: the career conversation move and the hoarding failure mode.</li><li>Point at field 3, what you will NOT do, as the honest field: the failure mode is half the commitment.</li><li>Push the build moment, then the close-the-loop line: after the move, write one line about what you found; that line decides move two.</li></ol></div><div class="facnote__blk"><span class="facnote__tag t-ask">Ask</span><p class="facnote__script">&ldquo;What's most likely to make you skip your first move, and what's your plan for that obstacle?&rdquo;</p><p class="facnote__mini">Expect:</p><ul class="facnote__steps"><li>The week will swallow it; no urgency</li><li>Nervousness that exploring will be seen as disloyalty</li><li>Managers: the career conversation feels like inviting people to leave</li></ul><p class="facnote__mini">Respond: The busy week: 'that's why the date field exists; calendar it before you stand up.' The disloyalty fear: 'exploring is invisible by design; that was Section 01's whole point.' The manager fear: 'the research says the opposite: people who can talk about their future with you stay longer. Silence is what sends them to the external market.'</p></div><div class="facnote__blk"><span class="facnote__tag t-deb">Debrief</span><p class="facnote__mini">One field of the university is about to get a more honest version of your career data, and one move is on your calendar. That's how a marketplace starts: one profile at a time.</p></div><p class="facnote__meta"><b>Validate:</b> Every learner builds a card (all four fields). The card plus the 7-day pulse plus the 30-day re-poll is the evidence chain.</p><p class="facnote__meta"><b>Watch for:</b> Vague directions ('something better') get pushed to one role family, skill, or unit. Staff picking the manager chips or vice versa: gently reroute to the chair they actually sit in. And anyone racing through it: a card without honesty in field 3 is a poster.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Reference shelf in one breath, and then the send-off.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: protect the individual work; trim your framing to one minute. Never cut the capstone.</p></aside>
+  </section>
+
+  <!-- ============ 11 · GLOSSARY ============ -->
+  <section class="slide on-cream" id="s-glossary" data-title="Glossary">
+    <div class="wrap wrap-wide">
+      <p class="eyebrow" data-reveal>Reference · Flip to reveal</p>
+      <h2 class="h2" data-reveal style="margin-bottom:2rem">The <em>vocabulary</em>.</h2>
+      <div class="glossary">
+        <button class="flip" data-reveal aria-label="Transfer Portal, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Transfer Portal</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Vanderbilt's staff-facing front door for internal career movement, powered by Oracle. Private by default, competitive by design, owned by you.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Workforce Intelligence, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Workforce Intelligence</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>The leader-side view of the same data: aggregated, privacy-preserving, built for workforce planning rather than watching individuals.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Gig, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Gig</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>A short-term stretch assignment in another unit with defined scope and duration, held alongside your home role. Development, with no promise of a permanent move.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Careers of Interest, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Careers of Interest</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Your private declaration of the directions you're drawn to. Feeds tailored role and learning suggestions. Notifies no one.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Skills profile, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Skills Profile</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Your skills, tagged at honest levels. The matching engine runs on it, so it works exactly as well as the data you give it.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Grow, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Grow</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>The development planning tool: one to three goals tied to a role, skill, or stretch experience you want next.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Internal-first window, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Internal-First Window</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Every eligible open role posts internally for two weeks before it can post externally. Staff see opportunity first.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Requisition, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Requisition</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>An approved open role. The Move track starts when one posts, and internal candidates compete through the standard interview process.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Employee consultant, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Employee Consultant</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>An advisor you can request for confidential career conversations: clarifying direction, preparing to apply, navigating a reorg. Activates only when you ask.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Talent hoarding, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Talent Hoarding</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>Managers holding onto strong performers instead of releasing them to grow. About 75% self-report it, and it deters internal applications (Haegele, AER 2024).</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Release rate, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Release Rate</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>A leader metric that counts team members successfully launched into new internal roles as a win on the manager's record.</p></div></div></button>
+        <button class="flip" data-reveal aria-label="Backfill cascade, flip for definition"><div class="flip__inner"><div class="flip__face flip__front"><span class="hint">Term</span><h3>Backfill Cascade</h3></div><div class="flip__face flip__back"><span class="hint">Definition</span><p>When you move, your old role posts to the same portal, giving the releasing team the same internal-first look. One move becomes several opportunities.</p></div></div></button>
+      </div>
+    </div>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 1 min · Core skip</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Signpost the reference layer; it lives here for after the session.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Every term from today lives here as flip cards, including the one to keep handy for your next leadership meeting: talent hoarding, with the number attached.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Flip one card on the projector (Talent Hoarding is a good pick; it reteaches Section 04 in one line).</li><li>Tell them it's all here whenever they need the vocabulary back.</li></ol></div><p class="facnote__meta"><b>Validate:</b> None; reference material.</p><p class="facnote__meta"><b>Watch for:</b> Don't tour all twelve cards; one flip makes the point.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Last slide. One move left.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: skip; point at it verbally from the closing slide.</p></aside>
+  </section>
+
+  <!-- ============ 12 · CLOSING ============ -->
+  <section class="slide on-dark" id="s-close" data-title="Wrap-up">
+    <div class="wrap" style="text-align:center">
+      <img src="../assets/img/vu-centered-white.png" alt="Vanderbilt University" width="120" height="125" style="margin:0 auto 2rem;width:clamp(96px,10vw,130px);height:auto" data-reveal>
+      <h2 class="h2 gold-text" data-reveal style="max-width:20ch;margin-inline:auto">Now make the first <em>move</em>.</h2>
+      <p class="lead" data-reveal style="margin:1.25rem auto 0;color:rgba(255,255,255,.82)">You know what the portal is and what it guarantees, you found your entrance, you can walk both tracks, you have the words for the conversation that makes it all work, and you can cite the case to anyone. One card leaves this room with a date on it.</p>
+      <div class="vidcard vidcard--feature" data-reveal style="text-align:left;max-width:680px;margin:2.25rem auto 0;cursor:default">
+        <div class="vidcard__top"><span class="vidcard__src">Your one next step · This week</span><span class="vidcard__dur">Within 7 days</span></div>
+        <h3>The first move on your card, exactly as written</h3>
+        <p>Open the Transfer Portal and do the one thing you committed to: the profile update, the saved Gig, the requisition search, the advisory request, or the career conversation with your team member. Afterward, write one line about what you found; that line decides your second move.</p>
+      </div>
+      <p class="why" data-reveal style="margin:1.5rem auto 0;max-width:52ch;text-align:center"><b>Before you go:</b> say your move and your day out loud, or type it in the chat. Spoken commitments stick.</p>
+      <div class="hero__cta" data-reveal style="justify-content:center;margin-top:1.75rem">
+        <a class="btn" href="../cheatsheet.html" target="_blank" rel="noopener">Take the quick reference card</a>
+        <a class="btn btn--ghost" href="../worksheet.html" target="_blank" rel="noopener">Print the first move card</a>
+        <a class="btn btn--ghost" href="#s-recap">Retake the quiz</a>
+      </div>
+    </div>
+  <!-- ============ FOOTER ============ -->
+<footer class="footer" aria-labelledby="footHead">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <img src="../assets/img/vu-lockup-white.png" alt="Vanderbilt University" width="300" height="78" style="width:min(300px,80%);height:auto">
+        <p class="brandline" id="footHead">One Vanderbilt career. Many roles.</p>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="#s-what">What It Is</a></li>
+          <li><a href="#s-entrances">Six Entrances</a></li>
+          <li><a href="#s-process">The Process</a></li>
+          <li><a href="#s-culture">The Culture Shift</a></li>
+          <li><a href="#s-evidence">The Evidence</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Keep Learning</h4>
+        <ul>
+          <li><a href="#s-glossary">Glossary</a></li>
+          <li><a href="#s-recap">Knowledge Check</a></li>
+          <li><a href="#s-plan">My First Move Card</a></li>
+          <li><a href="#s-close">Your Next Step</a></li>
+          <li><a href="web/">Self-paced version</a></li>
+          <li><a href="https://me5231979.github.io/Course_Library/">Course Library</a></li>
+          <li><a href="#top">Start Over</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>© <span id="year">2026</span> Vanderbilt University. For classroom and self-paced learning.</span>
+      <span>Questions? <a href="mailto:chart@vanderbilt.edu" style="color:rgba(255,255,255,.7);text-decoration:underline">chart@vanderbilt.edu</a><!-- [EDIT] program contact --> · The Transfer Portal · Facilitator Edition · learner link: <a href="https://me5231979.github.io/TransferPortal-/" style="color:rgba(255,255,255,.7);text-decoration:underline">me5231979.github.io/TransferPortal-</a></span>
+    </div>
+  </div>
+</footer>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 4 min · Core 2</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Convert cards into spoken commitments, capture the Level 1 reaction check, and point at the follow-up chain.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;The whole session in one breath: the portal is private by default and competitive by design. Six doors, and one of them is yours. Two tracks: explore quietly, compete openly, hand off respectfully. The culture turns on one sentence: thank you for telling me. And the research is unanimous enough to say out loud in any meeting: talent that can move inside, stays inside. You have a card. Before you go: your move, and your day. Say it out loud; spoken commitments stick.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Read the featured card: the one next step is the first move from their card, in the actual portal, within 7 days.</li><li>Run the fist-to-five (Level 1): 'On a fist to five, how confident are you about making your move?' Scan and note the number for your session log; the 30-day re-poll asks it again.</li><li>Run the commitment round, popcorn style: move and day, out loud or in chat.</li><li>Point at the quick reference and first move card buttons.</li><li>Tell them the 7-day pulse is coming, close the open-questions loop ('written answers to that board within a week'), then land the last line and stop on time.</li></ol></div><div class="facnote__blk"><span class="facnote__tag t-ask">Ask</span><p class="facnote__script">&ldquo;Around the room, one line each: your move, and your day.&rdquo;</p><p class="facnote__mini">Expect:</p><ul class="facnote__steps"><li>'Profile and a Career of Interest, tomorrow'</li><li>'Requisition search in research admin, Thursday'</li><li>A manager commits to a career conversation by Friday</li></ul><p class="facnote__mini">Respond: Thank each one, no commentary. For the manager commitments, one warm addition: 'Your team member will remember that conversation longer than you will. That's the program launching, right there.'</p></div><div class="facnote__blk"><span class="facnote__tag t-deb">Debrief</span><p class="facnote__mini">The session's success metric isn't in this room; it's the 7-day pulse: how many first moves actually ran, and what people found on the other side of the door.</p></div><p class="facnote__meta"><b>Validate:</b> Fist-to-five mostly 3+ (Level 1); a majority state a move-and-day out loud or in chat. Count both; with the pulse and the 30-day re-poll, that's your evidence chain.</p><p class="facnote__meta"><b>Watch for:</b> Cards that quietly skipped the date. The commitment round catches them: no day, no commitment; help them pick one on the spot.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Go make the move. And when you find something interesting in there, tell a colleague where the door is. Marketplaces run on word of mouth.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: fist-to-five plus a fast commitment round; the ending survives every cut.</p></aside>
+  </section>
+
+</main>
+
+
+
+<script src="../assets/js/qrcode.js?v=1"></script>
+<script src="../assets/js/main.js?v=1"></script>
+
+<script>
+(function () {
+  var KEY = 'facScriptHidden';
+  var show = document.createElement('button');
+  show.className = 'facshow'; show.type = 'button';
+  show.textContent = 'Show facilitator script';
+  document.body.appendChild(show);
+  function set(h) {
+    document.body.classList.toggle('fac-hide', h);
+    try { localStorage.setItem(KEY, h ? '1' : '0'); } catch (e) {}
+  }
+  document.addEventListener('click', function (e) {
+    if (e.target.closest && e.target.closest('.facnote__hide')) set(true);
+  });
+  show.addEventListener('click', function () { set(false); });
+  try { if (localStorage.getItem(KEY) === '1') set(true); } catch (e) {}
+})();
+</script>
+</body>
+</html>

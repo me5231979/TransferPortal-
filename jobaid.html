@@ -38,6 +38,12 @@
   .move .where { margin-top: 4px; font-size: 12px; color: #555; }
   b { font-weight: 600; }
   .note { margin-top: 14px; font-size: 11.5px; color: #666; border-left: 2px solid #CFAE70; padding-left: 10px; }
+  .shot { margin: 8px 0 0; }
+  .shot img { width: 100%; max-width: 500px; border: 1px solid #E4E4E4; border-radius: 4px; display: block; }
+  .shot figcaption { font-family: 'Antonio', Impact, sans-serif; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .06em; font-size: 9px; color: #946E24; margin-top: 4px; }
+  figure.shot { margin: 8px 0 0; break-inside: avoid; }
+  @media print { .shot img { max-width: 420px; } }
   footer { margin-top: 16px; border-top: 1px solid #E4E4E4; padding-top: 10px; font-size: 11px; color: #777;
     display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
   a { color: #946E24; }
@@ -67,15 +73,15 @@
     <span class="num">1</span>
     <div>
       <h2>The growth conversation</h2>
-      <p>Talk with your manager about your growth. Managers: hold that conversation with a team member.</p>
+      <p>Have a conversation with your manager about your growth and development. Managers: hold that conversation with a team member.</p>
     </div>
   </div>
   <div class="move">
     <span class="num">2</span>
     <div>
-      <h2>The Transfer Portal</h2>
+      <h2>The Transfer Portal Tool</h2>
       <p>Map your skills and build a growth plan. Managers: evaluate the skills across your team.</p>
-      <p class="where">Open the <a href="https://vanderbilttalentcompass.vercel.app/">Transfer Portal</a>.</p>
+      <p class="where">Open the <a href="https://vanderbilttalentcompass.vercel.app/">Transfer Portal Tool</a>.</p>
     </div>
   </div>
   <div class="move">
@@ -84,6 +90,7 @@
       <h2>Career Preferences</h2>
       <p>In your Oracle Talent Profile: next career move, preferred function and family, aspirations in the comments.</p>
       <p class="where">Open your <a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/faces/deeplink?objType=NFX_VIEW_MY_SKILLS_AND_QUAL_VB&action=NONE">Talent Profile</a> (Oracle lists it as Skills and Qualifications).</p>
+      <figure class="shot"><img src="assets/img/oracle-career-preferences.png" alt="Oracle Career Preferences screen with Next Career Move, Preferred Job Function, Preferred Job Family, and a comments box"><figcaption>Oracle · Talent Profile · Career Preferences</figcaption></figure>
     </div>
   </div>
   <div class="move">
@@ -92,6 +99,7 @@
       <h2>Skills</h2>
       <p>Both lists, Skills I have and Skills I'm developing, honestly leveled. The matching runs on this data.</p>
       <p class="where">Open the <a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/redwood/profiles/skills/skillscenter?navigateBack=true">Skills Center</a>.</p>
+      <figure class="shot"><img src="assets/img/oracle-skills.png" alt="Oracle skills screen showing Skills I'm developing and Skills I have with endorsement counts"><figcaption>Oracle · Talent Profile · Skills</figcaption></figure>
     </div>
   </div>
   <div class="move">
@@ -100,6 +108,7 @@
       <h2>Careers of Interest</h2>
       <p>In the Grow area, flag the roles that interest you, then browse the Opportunity Marketplace with Opportunity set to Career Roles: careers show with or without an open requisition.</p>
       <p class="where">Browse the <a href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/redwood/internalmobility/opportunitymarketplace/search">Opportunity Marketplace</a>.</p>
+      <figure class="shot"><img src="assets/img/oracle-marketplace.png" alt="Oracle Opportunity Marketplace showing career role cards with job openings and an Update Interests button"><figcaption>Oracle · Grow · Opportunity Marketplace</figcaption></figure>
     </div>
   </div>
 

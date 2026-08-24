@@ -1,6 +1,16 @@
 name: Fetch hero video clips
 on:
   workflow_dispatch:
+    inputs:
+      url1:
+        description: Signed URL for hero-conversation.mp4
+        required: true
+      url2:
+        description: Signed URL for hero-collaboration.mp4
+        required: true
+      url3:
+        description: Signed URL for hero-mentorship.mp4
+        required: true
 permissions:
   contents: write
 jobs:
@@ -18,9 +28,9 @@ jobs:
           curl -fL -o assets/video/hero-mentorship.mp4 "$URL3"
           ls -la assets/video
         env:
-          URL1: ${{ vars.HERO_URL1 || inputs.url1 || 'PLACEHOLDER1' }}
-          URL2: ${{ vars.HERO_URL2 || inputs.url2 || 'PLACEHOLDER2' }}
-          URL3: ${{ vars.HERO_URL3 || inputs.url3 || 'PLACEHOLDER3' }}
+          URL1: ${{ inputs.url1 }}
+          URL2: ${{ inputs.url2 }}
+          URL3: ${{ inputs.url3 }}
       - name: Commit and push to main and gh-pages
         run: |
           git config user.name "github-actions[bot]"

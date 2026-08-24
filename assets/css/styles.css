@@ -251,8 +251,10 @@ em, .italic { font-style: italic; }
 .hero { text-align: left; }
 .hero__video {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
-  z-index: 0; opacity: .38; filter: grayscale(1) sepia(.35) hue-rotate(-8deg) saturate(1.4) brightness(.8);
+  z-index: 0; opacity: 0; transition: opacity 1.5s ease;
+  filter: grayscale(1) sepia(.35) hue-rotate(-8deg) saturate(1.4) brightness(.8);
 }
+.hero__video.on { opacity: .38; }
 .hero__scrim {
   position: absolute; inset: 0; z-index: 0;
   background: linear-gradient(105deg, rgba(28,28,28,.92) 0%, rgba(28,28,28,.55) 55%, rgba(28,28,28,.75) 100%);

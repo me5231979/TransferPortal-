@@ -93,12 +93,11 @@
     }
   }
 
-  /* ---------- Hero video: 3-clip montage with graceful fallback ---------- */
+  /* ---------- Hero video: crossfading half-speed montage ---------- */
   var heroVideo = $('#heroVideo');
   if (heroVideo) {
-    var killVideo = function () { if (heroVideo) { heroVideo.remove(); heroVideo = null; } };
     if (reduce) {
-      killVideo();
+      heroVideo.remove(); heroVideo = null;
     } else {
       var playlist = [];
       try { playlist = JSON.parse(heroVideo.getAttribute('data-playlist') || '[]'); } catch (e) {}
@@ -113,23 +112,57 @@
         return /^https?:/.test(u) ? u : vprefix + u;
       });
       if (!playlist.length) {
-        killVideo();
+        heroVideo.remove(); heroVideo = null;
       } else {
-        var clip = 0, failures = 0;
-        var playClip = function (i) {
-          if (!heroVideo) return;
-          clip = ((i % playlist.length) + playlist.length) % playlist.length;
-          heroVideo.src = playlist[clip];
-          var p = heroVideo.play && heroVideo.play();
-          if (p && p.catch) p.catch(function () { /* autoplay blocked; canvas remains */ });
+        var RATE = 0.5;   // each clip runs at half speed
+        var FADE_S = 1.5; // crossfade length in wall-clock seconds (matches the CSS transition)
+        var twin = heroVideo.cloneNode(false);
+        twin.removeAttribute('id');
+        twin.removeAttribute('data-playlist');
+        twin.muted = true;
+        heroVideo.parentNode.insertBefore(twin, heroVideo.nextSibling);
+        var vids = [heroVideo, twin];
+        var active = 0, clip = 0, failures = 0, switching = false, dead = false;
+        var killMontage = function () {
+          dead = true;
+          vids.forEach(function (v) { if (v.parentNode) v.parentNode.removeChild(v); });
         };
-        heroVideo.addEventListener('ended', function () { failures = 0; playClip(clip + 1); });
-        heroVideo.addEventListener('error', function () {
-          failures++;
-          if (failures >= playlist.length) { killVideo(); }
-          else { playClip(clip + 1); }
+        var startOn = function (slot, idx) {
+          if (dead) return;
+          clip = ((idx % playlist.length) + playlist.length) % playlist.length;
+          var v = vids[slot];
+          v.src = playlist[clip];
+          v.playbackRate = RATE;
+          var p = v.play && v.play();
+          if (p && p.catch) p.catch(function () { /* autoplay blocked; canvas remains */ });
+          active = slot;
+          switching = false;
+          // toggling .on drives the CSS opacity transition: new clip fades in
+          // over the old one, which keeps playing underneath until paused
+          vids.forEach(function (x, i) { x.classList.toggle('on', i === slot); });
+        };
+        vids.forEach(function (v, slot) {
+          v.addEventListener('loadedmetadata', function () { v.playbackRate = RATE; });
+          v.addEventListener('timeupdate', function () {
+            if (dead || slot !== active || switching || !v.duration) return;
+            // start the crossfade FADE_S wall-clock seconds before the clip ends
+            if (v.duration - v.currentTime <= FADE_S * RATE) {
+              switching = true;
+              failures = 0;
+              startOn(1 - slot, clip + 1);
+              setTimeout(function () { if (!dead) v.pause(); }, FADE_S * 1000 + 150);
+            }
+          });
+          v.addEventListener('ended', function () {
+            if (!dead && slot === active && !switching) { switching = true; startOn(1 - slot, clip + 1); }
+          });
+          v.addEventListener('error', function () {
+            failures++;
+            if (failures >= playlist.length * 2) { killMontage(); }
+            else if (slot === active && !dead) { startOn(1 - slot, clip + 1); }
+          });
         });
-        playClip(0);
+        startOn(0, 0);
       }
     }
   }

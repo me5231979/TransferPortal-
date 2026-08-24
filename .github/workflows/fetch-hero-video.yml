@@ -1,20 +1,13 @@
 name: Fetch hero video clips
 on:
-  workflow_dispatch:
-    inputs:
-      url1:
-        description: Signed URL for hero-conversation.mp4
-        required: true
-      url2:
-        description: Signed URL for hero-collaboration.mp4
-        required: true
-      url3:
-        description: Signed URL for hero-mentorship.mp4
-        required: true
+  push:
+    branches: [main]
+    paths: ['.github/hero-video-urls.json']
 permissions:
   contents: write
 jobs:
   fetch:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,19 +16,16 @@ jobs:
       - name: Download clips from Runway
         run: |
           mkdir -p assets/video
-          curl -fL -o assets/video/hero-conversation.mp4 "$URL1"
-          curl -fL -o assets/video/hero-collaboration.mp4 "$URL2"
-          curl -fL -o assets/video/hero-mentorship.mp4 "$URL3"
+          curl -fL -o assets/video/hero-conversation.mp4 "$(jq -r '.url1' .github/hero-video-urls.json)"
+          curl -fL -o assets/video/hero-collaboration.mp4 "$(jq -r '.url2' .github/hero-video-urls.json)"
+          curl -fL -o assets/video/hero-mentorship.mp4 "$(jq -r '.url3' .github/hero-video-urls.json)"
           ls -la assets/video
-        env:
-          URL1: ${{ inputs.url1 }}
-          URL2: ${{ inputs.url2 }}
-          URL3: ${{ inputs.url3 }}
       - name: Commit and push to main and gh-pages
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add assets/video
+          git rm -q .github/hero-video-urls.json
           git commit -m "Add hero montage video clips"
           git push origin HEAD:main
           git push -f origin HEAD:gh-pages

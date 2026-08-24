@@ -17,7 +17,10 @@ catalog at me5231979/Course_Library. Same engine, same standing principles.
    interest declarations, and the course itself mirrors it: the capstone and
    all typed input stay on-screen, saved nowhere, and learner-visible copy
    SAYS so. Never add telemetry, storage, or sharing.
-3. **Never contradict the program facts:** the program rests on three
+3. **Never contradict the program facts:** NAMING: the HR program is
+   "the Talent Transfer Portal"; the companion skills site at
+   vanderbilttalentcompass.vercel.app is "the Talent Transfer Portal
+   Tool"; repo URLs (TransferPortal-) never change; the program rests on three
    connected pieces (an ongoing growth conversation with your manager,
    recommended never required; a private skill map the staff member owns;
    Oracle as the operating layer for learning, declarations, Gigs, and

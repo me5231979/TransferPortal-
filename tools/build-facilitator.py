@@ -23,8 +23,8 @@ s = s.replace('href="cheatsheet.html"', 'href="../cheatsheet.html"')
 s = s.replace('href="worksheet.html"', 'href="../worksheet.html"')
 
 # ---- 2. head: title, noindex, no canonical/og confusion ----
-s = s.replace('<title>The Transfer Portal | Vanderbilt</title>',
-              '<title>The Transfer Portal · Facilitator Edition | Vanderbilt</title>')
+s = s.replace('<title>The Talent Transfer Portal | Vanderbilt</title>',
+              '<title>The Talent Transfer Portal · Facilitator Edition | Vanderbilt</title>')
 s = re.sub(r'<link rel="canonical"[^>]*>\n', '', s)
 s = s.replace('<meta name="viewport"', '<meta name="robots" content="noindex">\n<meta name="viewport"')
 
@@ -237,8 +237,8 @@ FAC_JS = """
 s = s.replace('</body>', FAC_JS + '</body>')
 
 # ---- 7. footer marker ----
-s = s.replace('The Transfer Portal · A Vanderbilt learning experience',
-              'The Transfer Portal · Facilitator Edition · learner link: <a href="' + LEARNER_URL + '" style="color:rgba(255,255,255,.7);text-decoration:underline">me5231979.github.io/TransferPortal-</a>')
+s = s.replace('The Talent Transfer Portal · A Vanderbilt learning experience',
+              'The Talent Transfer Portal · Facilitator Edition · learner link: <a href="' + LEARNER_URL + '" style="color:rgba(255,255,255,.7);text-decoration:underline">me5231979.github.io/TransferPortal-</a>')
 
 out = os.path.join(ROOT, 'facilitator', 'index.html')
 open(out, 'w').write(s)

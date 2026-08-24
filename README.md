@@ -1,4 +1,4 @@
-# The Transfer Portal · Vanderbilt Learning Series
+# The Talent Transfer Portal · Vanderbilt Learning Series
 
 An interactive training for Vanderbilt staff and managers on **the Transfer
 Portal**, Vanderbilt's staff-facing internal talent mobility experience
@@ -62,5 +62,5 @@ git branch -f gh-pages main && git push -f origin gh-pages
 Sister programs: AI Basics, AI 201, Difficult Conversations, Coaching for
 Performance, Emotional Intelligence. Same engine, same FLH brand system.
 
-Source material: "The Transfer Portal: A Training Guide for Staff and
+Source material: "The Talent Transfer Portal: A Training Guide for Staff and
 Managers," Vanderbilt University People, Culture and Belonging.

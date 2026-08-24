@@ -1,4 +1,4 @@
-# Facilitating The Transfer Portal
+# Facilitating The Talent Transfer Portal
 
 The full ATD runbook lives in the facilitator edition
 (https://me5231979.github.io/TransferPortal-/facilitator/), generated from
@@ -36,6 +36,6 @@ privately.
 ## Before you teach
 
 Run both editions end to end, build your own first move card, and confirm
-the live state of the actual Transfer Portal rollout with People, Culture
+the live state of the actual Talent Transfer Portal rollout with People, Culture
 and Belonging so you can answer "when" and "who do I call" without
 guessing.

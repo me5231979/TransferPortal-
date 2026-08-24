@@ -359,7 +359,7 @@
       });
     });
     var PRACTICE = {
-      explore: { name: 'Profile and interests', move: 'Open the Transfer Portal, tag your skills at their honest levels, and declare at least one Career of Interest. Private to you; the suggestions start from there.' },
+      explore: { name: 'Profile and interests', move: 'Open the Talent Transfer Portal, tag your skills at their honest levels, and declare at least one Career of Interest. Private to you; the suggestions start from there.' },
       gig: { name: 'The Gig warm-up', move: 'Set one Grow goal around a stretch skill now, so the day Gigs launch you can search the postings and save the one that fits it.' },
       req: { name: 'The requisition search', move: 'Search open internal requisitions in your target area, save the closest match, and read its requirements against your profile. Gaps become Grow goals.' },
       advisory: { name: 'The advisory conversation', move: 'Request an employee-consultant conversation and bring one honest question about your direction. It stays confidential, and nothing happens without your consent.' },
@@ -390,7 +390,7 @@
         '<span class="quiz__progress" id="planCopied" style="color:rgba(255,255,255,.6)">Put the move on your calendar now</span></div>';
       outEl2.hidden = false;
       $('#planCopy').addEventListener('click', function () {
-        var text = 'MY FIRST MOVE CARD (The Transfer Portal, Vanderbilt)\n' +
+        var text = 'MY FIRST MOVE CARD (The Talent Transfer Portal, Vanderbilt)\n' +
           'Direction: ' + who + '\n' +
           'First move: ' + p.name + '. ' + p.move + '\n' +
           'I will NOT: ' + NOT[pick.not] + '\n' +
@@ -411,7 +411,7 @@
   var recap = $('#recap');
   if (recap) {
     var QUESTIONS = [
-      { q: 'The Transfer Portal is best described as…',
+      { q: 'The Talent Transfer Portal is best described as…',
         opts: ['A guaranteed promotion pipeline for tenured staff', 'A competitive internal marketplace, staff-owned and private by default', 'An HR-run reassignment engine', 'A public listing of who wants to leave their team'],
         correct: 1, why: 'A marketplace you own: private by default, competitive by design, with support that activates only when you ask.' },
       { q: 'You declare a Career of Interest on Tuesday. Your manager…',

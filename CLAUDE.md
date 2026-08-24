@@ -1,4 +1,4 @@
-# The Transfer Portal — Vanderbilt Learning Series
+# The Talent Transfer Portal — Vanderbilt Learning Series
 
 Single-page interactive classroom experience (Learning on Demand). Live at
 https://me5231979.github.io/TransferPortal-/ (GitHub Pages, `gh-pages`
@@ -51,7 +51,7 @@ data-count so teaching sections stay 01-05) →
 03 The process, two tracks (Call the Next Move) → 04 The culture shift
 (Judge the Response) → 05 The evidence (Guess the Number + stat tiles) →
 Recap quiz → Job aid: five moves with Oracle screenshots, deep links,
-and the Transfer Portal link (the interactive First Move Card was
+and the Talent Transfer Portal link (the interactive First Move Card was
 retired: the course educates, it does not plan a move) → Closing.
 
 Deliberately no agenda, manifesto, or glossary slides; the deck was
@@ -72,5 +72,5 @@ developing), Grow (Careers of Interest), Opportunity Marketplace.
 - Runbook: `facilitator/notes.json` (timing must sum: Full 15 / Core 10)
 - Printables: `cheatsheet.html` (quick reference); `worksheet.html` is
   retired and no longer linked
-- Source doc: "The Transfer Portal: A Training Guide for Staff and
+- Source doc: "The Talent Transfer Portal: A Training Guide for Staff and
   Managers," VU People, Culture and Belonging, v1.0 August 2026.

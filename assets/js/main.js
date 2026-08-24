@@ -93,6 +93,47 @@
     }
   }
 
+  /* ---------- Hero video: 3-clip montage with graceful fallback ---------- */
+  var heroVideo = $('#heroVideo');
+  if (heroVideo) {
+    var killVideo = function () { if (heroVideo) { heroVideo.remove(); heroVideo = null; } };
+    if (reduce) {
+      killVideo();
+    } else {
+      var playlist = [];
+      try { playlist = JSON.parse(heroVideo.getAttribute('data-playlist') || '[]'); } catch (e) {}
+      // resolve relative clip paths against the same prefix the build scripts
+      // apply to asset URLs (the nav lockup src carries it: '' or '../')
+      var lockup = $('.nav__lockup');
+      var vprefix = '';
+      if (lockup) {
+        vprefix = (lockup.getAttribute('src') || '').replace('assets/img/vu-lockup-white.png', '');
+      }
+      playlist = playlist.map(function (u) {
+        return /^https?:/.test(u) ? u : vprefix + u;
+      });
+      if (!playlist.length) {
+        killVideo();
+      } else {
+        var clip = 0, failures = 0;
+        var playClip = function (i) {
+          if (!heroVideo) return;
+          clip = ((i % playlist.length) + playlist.length) % playlist.length;
+          heroVideo.src = playlist[clip];
+          var p = heroVideo.play && heroVideo.play();
+          if (p && p.catch) p.catch(function () { /* autoplay blocked; canvas remains */ });
+        };
+        heroVideo.addEventListener('ended', function () { failures = 0; playClip(clip + 1); });
+        heroVideo.addEventListener('error', function () {
+          failures++;
+          if (failures >= playlist.length) { killVideo(); }
+          else { playClip(clip + 1); }
+        });
+        playClip(0);
+      }
+    }
+  }
+
   /* ---------- Hero ambient particles ---------- */
   var canvas = $('.hero__canvas');
   if (canvas && !reduce && !isTouch) {

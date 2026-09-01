@@ -52,6 +52,20 @@ python3 tools/build-facilitator.py
 Regenerate both after any change to `index.html` or `notes.json`, and
 re-shoot `facilitator/img/*.jpg` after any visual change.
 
+## SCORM package (Oracle Learning)
+
+`talent-transfer-portal-scorm12.zip` at the repo root is a SCORM 1.2
+package of the self-paced edition, rebuilt with:
+
+```
+python3 tools/build-web.py && python3 tools/build-scorm.py
+```
+
+It reports completion (reaching the closing page) and the recap quiz
+score to the LMS via `assets/js/scorm.js`, which is injected only into
+the packaged copy. Upload the zip in Oracle Learning as SCORM content
+and attach it to a course offering.
+
 ## Publishing
 
 ```

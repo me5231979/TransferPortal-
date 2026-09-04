@@ -290,15 +290,15 @@
     labels: ['Fact', 'Fiction'],
     items: [
       { q: '"The moment you declare a Career of Interest, your manager gets a notification."',
-        answer: 1, why: 'Fiction, and it is the load-bearing guarantee: declarations are silent by default. You decide when to disclose.' },
+        answer: 1, why: 'Fiction, and this is the core promise: showing interest alerts no one. You decide when to tell.' },
       { q: '"Eligible open roles post internally for five business days before they can post externally."',
-        answer: 0, why: 'Fact. The internal-first window is the structural advantage staff get: you see opportunity before the outside world does.' },
+        answer: 0, why: 'Fact. That head start is the staff advantage: you see openings before the outside world does.' },
       { q: '"A Gig is basically a trial run; do well and the permanent transfer follows."',
-        answer: 1, why: 'Fiction. A Gig is development with a defined scope and duration. It builds skills and relationships, and a permanent move still runs through a competitive requisition.' },
+        answer: 1, why: 'Fiction. A Gig is a short project that builds skills and relationships. A real move still goes through an open job posting.' },
       { q: '"Advisory support starts only when you request it, and nothing you share triggers action without your consent."',
-        answer: 0, why: 'Fact. The employee-consultant conversation is initiated by you and stays advisory. Nobody gets reassigned by surprise.' },
+        answer: 0, why: 'Fact. You start the advisor conversation, and it stays advice. Nobody gets moved by surprise.' },
       { q: '"Applying internally means the job is basically yours; internal candidates are guaranteed the role."',
-        answer: 1, why: 'Fiction. It is a competitive marketplace: the window gives you first look, and the interview is still yours to win. Internal application never equals internal entitlement.' }
+        answer: 1, why: 'Fiction. The window gives you the first look, and the interview is still yours to win. Applying from inside never means the job is yours.' }
     ]
   });
 
@@ -313,15 +313,15 @@
     labels: ['A · Explorer', 'B · New challenge', 'C · Unused skills', 'D · Post-reorg', 'E · At risk', 'F · Direct applicant'],
     items: [
       { q: 'Fifteen years in, excellent reviews, and lately the work runs on autopilot. They love their team and have no wish to abandon it; they just miss being stretched.',
-        answer: 1, why: 'Entrance B. A Gig gives them a stretch assignment in another unit while they keep their home role, and Careers of Interest starts mapping what a bigger next chapter could be.' },
+        answer: 1, why: 'Entrance B. A Gig gives them a stretch project in another unit while they keep their home role, and Careers of Interest starts mapping what could come next.' },
       { q: 'Hired as a financial analyst, they have quietly become the unit\'s data visualization expert, and the current role has no room for that work.',
-        answer: 2, why: 'Entrance C. Tagging the real skills at their true level is the move; the portal then surfaces roles and Gigs that actually need them.' },
+        answer: 2, why: 'Entrance C. Tag the real skills at their true level; the portal then shows roles and Gigs that need them.' },
       { q: 'Their division just merged with another. New manager, new mission, and half their duties moved to a different team in the space of a month.',
-        answer: 3, why: 'Entrance D. An employee-consultant conversation helps them sort out what they want next, and then they apply competitively to roles that fit. The advisory is theirs to start.' },
+        answer: 3, why: 'Entrance D. An advisor conversation helps them figure out what they want next; then they apply to roles that fit. The talk is theirs to start.' },
       { q: 'They keep wondering what else exists at Vanderbilt, and they would be mortified if anyone concluded they were leaving.',
-        answer: 0, why: 'Entrance A. Careers of Interest plus a skills profile, browsed and declared privately. Their manager is not notified; the wondering gets an outlet with zero exposure.' },
+        answer: 0, why: 'Entrance A. Careers of Interest plus a skills profile, browsed privately. Their manager is not alerted; the wondering gets a safe outlet.' },
       { q: 'A posting just went up in another school that matches their skills exactly, and they are ready today.',
-        answer: 5, why: 'Entrance F. Straight to the requisition during the internal-first window: apply, interview competitively, and if selected, transition through a coordinated handoff.' }
+        answer: 5, why: 'Entrance F. Straight to the posting during the staff-first window: apply, interview, and if chosen, move with a planned handoff.' }
     ]
   });
 
@@ -336,20 +336,20 @@
     labels: [],
     items: [
       { q: 'You just tagged your skills and declared two Careers of Interest. What appears on your manager\'s screen?',
-        opts: ['Nothing; declarations are private and roll up only in aggregate', 'A notification that day', 'A meeting request from HR'],
-        answer: 0, why: 'Nothing. Interest and profile data stay private to you, reaching People, Culture and Belonging only as anonymous aggregate. Disclosure happens when you choose it.' },
+        opts: ['Nothing; your interest is private and only counted in group totals', 'An alert that day', 'A meeting request from HR'],
+        answer: 0, why: 'Nothing. Your interest and profile stay private, reaching People, Culture and Belonging only as group totals. You choose when to tell.' },
       { q: 'You finish a Gig in another unit and loved every minute. What did the Gig earn you?',
-        opts: ['A permanent transfer to that team within the year', 'First refusal on their next opening', 'The development itself: skills, relationships, and evidence, with any move still running through a competitive requisition'],
-        answer: 2, why: 'The Gig is the development. What you carry out of it, new skills, a network, and proof you can do the work, makes you a stronger candidate when a real requisition opens.' },
+        opts: ['A permanent transfer to that team within the year', 'First refusal on their next opening', 'The growth itself: skills, relationships, and proof, with any move still going through an open job posting'],
+        answer: 2, why: 'The Gig is the growth. What you carry out of it, new skills, a network, and proof you can do the work, makes you a stronger candidate when a real job posts.' },
       { q: 'A role you want just posted internally. When can external candidates enter the race?',
-        opts: ['Immediately, alongside you', 'After the five-business-day internal-first window', 'Whenever the hiring manager chooses'],
-        answer: 1, why: 'Five business days. That window is the internal advantage: eligible roles face internal candidates first, and any overlap period still runs one consistent interview process.' },
+        opts: ['Immediately, alongside you', 'After the five-business-day staff-first window', 'Whenever the hiring manager chooses'],
+        answer: 1, why: 'Five business days. That window is the staff advantage: Vanderbilt candidates get the first look, then everyone goes through the same fair interview process.' },
       { q: 'You interviewed and got the role. What happens between the offer and your first day?',
         opts: ['You start Monday and your old team improvises', 'HR and both managers coordinate a planned handoff, typically two to four weeks', 'You split time between both jobs for a quarter'],
-        answer: 1, why: 'A coordinated, respectful handoff, usually two to four weeks depending on role complexity. The releasing manager is a partner in the plan, never an obstacle to it.' },
+        answer: 1, why: 'A planned, respectful handoff, usually two to four weeks. The manager you leave is a partner in the plan, never a roadblock.' },
       { q: 'You have moved. What happens to the role you left behind?',
-        opts: ['It posts to the same portal, giving the releasing team the same internal-first look you just used', 'It is absorbed and disappears', 'It goes straight to external posting to speed things up'],
-        answer: 0, why: 'The backfill cascade: your old role opens internally first, so one move becomes the next person\'s opportunity.' }
+        opts: ['It posts to the same portal, giving your old team the same first look you just used', 'It is absorbed and disappears', 'It goes straight to outside posting to speed things up'],
+        answer: 0, why: 'Your old job posts to staff first, so one move becomes the next person\'s opportunity.' }
     ]
   });
 
@@ -360,47 +360,19 @@
     progressWord: 'Response', goodColor: 'var(--vu-gold-flat)',
     resultColor: 'rgba(255,255,255,.85)', passAt: 4,
     passMsg: 'You can hear the difference between developing talent and defending territory. That ear is the culture shift.',
-    failMsg: 'Close. The tells: the culture-building response thanks first and coaches forward. Hoarding guilts or stalls. A guardrail breaks the moment anyone blocks, punishes, or surveils.',
+    failMsg: 'Close. The tells: the good response thanks first and coaches forward. Hoarding guilts or stalls. A guardrail breaks the moment anyone blocks, punishes, or spies.',
     labels: ['Builds the culture', 'Talent hoarding', 'Crosses a guardrail'],
     items: [
       { q: '"Thank you for telling me. What drew you to it? And whatever happens, let\'s make sure the next step in your development here is real."',
-        answer: 0, why: 'The model response, whole: gratitude first, curiosity second, development regardless of outcome. This is the sixty seconds the program depends on.' },
+        answer: 0, why: 'The model response: thanks first, curiosity second, growth either way. This is the minute the program depends on.' },
       { q: '"After everything I\'ve invested in you? I have to say, the timing feels a little disloyal."',
-        answer: 1, why: 'The guilt lever is textbook hoarding: it deters internal applications and pushes people to the external market instead.' },
+        answer: 1, why: 'The guilt trip is textbook hoarding: it stops people from applying inside and pushes them to other employers instead.' },
       { q: '"I hear you. Honestly though, you\'re too critical to this project right now. Let\'s revisit after the fiscal year, and maybe the one after."',
         answer: 1, why: 'Softer voice, same hoard. "Not now" without a date is "no" wearing a calendar.' },
       { q: '"Understood. I\'ll ask HR to hold your application until we\'ve delivered Q3; I\'m sure they can pause these things."',
         answer: 2, why: 'Blocking or delaying an application is the program\'s brightest line, and asking HR for a workaround is itself the violation.' },
       { q: '"Noted. I\'ll remember this at review time; commitment to this team matters to me."',
         answer: 2, why: 'A rating threat is retaliation, full stop. One sentence like this teaches a whole unit to move secretly or leave.' }
-    ]
-  });
-
-  /* Guess the number (Section 05) */
-  makeTrainer({
-    root: '#statGuess', q: '#sgQ', options: '#sgOptions', feedback: '#sgFeedback',
-    progress: '#sgProgress', next: '#sgNext', result: '#sgResult',
-    progressWord: 'Finding', goodColor: 'var(--vu-oak)',
-    resultColor: 'var(--ink-soft, #555)', passAt: 4,
-    passMsg: 'You called the research. Now you can cite it: every number here has a linked source on this page.',
-    failMsg: 'Most rooms miss a few, and the misses are the point: internal mobility is worth more than our instincts price it at. The sources are all linked on this page.',
-    labels: [],
-    items: [
-      { q: 'LinkedIn data across 32 million profiles: employees promoted within three years of hire have what chance of staying, versus those who never moved?',
-        opts: ['70% vs 45%', '55% vs 50%', '85% vs 65%'],
-        answer: 0, why: 'A 25-point gap: 70% versus 45%, with lateral moves at 62%. Movement of any kind is the retention lever (SHRM / LinkedIn).' },
-      { q: 'The first large-scale study of talent hoarding: what share of managers self-report hoarding behavior?',
-        opts: ['About one quarter', 'About half', 'About three quarters'],
-        answer: 2, why: 'Roughly 75%, and it intensifies with performance-based incentives, big teams, and visible talent (Haegele, American Economic Review, 2024). That is why the culture work is designed, never assumed.' },
-      { q: 'How much faster do internal hires reach full competency compared to external hires?',
-        opts: ['About 5% faster', '20 to 25% faster', 'About twice as fast'],
-        answer: 1, why: '20 to 25% faster, while external hires often run near quarter-speed in month one and can take up to a year to peak (LinkedIn Workplace Learning Report; Inop.ai).' },
-      { q: 'Counting time and lost productivity, hiring externally can cost how much more than moving someone internally?',
-        opts: ['About the same', 'Roughly 1.2 times more', 'Three to five times more'],
-        answer: 2, why: 'Up to 3 to 5 times more all-in (Bersin), with direct costs alone 18 to 20% higher (SHRM). The portal is a cost strategy wearing a career strategy\'s clothes.' },
-      { q: 'Across industry, internal hires have fallen to what share of all hires since their 2020 peak?',
-        opts: ['About 24%, down from about 40%', 'About 50%, up from 30%', 'Steady at about a third'],
-        answer: 0, why: 'Down to roughly 24% from about 40% (AMS), dragging retention and time-to-hire with it. Organizations that rebuild internal-first hiring are running against the tide, on purpose.' }
     ]
   });
 
@@ -486,23 +458,23 @@
   if (recap) {
     var QUESTIONS = [
       { q: 'The Talent Transfer Portal is best described as…',
-        opts: ['A guaranteed promotion pipeline for tenured staff', 'A competitive internal marketplace, staff-owned and private by default', 'An HR-run reassignment engine', 'A public listing of who wants to leave their team'],
-        correct: 1, why: 'A marketplace you own: private by default, competitive by design, with support that activates only when you ask.' },
+        opts: ['A guaranteed promotion track for long-time staff', 'A fair internal job market that you own, private by default', 'A tool HR uses to reassign people', 'A public list of who wants to leave their team'],
+        correct: 1, why: 'A job market you own: private by default, fair by design, with help that starts only when you ask.' },
       { q: 'You declare a Career of Interest on Tuesday. Your manager…',
-        opts: ['Gets a notification Tuesday', 'Sees it at your next review', 'Is not notified; you control if and when to disclose', 'Is told only if HR flags you as a flight risk'],
-        correct: 2, why: 'Silent by default. Interest data rolls up only in aggregate, and the disclosure conversation happens on your timing, once you\'re a serious candidate.' },
+        opts: ['Gets an alert Tuesday', 'Sees it at your next review', 'Is not alerted; you choose if and when to tell', 'Is told only if HR flags you as a risk to leave'],
+        correct: 2, why: 'Silent by default. Interest is only counted in group totals, and you tell your manager on your timing, once you\'re a serious candidate.' },
       { q: 'A Gig is…',
-        opts: ['A trial period that converts to a transfer if you do well', 'A defined-scope, defined-duration stretch assignment that counts as development', 'A mandatory rotation HR assigns', 'A second job with extra pay'],
-        correct: 1, why: 'Development, on purpose: real work in another unit, with your home role kept, and any permanent move still running through a competitive requisition.' },
-      { q: 'The five-business-day internal-first window means…',
-        opts: ['Internal candidates get five business days\' head start before eligible roles post externally', 'Roles stay internal-only forever', 'You have five business days to accept any offer', 'Managers get five business days to counter-offer'],
-        correct: 0, why: 'Staff see eligible openings first. After the window, any overlap with external candidates still runs one consistent interview process.' },
+        opts: ['A trial period that turns into a transfer if you do well', 'A short stretch project with a set scope and end date that builds your skills', 'A required rotation HR assigns', 'A second job with extra pay'],
+        correct: 1, why: 'Growth, on purpose: real work in another unit, with your home role kept. Any real move still goes through an open job posting.' },
+      { q: 'The five-business-day staff-first window means…',
+        opts: ['Vanderbilt staff get a five-business-day head start before roles post to the public', 'Roles stay internal-only forever', 'You have five business days to accept any offer', 'Managers get five business days to counter-offer'],
+        correct: 0, why: 'Staff see openings first. After the window, inside and outside candidates go through the same fair interview process.' },
       { q: 'The talent hoarding research (Haegele, American Economic Review, 2024) found…',
-        opts: ['Hoarding is rare, about one manager in ten', 'About 75% of managers self-report hoarding, and it deters internal applications', 'Hoarding mostly helps organizations keep teams stable', 'Only bad managers hoard'],
-        correct: 1, why: 'Roughly three quarters, driven by ordinary incentives, and it measurably suppresses internal applications. That is why the culture work is engineered rather than hoped for.' },
+        opts: ['Hoarding is rare, about one manager in ten', 'About 75% of managers admit to hoarding, and it stops people from applying inside', 'Hoarding mostly helps keep teams stable', 'Only bad managers hoard'],
+        correct: 1, why: 'About three out of four, driven by ordinary pressures, and it clearly stops inside applications. That is why the culture work is built in, never left to chance.' },
       { q: 'A team member tells you they\'ve applied for an internal role. The culture-building response starts with…',
         opts: ['"After everything I\'ve invested in you?"', '"Let\'s talk about your timing."', '"Thank you for telling me," then helping them compete well and planning their development either way', 'Calling HR to understand your options'],
-        correct: 2, why: 'Thank first, coach forward. The first response builds a career at Vanderbilt; the alternatives build a resume for somewhere else.' }
+        correct: 2, why: 'Thank first, coach forward. That response builds a career at Vanderbilt; the others build a resume for somewhere else.' }
     ];
     var idx = 0, score = 0, locked = false;
     var qEl = $('#recapQ'), optEl2 = $('#recapOptions'), fbEl = $('#recapFeedback'),

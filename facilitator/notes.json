@@ -219,68 +219,38 @@
     {
       "id": "s-culture",
       "title": "04 · The culture shift",
-      "minutes": 3,
+      "minutes": 4,
       "purpose": "The center of gravity: hoarding named, reframe installed, response drilled.",
       "facilitate": [
         "Land the 75% stat and let it sit a beat.",
         "Read both script cards aloud; pause after the bad one.",
         "Run Judge the Response; it IS the section.",
-        "Point managers at the Oracle Learning course link in the guardrails card for the deeper dive."
+        "Point managers at the Oracle Learning course link in the guardrails card for the deeper dive.",
+        "Point at the three number cards below the guardrails: staying (70% vs 45%), years served (5.4 vs 2.9), and cost (3 to 5x). One breath each; the links carry the sources."
       ],
       "validate": "4+ of 5 on the trainer; the room can tell hoarding from a guardrail violation.",
       "watchFor": "Manager shame; keep it structural (incentives, not villains) and land the backfill cascade.",
-      "coreMinutes": 2,
+      "coreMinutes": 3,
       "coreNote": "Core: stat, both script cards, trainer. Nothing else, and never less.",
-      "say": "Some managers hear internal mobility and think poaching. It's been measured: about three quarters of managers admit to talent hoarding, and hoarding deters internal applications without stopping external ones. So the real choice is lose them to the third floor with a handoff and a backfill, or lose them to another employer with two weeks' notice. The whole culture turns on one response: thank you for telling me.",
+      "say": "Some managers hear internal mobility and think poaching. It's been measured: about three quarters of managers admit to talent hoarding, and hoarding deters internal applications without stopping external ones. So the real choice is lose them to the third floor with a handoff and a backfill, or lose them to another employer with two weeks' notice. The whole culture turns on one response: thank you for telling me. And if anyone asks for proof, three numbers sit right on this page: people who move inside stay far more often, they stay years longer, and replacing someone from outside can cost three to five times more.",
       "transition": "For the meeting where you need ammunition, the numbers."
     },
     {
-      "id": "s-evidence",
-      "title": "05 · The evidence",
-      "minutes": 1,
-      "purpose": "Arm everyone with two citable numbers.",
-      "facilitate": [
-        "Point at two tiles, not six.",
-        "Run Guess the Number if the room is ahead of schedule; otherwise assign it as the follow-up."
-      ],
-      "validate": "Learners can quote two numbers with a source.",
-      "watchFor": "Methodology debates; the case is convergence, park the rest.",
-      "coreMinutes": 1,
-      "coreNote": "Core: two tiles, no trainer.",
-      "say": "Every number on this page is linked to its source: seventy percent versus forty-five retention, five point four versus two point nine years of tenure, twenty to twenty-five percent faster to full speed, three to five times the cost to hire outside. Steal this slide for your next leadership meeting.",
-      "transition": "Quiz, then your card."
-    },
-    {
-      "id": "s-recap",
-      "title": "Recap quiz",
-      "minutes": 1,
-      "purpose": "Score the knowledge (Level 2) before the commitment.",
-      "facilitate": [
-        "Run it on devices; hands for 5 or better.",
-        "Thirty-second reteach on anything the room missed."
-      ],
-      "validate": "Room mode at 5/6 or better.",
-      "watchFor": "Racing; it's a check, not a contest.",
-      "coreMinutes": 1,
-      "coreNote": "Core: keep; it's one minute.",
-      "say": "Six questions, fast. This is the systems check before the card.",
-      "transition": "Now the part you take with you."
-    },
-    {
       "id": "s-plan",
-      "title": "Job aid · Five moves",
-      "minutes": 1,
-      "purpose": "Send everyone out with the five-move runway and the exact Oracle screens.",
+      "title": "Recap quiz + job aid",
+      "minutes": 2,
+      "purpose": "Score what stuck (Level 2), then hand over the runway: five small moves with the exact Oracle screens and live links.",
       "facilitate": [
+        "Run the recap on devices; hands for 5 or better, and a thirty-second reteach on anything the room missed.",
         "Walk the five moves left to right; point at the screenshots and the live links.",
         "Name move one as the through-line: the growth conversation.",
         "Point at the Print the job aid button for the take-home."
       ],
-      "validate": "Learners know where the job aid lives and can name the move they'd take first.",
+      "validate": "Room mode at 5/6 or better on the quiz; every learner can name their first move.",
       "watchFor": "Turning this into a planning exercise; the course educates, the moves come later.",
-      "coreMinutes": 1,
-      "coreNote": "Core: point at the five moves and the links; done.",
-      "say": "Nothing to fill in and nothing to submit. This is the job aid: five small moves, each on a real Oracle screen, with live links that open them. Move one is the growth conversation; the rest live in Oracle. Print it from the button right here, and the quick reference card carries the rest home.",
+      "coreMinutes": 2,
+      "coreNote": "Core: quiz stays in full; walk the five moves in one pass.",
+      "say": "Six quick questions first; this is the check before the take-home. Then the job aid: five small moves, each on a real Oracle screen, with live links that open them. Move one is the growth conversation. Print it from the button right here.",
       "transition": "Last slide."
     },
     {

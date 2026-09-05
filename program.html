@@ -108,6 +108,7 @@
   .band-light h2 em { color: var(--vu-oak); }
   .band-light .big { color: var(--vu-oak); }
   .band-light .card small, .band-light .card small a { color: rgba(28,28,28,.55); }
+  .band-light .step p { color: rgba(28,28,28,.8); }
 
   /* prepare steps */
   .steps { counter-reset: step; display: grid; gap: 1rem; margin-top: 1.75rem; }
@@ -123,6 +124,11 @@
   .step .links { display: flex; gap: .6rem; flex-wrap: wrap; }
   .step .btn { font-size: .85rem; padding: .55rem .95rem; }
 
+  .shot { margin: .9rem 0 0; }
+  .shot img { width: 100%; max-width: 460px; border: 1px solid rgba(28,28,28,.18); border-radius: 5px;
+    display: block; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+  .shot figcaption { font-family: var(--cond); font-weight: 700; text-transform: uppercase;
+    letter-spacing: .07em; font-size: .64rem; color: var(--vu-oak); margin-top: .35rem; }
   footer { border-top: 1px solid rgba(207,174,112,.25); padding: 2.5rem 0 3rem;
     font-size: .85rem; color: rgba(255,255,255,.6); }
   footer .wrap { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; align-items: center; }
@@ -142,7 +148,7 @@
     <a href="#what">What it is</a>
     <a href="#why">Why it matters</a>
     <a href="#who">Who it's for</a>
-    <a href="#ready">Get ready</a>
+    <a href="#ready">Five moves</a>
     <a class="btn" href="web/">Take the training</a>
   </nav>
 </header>
@@ -248,14 +254,18 @@
   <section class="band-light" id="ready">
     <div class="wrap">
       <p class="eyebrow">Get ready</p>
-      <h2>Three steps to <em>prepare</em>.</h2>
+      <h2>Five <em>simple</em> moves.</h2>
+      <p class="lead">Take the 15-minute training for the full picture, then work this list. Each move is small, and each link opens the real screen. This is the same job aid the course hands out.</p>
+      <p style="margin:1.25rem 0 0;display:flex;gap:.6rem;flex-wrap:wrap">
+        <a class="btn" href="web/">Take the training</a>
+        <a class="btn btn--ghost" style="color:#1C1C1C;border-color:rgba(28,28,28,.35)" href="jobaid.html">Print the job aid</a>
+      </p>
       <div class="steps">
         <div class="step" style="border-color:rgba(28,28,28,.15);background:#fff">
           <span class="num" aria-hidden="true"></span>
           <div>
-            <h3>Take the training</h3>
-            <p>Fifteen minutes, interactive, and it covers everything on this page in depth: the two paths, the six doors, the process, and what managers commit to.</p>
-            <div class="links"><a class="btn" href="web/">Start the self-paced training</a> <a class="btn btn--ghost" style="color:#1C1C1C;border-color:rgba(28,28,28,.35)" href="./">Classroom version</a></div>
+            <h3>Have the growth conversation</h3>
+            <p>Talk with your manager about your growth and development. Managers: hold that conversation with a team member.</p>
           </div>
         </div>
         <div class="step" style="border-color:rgba(28,28,28,.15);background:#fff">
@@ -269,9 +279,28 @@
         <div class="step" style="border-color:rgba(28,28,28,.15);background:#fff">
           <span class="num" aria-hidden="true"></span>
           <div>
-            <h3>Set yourself up in Oracle</h3>
-            <p>Update your Career Preferences, level your skills honestly, and flag your Careers of Interest in Grow. The job aid shows every screen, with live links.</p>
-            <div class="links"><a class="btn" href="jobaid.html">Open the job aid</a> <a class="btn btn--ghost" style="color:#1C1C1C;border-color:rgba(28,28,28,.35)" href="cheatsheet.html">Quick reference card</a></div>
+            <h3>Update your Career Preferences</h3>
+            <p>In your Oracle Talent Profile: your next career move, preferred job function and family, and your goals in the comments.</p>
+            <div class="links"><a class="btn" href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/faces/deeplink?objType=NFX_VIEW_MY_SKILLS_AND_QUAL_VB&action=NONE">Open your Talent Profile</a></div>
+            <figure class="shot"><img src="assets/img/oracle-career-preferences.png" alt="Oracle Career Preferences screen with Next Career Move, Preferred Job Function, Preferred Job Family, and a comments box" loading="lazy" onerror="this.closest('figure').hidden=true"><figcaption>Oracle · Talent Profile · Career Preferences</figcaption></figure>
+          </div>
+        </div>
+        <div class="step" style="border-color:rgba(28,28,28,.15);background:#fff">
+          <span class="num" aria-hidden="true"></span>
+          <div>
+            <h3>Make sure your skills are up to date</h3>
+            <p>Both lists, Skills I have and Skills I'm developing, honestly leveled. The matching runs on this data.</p>
+            <div class="links"><a class="btn" href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/redwood/profiles/skills/skillscenter?navigateBack=true">Open the Skills Center</a></div>
+            <figure class="shot"><img src="assets/img/oracle-skills.png" alt="Oracle skills screen showing Skills I'm developing and Skills I have with endorsement counts" loading="lazy" onerror="this.closest('figure').hidden=true"><figcaption>Oracle · Talent Profile · Skills</figcaption></figure>
+          </div>
+        </div>
+        <div class="step" style="border-color:rgba(28,28,28,.15);background:#fff">
+          <span class="num" aria-hidden="true"></span>
+          <div>
+            <h3>Flag your Careers of Interest</h3>
+            <p>In the Grow area, flag the roles that interest you, then browse the Opportunity Marketplace with Opportunity set to Career Roles. Private to you.</p>
+            <div class="links"><a class="btn" href="https://ecsr.fa.us2.oraclecloud.com/fscmUI/redwood/internalmobility/opportunitymarketplace/search">Browse the Opportunity Marketplace</a></div>
+            <figure class="shot"><img src="assets/img/oracle-marketplace.png" alt="Oracle Opportunity Marketplace showing career role cards with job openings and an Update Interests button" loading="lazy" onerror="this.closest('figure').hidden=true"><figcaption>Oracle · Grow · Opportunity Marketplace</figcaption></figure>
           </div>
         </div>
       </div>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Talent Transfer Portal | Vanderbilt</title>
+<meta name="description" content="The Talent Transfer Portal is Vanderbilt's private home for growing your career inside the university: career moves and Gigs, staff-first job postings, and privacy by default.">
+<link rel="canonical" href="https://me5231979.github.io/TransferPortal-/program.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Talent Transfer Portal | Vanderbilt">
+<meta property="og:description" content="Stay at Vanderbilt. Go somewhere new. Explore roles, show interest safely, and grow your career inside the university.">
+<meta property="og:url" content="https://me5231979.github.io/TransferPortal-/program.html">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="assets/img/favicon-96.png">
+<link rel="preload" href="assets/fonts/libre-caslon-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face { font-family: 'Libre Caslon Display'; font-style: normal; font-weight: 400;
+    src: url('assets/fonts/libre-caslon-display-latin-400-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Libre Caslon Text'; font-style: italic; font-weight: 400;
+    src: url('assets/fonts/libre-caslon-text-latin-400-italic.woff2') format('woff2'); }
+  @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400;
+    src: url('assets/fonts/inter-latin-400-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500;
+    src: url('assets/fonts/inter-latin-500-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Inter'; font-style: normal; font-weight: 600;
+    src: url('assets/fonts/inter-latin-600-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'Antonio'; font-style: normal; font-weight: 700;
+    src: url('assets/fonts/antonio-latin-700-normal.woff2') format('woff2'); }
+
+  :root {
+    --vu-black: #1C1C1C; --vu-white: #FFFFFF; --vu-gold-flat: #CFAE70;
+    --vu-oak: #946E24; --vu-cream: #F5F3EF;
+    --serif: 'Libre Caslon Display', 'Times New Roman', serif;
+    --serif-i: 'Libre Caslon Text', 'Times New Roman', serif;
+    --body: 'Inter', Arial, sans-serif;
+    --cond: 'Antonio', Impact, sans-serif;
+    --nav-h: 64px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 12px); }
+  body { margin: 0; background: var(--vu-black); color: var(--vu-white);
+    font-family: var(--body); font-size: 16px; line-height: 1.6; }
+  img { max-width: 100%; }
+  a { color: var(--vu-gold-flat); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px); }
+  .eyebrow { font-family: var(--cond); font-weight: 700; text-transform: uppercase;
+    letter-spacing: .09em; font-size: .72rem; color: var(--vu-gold-flat); margin: 0 0 .75rem; }
+  h1, h2 { font-family: var(--serif); font-weight: 400; line-height: 1.12; margin: 0; }
+  h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); }
+  h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); margin-bottom: 1rem; }
+  h1 em, h2 em { font-family: var(--serif-i); font-style: italic; color: var(--vu-gold-flat); }
+  .lead { font-size: clamp(1rem, 1.4vw, 1.15rem); color: rgba(255,255,255,.85); max-width: 62ch; }
+  section { padding: clamp(56px, 8vw, 96px) 0; }
+
+  /* nav */
+  .nav { position: fixed; inset: 0 0 auto 0; height: var(--nav-h); z-index: 50;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: 0 clamp(16px, 3vw, 32px);
+    background: rgba(20,20,20,.97); border-bottom: 1px solid rgba(207,174,112,.18); }
+  .nav img { height: 40px; width: auto; }
+  .nav nav { display: flex; align-items: center; gap: clamp(.6rem, 2vw, 1.5rem); flex-wrap: wrap; }
+  .nav a { color: rgba(255,255,255,.85); text-decoration: none; font-size: .9rem; font-weight: 500; }
+  .nav a:hover { color: var(--vu-gold-flat); }
+  .btn { display: inline-block; font-family: var(--body); font-weight: 600; font-size: .95rem;
+    color: var(--vu-black); background: var(--vu-gold-flat); border: 1px solid var(--vu-gold-flat);
+    border-radius: 4px; padding: .7rem 1.2rem; text-decoration: none; transition: all .2s ease; }
+  .btn:hover { background: transparent; color: var(--vu-gold-flat); }
+  .btn--ghost { background: transparent; color: var(--vu-white); border-color: rgba(255,255,255,.4); }
+  .btn--ghost:hover { border-color: var(--vu-gold-flat); color: var(--vu-gold-flat); }
+  .nav .btn { padding: .45rem .85rem; font-size: .82rem; }
+  @media (max-width: 760px) { .nav nav a:not(.btn) { display: none; } }
+
+  /* hero */
+  .hero { position: relative; min-height: 88vh; display: grid; align-items: center;
+    padding: calc(var(--nav-h) + 48px) 0 64px; overflow: hidden; }
+  .hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+    opacity: 0; transition: opacity 1.5s ease;
+    filter: grayscale(1) sepia(.35) hue-rotate(-8deg) saturate(1.4) brightness(.8); }
+  .hero video.on { opacity: .38; }
+  .hero .scrim { position: absolute; inset: 0;
+    background: linear-gradient(105deg, rgba(28,28,28,.94) 0%, rgba(28,28,28,.6) 55%, rgba(28,28,28,.8) 100%); }
+  .hero .wrap { position: relative; }
+  .hero .cta { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 2rem; }
+  .kicker { display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 2.25rem;
+    font-size: .85rem; color: rgba(255,255,255,.7); }
+  .kicker b { display: block; font-family: var(--serif); font-size: 1.5rem; color: var(--vu-gold-flat); }
+
+  /* cards */
+  .cards { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); margin-top: 1.75rem; }
+  .card { border: 1px solid rgba(255,255,255,.14); border-radius: 6px; padding: 1.4rem 1.5rem; }
+  .card--gold { border-color: rgba(207,174,112,.5); }
+  .tag { display: inline-block; font-family: var(--cond); font-weight: 700; text-transform: uppercase;
+    letter-spacing: .07em; font-size: .68rem; color: var(--vu-black); background: var(--vu-gold-flat);
+    padding: .25rem .55rem; border-radius: 3px; margin-bottom: .7rem; }
+  .card h3 { font-family: var(--serif); font-weight: 400; font-size: 1.35rem; margin: 0 0 .5rem; }
+  .card p { margin: 0; color: rgba(255,255,255,.8); font-size: .95rem; }
+  .big { font-family: var(--serif); font-size: clamp(1.9rem, 3vw, 2.5rem); color: var(--vu-gold-flat);
+    line-height: 1.1; margin: .2rem 0 .4rem; }
+  .card small a { color: rgba(255,255,255,.55); }
+  .card small { color: rgba(255,255,255,.55); font-size: .78rem; }
+
+  /* light band */
+  .band-light { background: var(--vu-cream); color: var(--vu-black); }
+  .band-light .lead, .band-light .card p { color: rgba(28,28,28,.8); }
+  .band-light .card { border-color: rgba(28,28,28,.15); background: #fff; }
+  .band-light .eyebrow { color: var(--vu-oak); }
+  .band-light h2 em { color: var(--vu-oak); }
+  .band-light .big { color: var(--vu-oak); }
+  .band-light .card small, .band-light .card small a { color: rgba(28,28,28,.55); }
+
+  /* prepare steps */
+  .steps { counter-reset: step; display: grid; gap: 1rem; margin-top: 1.75rem; }
+  .step { display: grid; grid-template-columns: 56px 1fr; gap: 1.1rem; align-items: start;
+    border: 1px solid rgba(255,255,255,.14); border-radius: 6px; padding: 1.3rem 1.4rem; }
+  .step .num { counter-increment: step; width: 44px; height: 44px; border-radius: 50%;
+    border: 2px solid var(--vu-gold-flat); color: var(--vu-gold-flat);
+    font-family: var(--cond); font-weight: 700; font-size: 1.15rem;
+    display: grid; place-items: center; }
+  .step .num::before { content: counter(step); }
+  .step h3 { font-family: var(--serif); font-weight: 400; font-size: 1.3rem; margin: .1rem 0 .4rem; }
+  .step p { margin: 0 0 .7rem; color: rgba(255,255,255,.8); font-size: .95rem; max-width: 70ch; }
+  .step .links { display: flex; gap: .6rem; flex-wrap: wrap; }
+  .step .btn { font-size: .85rem; padding: .55rem .95rem; }
+
+  footer { border-top: 1px solid rgba(207,174,112,.25); padding: 2.5rem 0 3rem;
+    font-size: .85rem; color: rgba(255,255,255,.6); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; align-items: center; }
+  footer img { width: 220px; }
+  footer nav { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .hero video { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a href="#top" aria-label="Vanderbilt University, top of page"><img src="assets/img/vu-lockup-white.png" alt="Vanderbilt University"></a>
+  <nav aria-label="Page sections">
+    <a href="#what">What it is</a>
+    <a href="#why">Why it matters</a>
+    <a href="#who">Who it's for</a>
+    <a href="#ready">Get ready</a>
+    <a class="btn" href="web/">Take the training</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="s-hero">
+    <video id="v1" autoplay muted playsinline preload="auto" aria-hidden="true"></video>
+    <video id="v2" muted playsinline preload="auto" aria-hidden="true"></video>
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="eyebrow">The Talent Transfer Portal · Vanderbilt · People, Culture and Belonging</p>
+      <h1>Stay at Vanderbilt.<br><em>Go somewhere new.</em></h1>
+      <p class="lead" style="margin-top:1.25rem">Your next role might already be here. The Talent Transfer Portal is Vanderbilt's private home for growing your career inside the university: explore roles, show interest safely, and compete for your next chapter.</p>
+      <div class="cta">
+        <a class="btn" href="web/">Take the 15-minute training</a>
+        <a class="btn btn--ghost" href="https://vanderbilttalentcompass.vercel.app/">Open the portal tool</a>
+      </div>
+      <div class="kicker">
+        <div><b>2</b> paths: career moves and Gigs</div>
+        <div><b>5</b> business days of staff-first postings</div>
+        <div><b>0</b> alerts when you show interest</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT -->
+  <section id="what">
+    <div class="wrap">
+      <p class="eyebrow">What it is</p>
+      <h2>One private portal. <em>Two</em> paths.</h2>
+      <p class="lead">The portal lives in Oracle and does two things.</p>
+      <div class="cards">
+        <div class="card card--gold">
+          <span class="tag">1 · Career moves</span>
+          <h3>New roles at Vanderbilt</h3>
+          <p>Find open Vanderbilt jobs and compete for them. Staff see new postings first, for five business days. Flag the careers that interest you, and the portal matches roles to your skills. Private until you apply.</p>
+        </div>
+        <div class="card card--gold">
+          <span class="tag">2 · Gigs</span>
+          <h3>Short-term opportunities</h3>
+          <p>Short projects in other units that build your skills. We are rolling Gigs out in Oracle to promote short-term opportunities. Your manager approves each Gig, you keep your home job, and a Gig never promises a transfer.</p>
+        </div>
+      </div>
+      <div class="cards" style="grid-template-columns:1fr">
+        <div class="card">
+          <span class="tag">The promises</span>
+          <p>You control what you share. Showing interest alerts no one. Leaders see only group totals, never your activity. Managers may not punish or spy. Advisor help starts only when you ask.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="band-light" id="why">
+    <div class="wrap">
+      <p class="eyebrow">Why it matters</p>
+      <h2>People who can grow inside, <em>stay</em>.</h2>
+      <p class="lead">That is good for careers and good for Vanderbilt. The research is clear.</p>
+      <div class="cards">
+        <div class="card">
+          <span class="tag">They stay</span>
+          <p class="big">70% vs 45%</p>
+          <p>People promoted within three years stay at a 70% rate. People who never moved: 45%.</p>
+          <small><a href="https://www.shrm.org/topics-tools/news/talent-acquisition/study-internal-mobility-boosts-retention" target="_blank" rel="noopener">SHRM / LinkedIn</a></small>
+        </div>
+        <div class="card">
+          <span class="tag">They stay longer</span>
+          <p class="big">5.4 vs 2.9</p>
+          <p>Average years people stay where internal moves are common, versus where they are rare.</p>
+          <small><a href="https://inop.ai/the-link-between-internal-mobility-and-employee-retention/" target="_blank" rel="noopener">Inop.ai</a></small>
+        </div>
+        <div class="card">
+          <span class="tag">It costs less</span>
+          <p class="big">3 to 5x</p>
+          <p>What an outside hire can cost compared to an inside move, once time and lost output count.</p>
+          <small><a href="https://joshbersin.com/internal-hiring-factbook/" target="_blank" rel="noopener">Bersin</a></small>
+        </div>
+      </div>
+      <p class="lead" style="margin-top:1.75rem"><b>For leaders:</b> when a team member grows into a new Vanderbilt role, that is a win on your record. We keep someone we would have lost, and you get help refilling the role, with the same staff-first look.</p>
+    </div>
+  </section>
+
+  <!-- WHO -->
+  <section id="who">
+    <div class="wrap">
+      <p class="eyebrow">Who it's for</p>
+      <h2>Six common reasons people <em>walk in</em>.</h2>
+      <p class="lead">Yours might be a mix. Every one starts best with a growth conversation with your manager, and exploring stays private until you say otherwise.</p>
+      <div class="cards">
+        <div class="card"><span class="tag">A · Curious</span><p>"I'm happy here, but what else is out there?" Browse privately; nobody is alerted.</p></div>
+        <div class="card"><span class="tag">B · Ready to stretch</span><p>"I need a new challenge." Take a Gig, keep your home job, build new skills.</p></div>
+        <div class="card"><span class="tag">C · Skills unused</span><p>"I can do more than my job asks." Tag your real skills and let matching find the fit.</p></div>
+        <div class="card"><span class="tag">D · After a reorg</span><p>"My job changed under me." Talk with a career advisor, privately, then apply where it fits.</p></div>
+        <div class="card"><span class="tag">E · Role at risk</span><p>"My position may go away." Get priority matching and faster review, on your request.</p></div>
+        <div class="card"><span class="tag">F · Ready to apply</span><p>"There's an open job I want." Apply during the staff-first window and win the interview.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- READY -->
+  <section class="band-light" id="ready">
+    <div class="wrap">
+      <p class="eyebrow">Get ready</p>
+      <h2>Three steps to <em>prepare</em>.</h2>
+      <div class="steps">
+        <div class="step" style="border-color:rgba(28,28,28,.15);background:#fff">
+          <span class="num" aria-hidden="true"></span>
+          <div>
+            <h3>Take the training</h3>
+            <p>Fifteen minutes, interactive, and it covers everything on this page in depth: the two paths, the six doors, the process, and what managers commit to.</p>
+            <div class="links"><a class="btn" href="web/">Start the self-paced training</a> <a class="btn btn--ghost" style="color:#1C1C1C;border-color:rgba(28,28,28,.35)" href="./">Classroom version</a></div>
+          </div>
+        </div>
+        <div class="step" style="border-color:rgba(28,28,28,.15);background:#fff">
+          <span class="num" aria-hidden="true"></span>
+          <div>
+            <h3>Open the Talent Transfer Portal Tool</h3>
+            <p>Map your skills and build a growth plan. Managers: see the skills across your team.</p>
+            <div class="links"><a class="btn" href="https://vanderbilttalentcompass.vercel.app/">Open the tool</a></div>
+          </div>
+        </div>
+        <div class="step" style="border-color:rgba(28,28,28,.15);background:#fff">
+          <span class="num" aria-hidden="true"></span>
+          <div>
+            <h3>Set yourself up in Oracle</h3>
+            <p>Update your Career Preferences, level your skills honestly, and flag your Careers of Interest in Grow. The job aid shows every screen, with live links.</p>
+            <div class="links"><a class="btn" href="jobaid.html">Open the job aid</a> <a class="btn btn--ghost" style="color:#1C1C1C;border-color:rgba(28,28,28,.35)" href="cheatsheet.html">Quick reference card</a></div>
+          </div>
+        </div>
+      </div>
+      <p class="lead" style="margin-top:1.75rem"><b>One norm to remember:</b> exploring is private. Once you are a serious candidate for a role, tell your manager yourself. That conversation is how careers grow here.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <img src="assets/img/vu-lockup-white.png" alt="Vanderbilt University">
+      <p style="margin:.75rem 0 0">One Vanderbilt career. Many roles.</p>
+    </div>
+    <nav aria-label="Program resources">
+      <a href="web/">Training</a>
+      <a href="jobaid.html">Job aid</a>
+      <a href="cheatsheet.html">Quick reference</a>
+      <a href="https://vanderbilttalentcompass.vercel.app/">Portal tool</a>
+    </nav>
+    <span>© <span id="yr">2026</span> Vanderbilt University · The Talent Transfer Portal · People, Culture and Belonging</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var vids = [document.getElementById('v1'), document.getElementById('v2')];
+  if (reduce || !vids[0]) { vids.forEach(function (v) { if (v) v.remove(); }); return; }
+  var clips = ['assets/video/hero-conversation.mp4', 'assets/video/hero-collaboration.mp4', 'assets/video/hero-mentorship.mp4'];
+  var RATE = 0.5, FADE = 1.5;
+  var active = 0, clip = 0, switching = false, fails = 0, dead = false;
+  function startOn(slot, idx) {
+    if (dead) return;
+    clip = ((idx % clips.length) + clips.length) % clips.length;
+    var v = vids[slot];
+    v.src = clips[clip];
+    v.playbackRate = RATE;
+    var p = v.play && v.play();
+    if (p && p.catch) p.catch(function () {});
+    active = slot; switching = false;
+    vids.forEach(function (x, i) { x.classList.toggle('on', i === slot); });
+  }
+  vids.forEach(function (v, slot) {
+    v.addEventListener('loadedmetadata', function () { v.playbackRate = RATE; });
+    v.addEventListener('timeupdate', function () {
+      if (dead || slot !== active || switching || !v.duration) return;
+      if (v.duration - v.currentTime <= FADE * RATE) {
+        switching = true;
+        startOn(1 - slot, clip + 1);
+        setTimeout(function () { if (!dead) v.pause(); }, FADE * 1000 + 150);
+      }
+    });
+    v.addEventListener('ended', function () {
+      if (!dead && slot === active && !switching) { switching = true; startOn(1 - slot, clip + 1); }
+    });
+    v.addEventListener('error', function () {
+      fails++;
+      if (fails >= clips.length * 2) { dead = true; vids.forEach(function (x) { x.remove(); }); }
+      else if (slot === active && !dead) { startOn(1 - slot, clip + 1); }
+    });
+  });
+  startOn(0, 0);
+})();
+</script>
+</body>
+</html>

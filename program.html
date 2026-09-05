@@ -73,18 +73,25 @@
 
   /* hero */
   .hero { position: relative; min-height: 88vh; display: grid; align-items: center;
-    padding: calc(var(--nav-h) + 48px) 0 64px; overflow: hidden; }
-  .hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
-    opacity: 0; transition: opacity 1.5s ease;
-    filter: grayscale(1) sepia(.35) hue-rotate(-8deg) saturate(1.4) brightness(.8); }
-  .hero video.on { opacity: .38; }
-  .hero .scrim { position: absolute; inset: 0;
-    background: linear-gradient(105deg, rgba(28,28,28,.94) 0%, rgba(28,28,28,.6) 55%, rgba(28,28,28,.8) 100%); }
-  .hero .wrap { position: relative; }
+    padding: calc(var(--nav-h) + 48px) 0 72px; overflow: hidden;
+    background:
+      radial-gradient(1000px 620px at 82% 12%, rgba(207,174,112,.16), transparent 62%),
+      radial-gradient(760px 520px at 6% 95%, rgba(207,174,112,.09), transparent 60%),
+      var(--vu-black); }
+  .hero .mark { position: absolute; right: -6%; top: 8%; width: clamp(320px, 38vw, 560px);
+    opacity: .05; pointer-events: none; user-select: none; }
+  .hero .wrap { position: relative; display: grid; gap: clamp(2rem, 4vw, 3.5rem);
+    grid-template-columns: 1.15fr .85fr; align-items: center; }
+  @media (max-width: 880px) { .hero .wrap { grid-template-columns: 1fr; } }
   .hero .cta { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 2rem; }
-  .kicker { display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 2.25rem;
-    font-size: .85rem; color: rgba(255,255,255,.7); }
-  .kicker b { display: block; font-family: var(--serif); font-size: 1.5rem; color: var(--vu-gold-flat); }
+  .means { border: 1px solid rgba(207,174,112,.45); border-left: 4px solid var(--vu-gold-flat);
+    border-radius: 8px; padding: 1.6rem 1.7rem; background: rgba(207,174,112,.06); }
+  .means h2 { font-size: 1.45rem; margin-bottom: 1rem; }
+  .means ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .85rem; }
+  .means li { position: relative; padding-left: 1.7rem; color: rgba(255,255,255,.88); font-size: .97rem; }
+  .means li::before { content: "\2713"; position: absolute; left: 0; top: 0;
+    color: var(--vu-gold-flat); font-weight: 700; }
+  .means li b { color: var(--vu-white); }
 
   /* cards */
   .cards { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); margin-top: 1.75rem; }
@@ -157,22 +164,26 @@
 
   <!-- HERO -->
   <section class="hero" id="s-hero">
-    <video id="v1" autoplay muted playsinline preload="auto" aria-hidden="true"></video>
-    <video id="v2" muted playsinline preload="auto" aria-hidden="true"></video>
-    <div class="scrim" aria-hidden="true"></div>
+    <img class="mark" src="assets/img/vu-v-icon.png" alt="" aria-hidden="true">
     <div class="wrap">
-      <p class="eyebrow">The Talent Transfer Portal · Vanderbilt · People, Culture and Belonging</p>
-      <h1>Stay at Vanderbilt.<br><em>Go somewhere new.</em></h1>
-      <p class="lead" style="margin-top:1.25rem">Your next role might already be here. The Talent Transfer Portal is Vanderbilt's private home for growing your career inside the university: explore roles, show interest safely, and compete for your next chapter.</p>
-      <div class="cta">
-        <a class="btn" href="web/">Take the 15-minute training</a>
-        <a class="btn btn--ghost" href="https://vanderbilttalentcompass.vercel.app/">Open the portal tool</a>
+      <div>
+        <p class="eyebrow">The Talent Transfer Portal · Vanderbilt · People, Culture and Belonging</p>
+        <h1>What is the Talent Transfer <em>Portal</em>?</h1>
+        <p class="lead" style="margin-top:1.25rem">It is Vanderbilt's private home for growing your career inside the university. It lives in Oracle and does two things: helps you find and win new roles here, and offers Gigs, short projects that build your skills.</p>
+        <div class="cta">
+          <a class="btn" href="web/">Take the 15-minute training</a>
+          <a class="btn btn--ghost" href="https://vanderbilttalentcompass.vercel.app/">Open the portal tool</a>
+        </div>
       </div>
-      <div class="kicker">
-        <div><b>2</b> paths: career moves and Gigs</div>
-        <div><b>5</b> business days of staff-first postings</div>
-        <div><b>0</b> alerts when you show interest</div>
-      </div>
+      <aside class="means" aria-label="What it means for you">
+        <h2>What it means <em>for you</em></h2>
+        <ul>
+          <li><b>First look.</b> See open Vanderbilt jobs five business days before the public.</li>
+          <li><b>Real privacy.</b> Explore and show interest without anyone being alerted.</li>
+          <li><b>Room to stretch.</b> Build skills with short Gigs while keeping your job.</li>
+          <li><b>A future here.</b> Grow up or sideways without leaving Vanderbilt.</li>
+        </ul>
+      </aside>
     </div>
   </section>
 
@@ -327,46 +338,7 @@
 </footer>
 
 <script>
-(function () {
-  document.getElementById('yr').textContent = new Date().getFullYear();
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var vids = [document.getElementById('v1'), document.getElementById('v2')];
-  if (reduce || !vids[0]) { vids.forEach(function (v) { if (v) v.remove(); }); return; }
-  var clips = ['assets/video/hero-conversation.mp4', 'assets/video/hero-collaboration.mp4', 'assets/video/hero-mentorship.mp4'];
-  var RATE = 0.5, FADE = 1.5;
-  var active = 0, clip = 0, switching = false, fails = 0, dead = false;
-  function startOn(slot, idx) {
-    if (dead) return;
-    clip = ((idx % clips.length) + clips.length) % clips.length;
-    var v = vids[slot];
-    v.src = clips[clip];
-    v.playbackRate = RATE;
-    var p = v.play && v.play();
-    if (p && p.catch) p.catch(function () {});
-    active = slot; switching = false;
-    vids.forEach(function (x, i) { x.classList.toggle('on', i === slot); });
-  }
-  vids.forEach(function (v, slot) {
-    v.addEventListener('loadedmetadata', function () { v.playbackRate = RATE; });
-    v.addEventListener('timeupdate', function () {
-      if (dead || slot !== active || switching || !v.duration) return;
-      if (v.duration - v.currentTime <= FADE * RATE) {
-        switching = true;
-        startOn(1 - slot, clip + 1);
-        setTimeout(function () { if (!dead) v.pause(); }, FADE * 1000 + 150);
-      }
-    });
-    v.addEventListener('ended', function () {
-      if (!dead && slot === active && !switching) { switching = true; startOn(1 - slot, clip + 1); }
-    });
-    v.addEventListener('error', function () {
-      fails++;
-      if (fails >= clips.length * 2) { dead = true; vids.forEach(function (x) { x.remove(); }); }
-      else if (slot === active && !dead) { startOn(1 - slot, clip + 1); }
-    });
-  });
-  startOn(0, 0);
-})();
+document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>

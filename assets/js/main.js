@@ -286,7 +286,7 @@
     progressWord: 'Claim', goodColor: 'var(--vu-oak)',
     resultColor: 'var(--ink-soft, #555)', passAt: 4,
     passMsg: 'You know what the portal actually does, which puts you ahead of most of the folklore about it.',
-    failMsg: 'Close. The pattern in every answer: the portal is private by default, competitive by design, and it acts only when you ask it to.',
+    failMsg: 'Close. The pattern in every answer: the portal is private by default, and it acts only when you ask it to.',
     labels: ['Fact', 'Fiction'],
     items: [
       { q: '"The moment you declare a Career of Interest, your manager gets a notification."',
@@ -298,7 +298,7 @@
       { q: '"Advisory support starts only when you request it, and nothing you share triggers action without your consent."',
         answer: 0, why: 'Fact. You start the advisor conversation, and it stays advice. Nobody gets moved by surprise.' },
       { q: '"Applying internally means the job is basically yours; internal candidates are guaranteed the role."',
-        answer: 1, why: 'Fiction. The window gives you the first look, and the interview is still yours to win. Applying from inside never means the job is yours.' }
+        answer: 1, why: 'Fiction. The window gives you the first look, and the interview still decides. Applying from inside never means the job is yours.' }
     ]
   });
 
@@ -332,7 +332,7 @@
     progressWord: 'Moment', goodColor: 'var(--vu-oak)',
     resultColor: 'var(--ink-soft, #555)', passAt: 4,
     passMsg: 'You can see every step before it happens, which is exactly what makes the process trustworthy.',
-    failMsg: 'Close. The through-line: private until you act, competitive when you do, and coordinated when you win.',
+    failMsg: 'Close. The through-line: private until you act, open when you apply, and planned when you are chosen.',
     labels: [],
     items: [
       { q: 'You just tagged your skills and declared two Careers of Interest. What appears on your manager\'s screen?',
@@ -473,7 +473,7 @@
         opts: ['Hoarding is rare, about one manager in ten', 'About 75% of managers admit to hoarding, and it stops people from applying inside', 'Hoarding mostly helps keep teams stable', 'Only bad managers hoard'],
         correct: 1, why: 'About three out of four, driven by ordinary pressures, and it clearly stops inside applications. That is why the culture work is built in, never left to chance.' },
       { q: 'A team member tells you they\'ve applied for an internal role. The culture-building response starts with…',
-        opts: ['"After everything I\'ve invested in you?"', '"Let\'s talk about your timing."', '"Thank you for telling me," then helping them compete well and planning their development either way', 'Calling HR to understand your options'],
+        opts: ['"After everything I\'ve invested in you?"', '"Let\'s talk about your timing."', '"Thank you for telling me," then helping them prepare well and planning their development either way', 'Calling HR to understand your options'],
         correct: 2, why: 'Thank first, coach forward. That response builds a career at Vanderbilt; the others build a resume for somewhere else.' }
     ];
     var idx = 0, score = 0, locked = false;

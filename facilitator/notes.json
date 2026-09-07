@@ -85,7 +85,7 @@
       },
       {
         "q": "If I take a Gig and do great work, why doesn't that guarantee me the permanent role?",
-        "a": "Because the Gig is development and the requisition is a competition, and keeping them separate protects you both ways. If Gigs converted automatically, every Gig would become a quiet audition and managers would guard them like headcount. Kept separate, you can stretch without betting your reputation, and when the real requisition opens, your Gig gives you evidence, relationships, and a warm start most candidates won't have."
+        "a": "Because the Gig is development and the job posting is its own fair process, and keeping them separate protects you both ways. If Gigs converted automatically, every Gig would become a quiet audition and managers would guard them like headcount. Kept separate, you can stretch without betting your reputation, and when the real requisition opens, your Gig gives you evidence, relationships, and a warm start most candidates won't have."
       },
       {
         "q": "What if my manager retaliates anyway?",
@@ -93,7 +93,7 @@
       },
       {
         "q": "Why would I tell the truth about my skill levels? Inflating them gets me matched to better roles.",
-        "a": "It gets you matched to interviews you then lose. The hiring manager verifies skills in the interview, and an inflated profile spends your credibility exactly where you need it most. Honest levels do something better: they route you to roles and Gigs where you'll genuinely compete, and they turn the gaps into Grow goals instead of surprises."
+        "a": "It gets you matched to interviews you then lose. The hiring manager verifies skills in the interview, and an inflated profile spends your credibility exactly where you need it most. Honest levels do something better: they route you to roles and Gigs where you'll genuinely be ready, and they turn the gaps into Grow goals instead of surprises."
       },
       {
         "q": "We're short-staffed already. How is my unit supposed to survive its best people leaving?",
@@ -178,7 +178,7 @@
       "watchFor": "Privacy skepticism; point at the mechanics (no notifications, aggregate-only) and move on. If Gigs come up: they have not launched yet, teach the concept and flag that timing is to be announced.",
       "coreMinutes": 1,
       "coreNote": "Core: same minute; the trainer carries it.",
-      "say": "What is it? Two things, one portal. Path one: career moves. Find open Vanderbilt jobs, see them before the public does, and compete for them. Path two: Gigs. Short projects in other units that build your skills; we are rolling Gigs out in Oracle to promote short-term opportunities. Both live in Oracle, both stay private until you act, and leaders only ever see group totals. Now the game: five claims, true or false.",
+      "say": "What is it? Two things, one portal. Path one: careers of interest. Name where you want to grow, build toward it, and see openings before the public does. Path two: Gigs. Short projects in other units that build your skills; we are rolling Gigs out in Oracle to promote short-term opportunities. Both live in Oracle, both stay private until you act, and leaders only ever see group totals. Now the game: five claims, true or false.",
       "transition": "Which door is yours? There are six."
     },
     {
@@ -205,11 +205,11 @@
       "minutes": 2,
       "purpose": "Make every step predictable, including disclosure timing.",
       "facilitate": [
-        "The two paragraphs, one breath each: build, then compete.",
+        "The two paragraphs, one breath each: build, then pursue.",
         "Run Call the Next Move as a fast vote."
       ],
       "validate": "4+ of 5 on the trainer.",
-      "watchFor": "The 'guaranteed job' misread: the window guarantees first look, the interview is yours to win. If privacy versus openness comes up: both are true, the conversation is the culture and the privacy is the guarantee. And the Gig caveat if asked: Gigs are still to launch, and a Gig needs the manager's approval, so it is never invisible to them.",
+      "watchFor": "The 'guaranteed job' misread: the window guarantees first look, the interview still decides. If privacy versus openness comes up: both are true, the conversation is the culture and the privacy is the guarantee. And the Gig caveat if asked: Gigs are still to launch, and a Gig needs the manager's approval, so it is never invisible to them.",
       "coreMinutes": 1,
       "coreNote": "Core: both gears in one breath each, trainer as one vote.",
       "say": "Two speeds. Every day: talk with your manager, keep your skills honest, flag the careers that interest you, browse the marketplace, and take a Gig when one fits. All private to you. When a job opens: staff see it first for five business days, you apply and interview like anyone, and if you win it, the handoff is planned. Your old job posts the same way.",
@@ -266,7 +266,7 @@
       "watchFor": "Running long; the ending IS the punctuality.",
       "coreMinutes": 1,
       "coreNote": "Core: fist to five and three voices; done.",
-      "say": "One breath: private by default, competitive by design, six doors, one process, and thank you for telling me. Your one next step is a conversation with your manager about your growth and development; the job aid carries the other four moves. Say your first move out loud; spoken commitments stick.",
+      "say": "One breath: private by default, built on growth, six doors, one process, and thank you for telling me. Your one next step is a conversation with your manager about your growth and development; the job aid carries the other four moves. Say your first move out loud; spoken commitments stick.",
       "transition": "Go make the move."
     }
   ]

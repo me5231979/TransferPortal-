@@ -249,7 +249,7 @@ def _g(t): return html.escape(str(t), quote=False)
 gm = notes['meta']
 gsecs = notes['sections']
 rows = ''.join(
-    f"<tr><td>{_g(x['title'])}</td><td>{x.get('minutes','')}</td><td>{x.get('coreMinutes') if x.get('coreMinutes') else '—'}</td></tr>"
+    f"<tr><td>{_g(x['title'])}</td><td>{x.get('minutes','')}</td><td>{x.get('coreMinutes') if x.get('coreMinutes') else 'skip'}</td></tr>"
     for x in gsecs)
 full_total = sum(x.get('minutes', 0) for x in gsecs)
 core_total = sum(x.get('coreMinutes', 0) for x in gsecs)

@@ -3,7 +3,7 @@
     "program": "The Talent Transfer Portal · Vanderbilt Learning Series",
     "totalMinutes": 15,
     "audience": "All Vanderbilt staff and their managers. Designed as a 15-minute experience: a team huddle, the top of a staff meeting, or a self-paced quarter hour. Works at any size; no prerequisites.",
-    "roomSetup": "Projector plus presenter device; learners on their own devices via the Welcome-slide QR; movable seating for pairs. Virtual: breakouts of 2 for the pair activities. This session touches real career hopes: establish early that nothing typed in the course is saved or sent, and that the portal itself is private by default. If HR leadership attends, brief them beforehand that the tough questions section may surface real policy questions to take away.",
+    "roomSetup": "Projector plus presenter device; learners on their own devices via the Welcome-slide QR; movable seating for pairs. Virtual: breakouts of 2 for the pair activities. This session touches real career hopes: establish early that nothing typed in the course is saved or sent, and that activity in the portal is private to each person by default. If HR leadership attends, brief them beforehand that the tough questions section may surface real policy questions to take away.",
     "postSession": "Seven days out, send the pulse: 'Did you take your first move from the job aid? What did you find in the portal? What is your second move?' At 30 days, re-poll the fist-to-five confidence question from the close plus 'has your unit had its first Talent Transfer Portal conversation, and how did it go?' The count of completed first moves is the program's headline Level 3 metric; for manager cohorts, also count completed career conversations.",
     "paths": {
       "full": {
@@ -85,7 +85,7 @@
       },
       {
         "q": "If I take a Gig and do great work, why doesn't that guarantee me the permanent role?",
-        "a": "Because the Gig is development and the job posting is its own fair process, and keeping them separate protects you both ways. If Gigs converted automatically, every Gig would become a quiet audition and managers would guard them like headcount. Kept separate, you can stretch without betting your reputation, and when the real requisition opens, your Gig gives you evidence, relationships, and a warm start most candidates won't have."
+        "a": "Because the Gig is development and a real move is its own fair, open process, and keeping them separate protects you both ways. If Gigs converted automatically, every Gig would become a quiet audition and managers would guard them like headcount. Kept separate, you can stretch without betting your reputation, and when the right opening arises, your Gig gives you evidence, relationships, and a warm start most candidates won't have."
       },
       {
         "q": "What if my manager retaliates anyway?",
@@ -266,7 +266,7 @@
       "watchFor": "Running long; the ending IS the punctuality.",
       "coreMinutes": 1,
       "coreNote": "Core: fist to five and three voices; done.",
-      "say": "One breath: private by default, built on growth, six doors, one process, and thank you for telling me. Your one next step is a conversation with your manager about your growth and development; the job aid carries the other four moves. Say your first move out loud; spoken commitments stick.",
+      "say": "One breath: built on growth, activity private to you, six doors, one process, and thank you for telling me. Your one next step is a conversation with your manager about your growth and development; the job aid carries the other four moves. Say your first move out loud; spoken commitments stick.",
       "transition": "Go make the move."
     }
   ]

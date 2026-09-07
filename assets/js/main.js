@@ -286,7 +286,7 @@
     progressWord: 'Claim', goodColor: 'var(--vu-oak)',
     resultColor: 'var(--ink-soft, #555)', passAt: 4,
     passMsg: 'You know what the portal actually does, which puts you ahead of most of the folklore about it.',
-    failMsg: 'Close. The pattern in every answer: the portal is private by default, and it acts only when you ask it to.',
+    failMsg: 'Close. The pattern in every answer: your activity stays private, and the portal acts only when you ask it to.',
     labels: ['Fact', 'Fiction'],
     items: [
       { q: '"The moment you declare a Career of Interest, your manager gets a notification."',
@@ -294,7 +294,7 @@
       { q: '"Eligible open roles post internally for five business days before they can post externally."',
         answer: 0, why: 'Fact. That head start is the staff advantage: you see openings before the outside world does.' },
       { q: '"A Gig is basically a trial run; do well and the permanent transfer follows."',
-        answer: 1, why: 'Fiction. A Gig is a short project that builds skills and relationships. A real move still goes through an open job posting.' },
+        answer: 1, why: 'Fiction. A Gig is a short project that builds skills and relationships. It gets you ready for the right opening when it arises.' },
       { q: '"Advisory support starts only when you request it, and nothing you share triggers action without your consent."',
         answer: 0, why: 'Fact. You start the advisor conversation, and it stays advice. Nobody gets moved by surprise.' },
       { q: '"Applying internally means the job is basically yours; internal candidates are guaranteed the role."',
@@ -310,7 +310,7 @@
     resultColor: 'rgba(255,255,255,.85)', passAt: 4,
     passMsg: 'You can route real situations to the right door, including your own.',
     failMsg: 'Close. The tells: curiosity with no urgency is A. Plateaued excellence is B. Hidden skills are C. A reorg is D. Risk is E. A specific posting is F.',
-    labels: ['A · Explorer', 'B · New challenge', 'C · Unused skills', 'D · Post-reorg', 'E · At risk', 'F · Direct applicant'],
+    labels: ['A · Explorer', 'B · New challenge', 'C · Unused skills', 'D · Post-reorg', 'E · At risk', 'F · Ready to pursue'],
     items: [
       { q: 'Fifteen years in, excellent reviews, and lately the work runs on autopilot. They love their team and have no wish to abandon it; they just miss being stretched.',
         answer: 1, why: 'Entrance B. A Gig gives them a stretch project in another unit while they keep their home role, and Careers of Interest starts mapping what could come next.' },
@@ -339,8 +339,8 @@
         opts: ['Nothing; your interest is private and only counted in group totals', 'An alert that day', 'A meeting request from HR'],
         answer: 0, why: 'Nothing. Your interest and profile stay private, reaching People, Culture and Belonging only as group totals. You choose when to tell.' },
       { q: 'You finish a Gig in another unit and loved every minute. What did the Gig earn you?',
-        opts: ['A permanent transfer to that team within the year', 'First refusal on their next opening', 'The growth itself: skills, relationships, and proof, with any move still going through an open job posting'],
-        answer: 2, why: 'The Gig is the growth. What you carry out of it, new skills, a network, and proof you can do the work, makes you a stronger candidate when a real job posts.' },
+        opts: ['A permanent transfer to that team within the year', 'First refusal on their next opening', 'The growth itself: skills, relationships, and proof, ready for the right opening when it arises'],
+        answer: 2, why: 'The Gig is the growth. What you carry out of it, new skills, a network, and proof you can do the work, makes you ready when the right opening arises.' },
       { q: 'A role you want just posted internally. When can external candidates enter the race?',
         opts: ['Immediately, alongside you', 'After the five-business-day staff-first window', 'Whenever the hiring manager chooses'],
         answer: 1, why: 'Five business days. That window is the staff advantage: Vanderbilt candidates get the first look, then everyone goes through the same fair interview process.' },
@@ -407,9 +407,9 @@
     var PRACTICE = {
       explore: { name: 'Profile and interests', move: 'Open the Talent Transfer Portal, tag your skills at their honest levels, and declare at least one Career of Interest. Private to you; the suggestions start from there.' },
       gig: { name: 'The Gig warm-up', move: 'Set one Grow goal around a stretch skill now, so the day Gigs launch you can search the postings and save the one that fits it.' },
-      req: { name: 'The requisition search', move: 'Search open internal requisitions in your target area, save the closest match, and read its requirements against your profile. Gaps become Grow goals.' },
+      req: { name: 'The opening search', move: 'Search open internal roles in your target area, save the closest match, and read its requirements against your profile. Gaps become Grow goals.' },
       advisory: { name: 'The advisory conversation', move: 'Request an employee-consultant conversation and bring one honest question about your direction. It stays confidential, and nothing happens without your consent.' },
-      coach: { name: 'The manager conversation', move: 'Hold the "what\'s next for you at Vanderbilt" conversation with one team member this week, before any requisition holds it for you. Thank first, coach forward.' }
+      coach: { name: 'The manager conversation', move: 'Hold the "what\'s next for you at Vanderbilt" conversation with one team member this week, before an opening holds it for you. Thank first, coach forward.' }
     };
     var NOT = {
       drift: 'Waiting to be discovered. Counter-move: the portal only matches what you put in it, so the profile update happens before anything else.',
@@ -458,14 +458,14 @@
   if (recap) {
     var QUESTIONS = [
       { q: 'The Talent Transfer Portal is best described as…',
-        opts: ['A guaranteed promotion track for long-time staff', 'A fair internal job market that you own, private by default', 'A tool HR uses to reassign people', 'A public list of who wants to leave their team'],
-        correct: 1, why: 'A job market you own: private by default, fair by design, with help that starts only when you ask.' },
+        opts: ['A guaranteed promotion track for long-time staff', 'Vanderbilt\'s home for your growth and development; your activity stays private to you', 'A tool HR uses to reassign people', 'A public list of who wants to leave their team'],
+        correct: 1, why: 'Your home for growth: identify where you want to go, build the skills, and pursue opportunities as they arise. Your activity stays private, and help starts only when you ask.' },
       { q: 'You declare a Career of Interest on Tuesday. Your manager…',
         opts: ['Gets an alert Tuesday', 'Sees it at your next review', 'Is not alerted; you choose if and when to tell', 'Is told only if HR flags you as a risk to leave'],
         correct: 2, why: 'Silent by default. Interest is only counted in group totals, and you tell your manager on your timing, once you\'re a serious candidate.' },
       { q: 'A Gig is…',
         opts: ['A trial period that turns into a transfer if you do well', 'A short stretch project with a set scope and end date that builds your skills', 'A required rotation HR assigns', 'A second job with extra pay'],
-        correct: 1, why: 'Growth, on purpose: real work in another unit, with your home role kept. Any real move still goes through an open job posting.' },
+        correct: 1, why: 'Growth, on purpose: real work in another unit, with your home role kept. What it builds gets you ready for the right opening.' },
       { q: 'The five-business-day staff-first window means…',
         opts: ['Vanderbilt staff get a five-business-day head start before roles post to the public', 'Roles stay internal-only forever', 'You have five business days to accept any offer', 'Managers get five business days to counter-offer'],
         correct: 0, why: 'Staff see openings first. After the window, inside and outside candidates go through the same fair interview process.' },

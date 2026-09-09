@@ -1,5 +1,5 @@
 /* =====================================================================
-   THE TRANSFER PORTAL, classroom deck
+   THE TALENT MARKETPLACE, classroom deck
    interactions (vanilla JS, no dependencies)
    ===================================================================== */
 (function () {
@@ -285,8 +285,8 @@
     progress: '#pfProgress', next: '#pfNext', result: '#pfResult',
     progressWord: 'Claim', goodColor: 'var(--vu-oak)',
     resultColor: 'var(--ink-soft, #555)', passAt: 4,
-    passMsg: 'You know what the portal actually does, which puts you ahead of most of the folklore about it.',
-    failMsg: 'Close. The pattern in every answer: your activity stays private, and the portal acts only when you ask it to.',
+    passMsg: 'You know what the marketplace actually does, which puts you ahead of most of the folklore about it.',
+    failMsg: 'Close. The pattern in every answer: your activity stays private, and the marketplace acts only when you ask it to.',
     labels: ['Fact', 'Fiction'],
     items: [
       { q: '"The moment you declare a Career of Interest, your manager gets a notification."',
@@ -315,7 +315,7 @@
       { q: 'Fifteen years in, excellent reviews, and lately the work runs on autopilot. They love their team and have no wish to abandon it; they just miss being stretched.',
         answer: 1, why: 'Entrance B. A Gig gives them a stretch project in another unit while they keep their home role, and Careers of Interest starts mapping what could come next.' },
       { q: 'Hired as a financial analyst, they have quietly become the unit\'s data visualization expert, and the current role has no room for that work.',
-        answer: 2, why: 'Entrance C. Tag the real skills at their true level; the portal then shows roles and Gigs that need them.' },
+        answer: 2, why: 'Entrance C. Tag the real skills at their true level; the marketplace then shows roles and Gigs that need them.' },
       { q: 'Their division just merged with another. New manager, new mission, and half their duties moved to a different team in the space of a month.',
         answer: 3, why: 'Entrance D. An advisor conversation helps them figure out what they want next; then they apply to roles that fit. The talk is theirs to start.' },
       { q: 'They keep wondering what else exists at Vanderbilt, and they would be mortified if anyone concluded they were leaving.',
@@ -348,7 +348,7 @@
         opts: ['You start Monday and your old team improvises', 'HR and both managers coordinate a planned handoff, typically two to four weeks', 'You split time between both jobs for a quarter'],
         answer: 1, why: 'A planned, respectful handoff, usually two to four weeks. The manager you leave is a partner in the plan, never a roadblock.' },
       { q: 'You have moved. What happens to the role you left behind?',
-        opts: ['It posts to the same portal, giving your old team the same first look you just used', 'It is absorbed and disappears', 'It goes straight to outside posting to speed things up'],
+        opts: ['It posts to the same marketplace, giving your old team the same first look you just used', 'It is absorbed and disappears', 'It goes straight to outside posting to speed things up'],
         answer: 0, why: 'Your old job posts to staff first, so one move becomes the next person\'s opportunity.' }
     ]
   });
@@ -405,14 +405,14 @@
       });
     });
     var PRACTICE = {
-      explore: { name: 'Profile and interests', move: 'Open the Talent Transfer Portal, tag your skills at their honest levels, and declare at least one Career of Interest. Private to you; the suggestions start from there.' },
+      explore: { name: 'Profile and interests', move: 'Open the Talent Marketplace, tag your skills at their honest levels, and declare at least one Career of Interest. Private to you; the suggestions start from there.' },
       gig: { name: 'The Gig warm-up', move: 'Set one Grow goal around a stretch skill now, so the day Gigs launch you can search the postings and save the one that fits it.' },
       req: { name: 'The opening search', move: 'Search open internal roles in your target area, save the closest match, and read its requirements against your profile. Gaps become Grow goals.' },
       advisory: { name: 'The advisory conversation', move: 'Request an employee-consultant conversation and bring one honest question about your direction. It stays confidential, and nothing happens without your consent.' },
       coach: { name: 'The manager conversation', move: 'Hold the "what\'s next for you at Vanderbilt" conversation with one team member this week, before an opening holds it for you. Thank first, coach forward.' }
     };
     var NOT = {
-      drift: 'Waiting to be discovered. Counter-move: the portal only matches what you put in it, so the profile update happens before anything else.',
+      drift: 'Waiting to be discovered. Counter-move: the marketplace only matches what you put in it, so the profile update happens before anything else.',
       inflate: 'Inflating skill ratings. Counter-move: tag the level a hiring manager would verify in an interview; credibility compounds, padding gets found out.',
       stall: 'Putting the career conversation off again. Counter-move: the calendar invite goes out the moment you finish this card.',
       hoard: 'Guilting or slow-walking a team member\'s move. Counter-move: the response is "thank you for telling me," and the release goes on your leadership record as the win it is.'
@@ -426,7 +426,7 @@
         '<div class="row"><b>My direction</b><span>' + who.replace(/</g, '&lt;') + '</span></div>' +
         '<div class="row"><b>My first move</b><span>' + p.name + '. ' + p.move + '</span></div>' +
         '<div class="row"><b>What I will NOT do</b><span>' + NOT[pick.not] + '</span></div>' +
-        '<div class="row"><b>The date</b><span>' + WHEN[pick.when].charAt(0).toUpperCase() + WHEN[pick.when].slice(1) + ', in the actual portal, before the week gets loud.</span></div>' +
+        '<div class="row"><b>The date</b><span>' + WHEN[pick.when].charAt(0).toUpperCase() + WHEN[pick.when].slice(1) + ', in the actual marketplace, before the week gets loud.</span></div>' +
         '<div class="row"><b>The evidence</b><span>Afterward, write one line about what you found. That line decides your second move.</span></div>' +
         '<div class="row"><b>The disclosure note</b><span>You owe nobody an announcement for exploring. Once you\'re a serious candidate for something, have the professional conversation with your manager on your terms.</span></div>';
       outEl2.innerHTML = '<span class="tag">My first move card</span>' +
@@ -436,7 +436,7 @@
         '<span class="quiz__progress" id="planCopied" style="color:rgba(255,255,255,.6)">Put the move on your calendar now</span></div>';
       outEl2.hidden = false;
       $('#planCopy').addEventListener('click', function () {
-        var text = 'MY FIRST MOVE CARD (The Talent Transfer Portal, Vanderbilt)\n' +
+        var text = 'MY FIRST MOVE CARD (The Talent Marketplace, Vanderbilt)\n' +
           'Direction: ' + who + '\n' +
           'First move: ' + p.name + '. ' + p.move + '\n' +
           'I will NOT: ' + NOT[pick.not] + '\n' +
@@ -457,7 +457,7 @@
   var recap = $('#recap');
   if (recap) {
     var QUESTIONS = [
-      { q: 'The Talent Transfer Portal is best described as…',
+      { q: 'The Talent Marketplace is best described as…',
         opts: ['A guaranteed promotion track for long-time staff', 'Vanderbilt\'s home for your growth and development; your activity stays private to you', 'A tool HR uses to reassign people', 'A public list of who wants to leave their team'],
         correct: 1, why: 'Your home for growth: identify where you want to go, build the skills, and pursue opportunities as they arise. Your activity stays private, and help starts only when you ask.' },
       { q: 'You declare a Career of Interest on Tuesday. Your manager…',

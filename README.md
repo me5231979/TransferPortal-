@@ -1,7 +1,7 @@
-# The Talent Transfer Portal · Vanderbilt Learning Series
+# The Talent Marketplace · Vanderbilt Learning Series
 
 An interactive training for Vanderbilt staff and managers on **the Transfer
-Portal**, Vanderbilt's staff-facing internal talent mobility experience
+Marketplace**, Vanderbilt's staff-facing internal talent mobility experience
 (powered by Oracle, paired with Workforce Intelligence on the leader side).
 
 **Live editions**
@@ -54,7 +54,7 @@ re-shoot `facilitator/img/*.jpg` after any visual change.
 
 ## SCORM package (Oracle Learning)
 
-`talent-transfer-portal-scorm12.zip` at the repo root is a SCORM 1.2
+`talent-marketplace-scorm12.zip` at the repo root is a SCORM 1.2
 package of the self-paced edition, rebuilt with:
 
 ```
@@ -76,5 +76,5 @@ git branch -f gh-pages main && git push -f origin gh-pages
 Sister programs: AI Basics, AI 201, Difficult Conversations, Coaching for
 Performance, Emotional Intelligence. Same engine, same FLH brand system.
 
-Source material: "The Talent Transfer Portal: A Training Guide for Staff and
+Source material: "The Talent Marketplace: A Training Guide for Staff and
 Managers," Vanderbilt University People, Culture and Belonging.

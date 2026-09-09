@@ -1,5 +1,5 @@
 /* =====================================================================
-   SCORM 1.2 wrapper for the Talent Transfer Portal course.
+   SCORM 1.2 wrapper for the Talent Marketplace course.
    Included only in the SCORM package build (tools/build-scorm.py).
    Reports: incomplete on launch, completed on reaching the final page,
    and the recap quiz score (as a percentage) when the learner finishes it.

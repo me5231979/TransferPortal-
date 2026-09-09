@@ -1,4 +1,4 @@
-# Facilitating The Talent Transfer Portal
+# Facilitating The Talent Marketplace
 
 The full ATD runbook lives in the facilitator edition
 (https://me5231979.github.io/TransferPortal-/facilitator/), generated from
@@ -17,7 +17,7 @@ bank, and copy-paste templates. Print the whole packet from
 
 ## The one norm that carries the session
 
-Nothing typed in the course is saved or sent, and the portal itself is
+Nothing typed in the course is saved or sent, and the marketplace itself is
 private by default. State it on the welcome slide, repeat it before the
 capstone. This session touches real career hopes; if someone shares a live
 painful situation (a role at risk, a manager conflict), honor it, bound
@@ -36,6 +36,6 @@ privately.
 ## Before you teach
 
 Run both editions end to end, build your own first move card, and confirm
-the live state of the actual Talent Transfer Portal rollout with People, Culture
+the live state of the actual Talent Marketplace rollout with People, Culture
 and Belonging so you can answer "when" and "who do I call" without
 guessing.

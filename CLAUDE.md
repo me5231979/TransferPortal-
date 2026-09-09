@@ -1,4 +1,4 @@
-# The Talent Transfer Portal — Vanderbilt Learning Series
+# The Talent Marketplace — Vanderbilt Learning Series
 
 Single-page interactive classroom experience (Learning on Demand). Live at
 https://me5231979.github.io/TransferPortal-/ (GitHub Pages, `gh-pages`
@@ -13,13 +13,13 @@ catalog at me5231979/Course_Library. Same engine, same standing principles.
 1. **Play throughout.** Every teaching section has a trainer: Fact or
    Fiction (01), Pick the Entrance (02), Call the Next Move (03),
    Judge the Response (04, the signature piece), Guess the Number (05).
-2. **Privacy is the product.** The portal's core promise is silent-by-default
+2. **Privacy is the product.** The marketplace's core promise is silent-by-default
    interest declarations, and the course itself mirrors it: the capstone and
    all typed input stay on-screen, saved nowhere, and learner-visible copy
    SAYS so. Never add telemetry, storage, or sharing.
 3. **Never contradict the program facts:** NAMING: the HR program is
-   "the Talent Transfer Portal"; the companion skills site at
-   vanderbilttalentcompass.vercel.app is "the Talent Transfer Portal
+   "the Talent Marketplace"; the companion skills site at
+   vanderbilttalentcompass.vercel.app is "the Talent Marketplace
    Tool"; repo URLs (TransferPortal-) never change; the program rests on three
    connected pieces (an ongoing growth conversation with your manager,
    recommended never required; a private skill map the staff member owns;
@@ -54,7 +54,7 @@ data-count so teaching sections stay 01-05) →
 03 The process, two tracks (Call the Next Move) → 04 The culture shift
 (Judge the Response) → 05 The evidence (Guess the Number + stat tiles) →
 Recap quiz → Job aid: five moves with Oracle screenshots, deep links,
-and the Talent Transfer Portal link (the interactive First Move Card was
+and the Talent Marketplace link (the interactive First Move Card was
 retired: the course educates, it does not plan a move) → Closing.
 
 Deliberately no agenda, manifesto, or glossary slides; the deck was
@@ -75,5 +75,5 @@ developing), Grow (Careers of Interest), Opportunity Marketplace.
 - Runbook: `facilitator/notes.json` (timing must sum: Full 15 / Core 10)
 - Printables: `cheatsheet.html` (quick reference); `worksheet.html` is
   retired and no longer linked
-- Source doc: "The Talent Transfer Portal: A Training Guide for Staff and
+- Source doc: "The Talent Marketplace: A Training Guide for Staff and
   Managers," VU People, Culture and Belonging, v1.0 August 2026.

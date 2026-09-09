@@ -8,14 +8,14 @@ editions are regenerated:
 
     python3 tools/build-web.py && python3 tools/build-scorm.py
 
-Writes talent-transfer-portal-scorm12.zip at the repo root.
+Writes talent-marketplace-scorm12.zip at the repo root.
 """
 import os, re, shutil, zipfile, html
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIST = os.path.join(ROOT, 'scorm-dist')
-ZIP = os.path.join(ROOT, 'talent-transfer-portal-scorm12.zip')
-TITLE = 'The Talent Transfer Portal'
+ZIP = os.path.join(ROOT, 'talent-marketplace-scorm12.zip')
+TITLE = 'The Talent Marketplace'
 
 if os.path.exists(DIST):
     shutil.rmtree(DIST)
@@ -52,7 +52,7 @@ for dirpath, dirnames, filenames in os.walk(DIST):
 file_xml = '\n      '.join('<file href="%s"/>' % html.escape(f, quote=True) for f in files)
 
 manifest = '''<?xml version="1.0" encoding="UTF-8"?>
-<manifest identifier="VU.TalentTransferPortal.SCORM12" version="1.0"
+<manifest identifier="VU.TalentMarketplace.SCORM12" version="1.0"
   xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
   xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -63,16 +63,16 @@ manifest = '''<?xml version="1.0" encoding="UTF-8"?>
     <schema>ADL SCORM</schema>
     <schemaversion>1.2</schemaversion>
   </metadata>
-  <organizations default="ORG-TTP">
-    <organization identifier="ORG-TTP">
+  <organizations default="ORG-TM">
+    <organization identifier="ORG-TM">
       <title>%(title)s</title>
-      <item identifier="ITEM-TTP" identifierref="RES-TTP" isvisible="true">
+      <item identifier="ITEM-TM" identifierref="RES-TM" isvisible="true">
         <title>%(title)s</title>
       </item>
     </organization>
   </organizations>
   <resources>
-    <resource identifier="RES-TTP" type="webcontent" adlcp:scormtype="sco" href="web/index.html">
+    <resource identifier="RES-TM" type="webcontent" adlcp:scormtype="sco" href="web/index.html">
       %(files)s
     </resource>
   </resources>

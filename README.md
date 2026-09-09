@@ -1,6 +1,6 @@
 # The Talent Marketplace · Vanderbilt Learning Series
 
-An interactive training for Vanderbilt staff and managers on **the Transfer
+An interactive training for Vanderbilt staff and managers on **the Talent
 Marketplace**, Vanderbilt's staff-facing internal talent mobility experience
 (powered by Oracle, paired with Workforce Intelligence on the leader side).
 

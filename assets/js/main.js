@@ -83,7 +83,7 @@
         qr.addData(qrTarget);
         qr.make();
         qrBox.innerHTML = qr.createSvgTag({ scalable: true, margin: 2 });
-        if (qrUrlEl) qrUrlEl.textContent = qrTarget.replace(/^https?:\/\//, '').replace(/\/$/, '');
+        if (qrUrlEl) qrUrlEl.textContent = /transfer-?portal/i.test(qrTarget) ? 'The Talent Marketplace' : qrTarget.replace(/^https?:\/\//, '').replace(/\/$/, '');
       } catch (err) {
         qrBox.parentElement.style.display = 'none';
       }

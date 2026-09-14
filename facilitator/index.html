@@ -217,7 +217,7 @@ body.fac-hide .facshow { display: inline-flex; }
   <span class="bottombar__title" id="barTitle"></span>
   <div class="dots" id="dots" role="navigation" aria-label="Slide navigation"></div>
   <div class="bottombar__ctrl">
-    <span class="bottombar__count" id="deckCount">1 / 8</span>
+    <span class="bottombar__count" id="deckCount">1 / 9</span>
     <button id="deckPrev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
     <button id="deckNext" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
   </div>
@@ -638,21 +638,9 @@ body.fac-hide .facshow { display: inline-flex; }
   <!-- ============ 10 · FIRST MOVE CARD (capstone) ============ -->
   <section class="slide on-dark" id="s-plan" data-title="The job aid">
     <div class="wrap">
-      <p class="eyebrow" data-reveal>Check what stuck · Then take the first move</p>
-      <h2 class="h2" data-reveal>The recap, then your <em>runway</em>.</h2>
-      <p class="lead" data-reveal>Six quick questions first. Then the job aid: five small moves, the exact Oracle screens, and live links that open them. Nothing to fill in and nothing to submit.</p>
-      <div class="quiz" id="recap" data-reveal>
-        <div id="recapPanel">
-          <p class="quiz__progress" id="recapProgress"></p>
-          <p class="quiz__q" id="recapQ" style="margin-top:.5rem"></p>
-          <div class="quiz__options" id="recapOptions" role="group" aria-label="Answer choices"></div>
-          <p class="quiz__feedback" id="recapFeedback" aria-live="polite"></p>
-          <div class="quiz__nav">
-            <button class="btn btn--dark" id="recapNext" style="visibility:hidden">Next question</button>
-          </div>
-        </div>
-        <div id="recapResult" hidden aria-live="polite"></div>
-      </div>
+      <p class="eyebrow" data-reveal>Take the first move</p>
+      <h2 class="h2" data-reveal>Your <em>runway</em>: five small moves.</h2>
+      <p class="lead" data-reveal>The job aid: five small moves, the exact Oracle screens, and live links that open them. Nothing to fill in and nothing to submit.</p>
 
       <div class="hero__cta" data-reveal style="margin-top:.75rem"><a class="btn" href="jobaid.html">Print the job aid</a></div>
       <div class="warmup">
@@ -685,12 +673,34 @@ body.fac-hide .facshow { display: inline-flex; }
         </div>
       </div>
     </div>
-    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 2 min · Core 2</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Score what stuck (Level 2), then hand over the runway: five small moves with the exact Oracle screens and live links.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Six quick questions first; this is the check before the take-home. Then the job aid: five small moves, each on a real Oracle screen, with live links that open them. Move one is the growth conversation. Print it from the button right here.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Run the recap on devices; hands for 5 or better, and a thirty-second reteach on anything the room missed.</li><li>Walk the five moves left to right; point at the screenshots and the live links.</li><li>Name move one as the through-line: the growth conversation.</li><li>Point at the Print the job aid button for the take-home.</li></ol></div><p class="facnote__meta"><b>Validate:</b> Room mode at 5/6 or better on the quiz; every learner can name their first move.</p><p class="facnote__meta"><b>Watch for:</b> Turning this into a planning exercise; the course educates, the moves come later.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Last slide.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: quiz stays in full; walk the five moves in one pass.</p></aside>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 1 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Send everyone out with the five moves: conversation, tool, preferences, skills, careers of interest.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Now the runway. Five small moves, in order: the growth conversation with your manager, a plan in the Talent Marketplace tool, career preferences in Oracle, skills honest and current, and careers of interest flagged in Grow. Every link opens the real screen. Print the job aid, pick your first move, and take it today.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Walk the five cards left to right, pointing at the Oracle screenshots.</li><li>Call out that every link opens the real screen.</li><li>Tell the room to print the job aid before they leave.</li></ol></div><p class="facnote__meta"><b>Validate:</b> Everyone can name their own first move.</p><p class="facnote__meta"><b>Watch for:</b> Learners trying to do all five now; the ask is one move today.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;Before we close, let us check what stuck.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: same minute; point, do not demo.</p></aside>
   </section>
 
   
 
   
+
+  <!-- ============ RECAP QUIZ ============ -->
+  <section class="slide on-dark" id="s-recap" data-count data-title="The recap">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Check what stuck</p>
+      <h2 class="h2" data-reveal>Six questions, <em>instant</em> feedback.</h2>
+      <p class="lead" data-reveal>A quick check that the big ideas landed. Pick an answer, read the why, and see your score at the end.</p>
+      <div class="quiz" id="recap" data-reveal>
+        <div id="recapPanel">
+          <p class="quiz__progress" id="recapProgress"></p>
+          <p class="quiz__q" id="recapQ" style="margin-top:.5rem"></p>
+          <div class="quiz__options" id="recapOptions" role="group" aria-label="Answer choices"></div>
+          <p class="quiz__feedback" id="recapFeedback" aria-live="polite"></p>
+          <div class="quiz__nav">
+            <button class="btn btn--dark" id="recapNext" style="visibility:hidden">Next question</button>
+          </div>
+        </div>
+        <div id="recapResult" hidden aria-live="polite"></div>
+      </div>
+    </div>
+    <aside class="facnote" aria-label="Facilitator notes"><div class="facnote__head"><span>Facilitator script</span><span class="facnote__time">Full 1 min · Core 1</span><button class="facnote__hide" type="button" aria-label="Hide the facilitator script">Hide</button></div><p class="facnote__purpose">Verify the big ideas landed with the six-question recap.</p><div class="facnote__blk"><span class="facnote__tag t-say">Say</span><p class="facnote__script">&ldquo;Quick check before we close. Six questions, instant feedback. Answer honestly, read the why after each one, and see how much stuck. Most rooms are surprised by at least one answer.&rdquo;</p></div><div class="facnote__blk"><span class="facnote__tag t-do">Do</span><ol class="facnote__steps"><li>Run the six questions as a room vote, hands up per option.</li><li>Read each why aloud after the reveal.</li><li>Celebrate the score; no grades, just a check.</li></ol></div><p class="facnote__meta"><b>Validate:</b> Room lands 4+ of 6 together.</p><p class="facnote__meta"><b>Watch for:</b> Rushing; the why lines carry the teaching, read them.</p><div class="facnote__blk"><span class="facnote__tag t-tra">Transition</span><p class="facnote__script">&ldquo;That is the whole story. One breath to close.&rdquo;</p></div><p class="facnote__meta facnote__core"><b>60-min core:</b> Core: same minute; skip the debate, keep the whys.</p></aside>
+  </section>
 
   <!-- ============ 12 · CLOSING ============ -->
   <section class="slide on-dark" id="s-close" data-title="Wrap-up">

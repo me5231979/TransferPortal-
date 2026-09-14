@@ -220,21 +220,37 @@
     },
     {
       "id": "s-plan",
-      "title": "Recap quiz + job aid",
-      "minutes": 2,
-      "purpose": "Score what stuck (Level 2), then hand over the runway: five small moves with the exact Oracle screens and live links.",
+      "title": "05 · The job aid",
+      "minutes": 1,
+      "purpose": "Send everyone out with the five moves: conversation, tool, preferences, skills, careers of interest.",
       "facilitate": [
-        "Run the recap on devices; hands for 5 or better, and a thirty-second reteach on anything the room missed.",
-        "Walk the five moves left to right; point at the screenshots and the live links.",
-        "Name move one as the through-line: the growth conversation.",
-        "Point at the Print the job aid button for the take-home."
+        "Walk the five cards left to right, pointing at the Oracle screenshots.",
+        "Call out that every link opens the real screen.",
+        "Tell the room to print the job aid before they leave."
       ],
-      "validate": "Room mode at 5/6 or better on the quiz; every learner can name their first move.",
-      "watchFor": "Turning this into a planning exercise; the course educates, the moves come later.",
-      "coreMinutes": 2,
-      "coreNote": "Core: quiz stays in full; walk the five moves in one pass.",
-      "say": "Six quick questions first; this is the check before the take-home. Then the job aid: five small moves, each on a real Oracle screen, with live links that open them. Move one is the growth conversation. Print it from the button right here.",
-      "transition": "Last slide."
+      "validate": "Everyone can name their own first move.",
+      "watchFor": "Learners trying to do all five now; the ask is one move today.",
+      "coreMinutes": 1,
+      "coreNote": "Core: same minute; point, do not demo.",
+      "say": "Now the runway. Five small moves, in order: the growth conversation with your manager, a plan in the Talent Marketplace tool, career preferences in Oracle, skills honest and current, and careers of interest flagged in Grow. Every link opens the real screen. Print the job aid, pick your first move, and take it today.",
+      "transition": "Before we close, let us check what stuck."
+    },
+    {
+      "id": "s-recap",
+      "title": "06 · The recap",
+      "minutes": 1,
+      "purpose": "Verify the big ideas landed with the six-question recap.",
+      "facilitate": [
+        "Run the six questions as a room vote, hands up per option.",
+        "Read each why aloud after the reveal.",
+        "Celebrate the score; no grades, just a check."
+      ],
+      "validate": "Room lands 4+ of 6 together.",
+      "watchFor": "Rushing; the why lines carry the teaching, read them.",
+      "coreMinutes": 1,
+      "coreNote": "Core: same minute; skip the debate, keep the whys.",
+      "say": "Quick check before we close. Six questions, instant feedback. Answer honestly, read the why after each one, and see how much stuck. Most rooms are surprised by at least one answer.",
+      "transition": "That is the whole story. One breath to close."
     },
     {
       "id": "s-close",

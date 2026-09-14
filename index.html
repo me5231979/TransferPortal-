@@ -140,7 +140,7 @@
   <span class="bottombar__title" id="barTitle"></span>
   <div class="dots" id="dots" role="navigation" aria-label="Slide navigation"></div>
   <div class="bottombar__ctrl">
-    <span class="bottombar__count" id="deckCount">1 / 8</span>
+    <span class="bottombar__count" id="deckCount">1 / 9</span>
     <button id="deckPrev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
     <button id="deckNext" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
   </div>
@@ -555,21 +555,9 @@
   <!-- ============ 10 · FIRST MOVE CARD (capstone) ============ -->
   <section class="slide on-dark" id="s-plan" data-title="The job aid">
     <div class="wrap">
-      <p class="eyebrow" data-reveal>Check what stuck · Then take the first move</p>
-      <h2 class="h2" data-reveal>The recap, then your <em>runway</em>.</h2>
-      <p class="lead" data-reveal>Six quick questions first. Then the job aid: five small moves, the exact Oracle screens, and live links that open them. Nothing to fill in and nothing to submit.</p>
-      <div class="quiz" id="recap" data-reveal>
-        <div id="recapPanel">
-          <p class="quiz__progress" id="recapProgress"></p>
-          <p class="quiz__q" id="recapQ" style="margin-top:.5rem"></p>
-          <div class="quiz__options" id="recapOptions" role="group" aria-label="Answer choices"></div>
-          <p class="quiz__feedback" id="recapFeedback" aria-live="polite"></p>
-          <div class="quiz__nav">
-            <button class="btn btn--dark" id="recapNext" style="visibility:hidden">Next question</button>
-          </div>
-        </div>
-        <div id="recapResult" hidden aria-live="polite"></div>
-      </div>
+      <p class="eyebrow" data-reveal>Take the first move</p>
+      <h2 class="h2" data-reveal>Your <em>runway</em>: five small moves.</h2>
+      <p class="lead" data-reveal>The job aid: five small moves, the exact Oracle screens, and live links that open them. Nothing to fill in and nothing to submit.</p>
 
       <div class="hero__cta" data-reveal style="margin-top:.75rem"><a class="btn" href="jobaid.html">Print the job aid</a></div>
       <div class="warmup">
@@ -607,6 +595,27 @@
   
 
   
+
+  <!-- ============ RECAP QUIZ ============ -->
+  <section class="slide on-dark" id="s-recap" data-count data-title="The recap">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>Check what stuck</p>
+      <h2 class="h2" data-reveal>Six questions, <em>instant</em> feedback.</h2>
+      <p class="lead" data-reveal>A quick check that the big ideas landed. Pick an answer, read the why, and see your score at the end.</p>
+      <div class="quiz" id="recap" data-reveal>
+        <div id="recapPanel">
+          <p class="quiz__progress" id="recapProgress"></p>
+          <p class="quiz__q" id="recapQ" style="margin-top:.5rem"></p>
+          <div class="quiz__options" id="recapOptions" role="group" aria-label="Answer choices"></div>
+          <p class="quiz__feedback" id="recapFeedback" aria-live="polite"></p>
+          <div class="quiz__nav">
+            <button class="btn btn--dark" id="recapNext" style="visibility:hidden">Next question</button>
+          </div>
+        </div>
+        <div id="recapResult" hidden aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
 
   <!-- ============ 12 · CLOSING ============ -->
   <section class="slide on-dark" id="s-close" data-title="Wrap-up">

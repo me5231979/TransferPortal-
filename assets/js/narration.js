@@ -17,6 +17,10 @@
     '.on-light .narr-btn:hover{background:#946E24;color:#fff}';
   document.head.appendChild(css);
 
+  var script = document.currentScript || document.querySelector('script[src*="narration.js"]');
+  var AUDIO_BASE = 'assets/audio/';
+  if (script && script.src) AUDIO_BASE = script.src.replace(/js\/narration\.js.*$/, 'audio/');
+
   var PLAY = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2l9 6-9 6z"/></svg>';
   var PAUSE = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2h3v12H4zM9 2h3v12H9z"/></svg>';
   var players = [];
@@ -26,7 +30,7 @@
   }
 
   document.querySelectorAll('section.slide[id]').forEach(function (slide) {
-    var audio = new Audio('../assets/audio/narr-' + slide.id + '.mp3');
+    var audio = new Audio(AUDIO_BASE + 'narr-' + slide.id + '.mp3');
     audio.preload = 'none';
     var btn = document.createElement('button');
     btn.className = 'narr-btn';

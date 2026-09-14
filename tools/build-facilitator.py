@@ -13,6 +13,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LEARNER_URL = "https://me5231979.github.io/TransferPortal-/"
 
 s = open(os.path.join(ROOT, 'index.html')).read()
+s = s.replace('<script src="assets/js/narration.js?v=1"></script>\n', '')
 notes = json.load(open(os.path.join(ROOT, 'facilitator', 'notes.json')))
 by_id = {sec['id']: sec for sec in notes['sections']}
 

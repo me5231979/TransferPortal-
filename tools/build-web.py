@@ -49,8 +49,6 @@ s = s.replace('<li><a href="web/">Self-paced version</a></li>',
 n = len(re.findall(r'<section class="slide', s))
 s = re.sub(r'(id="deckCount">1 / )\d+', lambda m: m.group(1) + str(n), s)
 
-s = s.replace('</body>', '<script src="../assets/js/narration.js?v=1"></script>\n</body>')
-
 assert 'As a group' not in s, 'a group block survived'
 assert 'id="s-welcome"' not in s
 out = os.path.join(ROOT, 'web', 'index.html')

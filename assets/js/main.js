@@ -69,30 +69,6 @@
     $$('.manifesto').forEach(function (m) { wObs.observe(m); });
   }
 
-  /* ---------- Welcome slide: QR code ---------- */
-  var qrBox = $('#qrBox');
-  if (qrBox && typeof qrcode === 'function') {
-    // Encodes the deployed URL. Override by setting data-url on #qrCard.
-    var qrCard = $('#qrCard');
-    var qrTarget = (qrCard && qrCard.getAttribute('data-url')) ||
-      (location.protocol === 'file:' ? '' : location.origin + location.pathname);
-    var qrUrlEl = $('#qrUrl');
-    if (qrTarget) {
-      try {
-        var qr = qrcode(0, 'M');
-        qr.addData(qrTarget);
-        qr.make();
-        qrBox.innerHTML = qr.createSvgTag({ scalable: true, margin: 2 });
-        if (qrUrlEl) qrUrlEl.textContent = /transfer-?portal/i.test(qrTarget) ? 'The Talent Marketplace' : qrTarget.replace(/^https?:\/\//, '').replace(/\/$/, '');
-      } catch (err) {
-        qrBox.parentElement.style.display = 'none';
-      }
-    } else {
-      if (qrUrlEl) qrUrlEl.textContent = 'QR appears when the site is hosted';
-      qrBox.innerHTML = '<div style="width:100%;aspect-ratio:1;display:grid;place-items:center;border:1px dashed #E4E4E4;color:#777;font-family:Inter,Arial,sans-serif;font-size:.8rem;padding:1rem;text-align:center">Deploy to generate the QR code</div>';
-    }
-  }
-
   /* ---------- Hero video: crossfading half-speed montage ---------- */
   var heroVideo = $('#heroVideo');
   if (heroVideo) {

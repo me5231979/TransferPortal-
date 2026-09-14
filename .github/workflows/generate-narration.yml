@@ -1,0 +1,61 @@
+name: Generate narration audio
+# Calls the ElevenLabs API for each section in assets/audio/narration.json,
+# commits the MP3s, rebuilds the SCORM package, and republishes gh-pages.
+# Requires the repository secret ELEVENLABS_API_KEY.
+on:
+  push:
+    branches: [main]
+    paths: ['assets/audio/narration.json']
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  tts:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Generate MP3s with ElevenLabs
+        env:
+          XI_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          python3 - <<'EOF'
+          import json, os, sys, urllib.request
+          key = os.environ.get('XI_KEY', '')
+          if not key:
+              sys.exit('The ELEVENLABS_API_KEY repository secret is not set. '
+                       'Add it under Settings > Secrets and variables > Actions.')
+          cfg = json.load(open('assets/audio/narration.json'))
+          voice, model = cfg['voice_id'], cfg.get('model_id', 'eleven_multilingual_v2')
+          for sid, text in cfg['sections'].items():
+              url = ('https://api.elevenlabs.io/v1/text-to-speech/%s'
+                     '?output_format=mp3_44100_128' % voice)
+              body = json.dumps({'text': text, 'model_id': model}).encode()
+              req = urllib.request.Request(url, data=body, headers={
+                  'xi-api-key': key, 'Content-Type': 'application/json'})
+              with urllib.request.urlopen(req) as r:
+                  audio = r.read()
+              path = 'assets/audio/narr-%s.mp3' % sid
+              open(path, 'wb').write(audio)
+              print(path, len(audio), 'bytes')
+          EOF
+
+      - name: Rebuild SCORM package
+        run: |
+          python3 tools/build-web.py
+          python3 tools/build-scorm.py
+
+      - name: Commit and publish
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/audio/*.mp3 web/index.html talent-marketplace-scorm12.zip
+          git commit -m "Generate narration audio via ElevenLabs" || { echo "nothing to commit"; exit 0; }
+          git push origin main
+          git branch -f gh-pages main
+          git push -f origin gh-pages

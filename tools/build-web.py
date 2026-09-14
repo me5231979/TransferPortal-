@@ -13,14 +13,14 @@ import re, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 s = open(os.path.join(ROOT, 'index.html')).read()
 
-# ---- 1. drop the welcome/QR slide ----
-i = s.index('id="s-welcome"')
-start = s.rindex('<section', 0, i)
-# include the leading comment line if present
-cstart = s.rindex('<!--', 0, start)
-if s[cstart:start].count('\n') <= 2: start = cstart
-end = s.index('</section>', i) + len('</section>')
-s = s[:start] + s[end:]
+# ---- 1. drop the welcome/QR slide (already absent since the QR page was retired) ----
+if 'id="s-welcome"' in s:
+    i = s.index('id="s-welcome"')
+    start = s.rindex('<section', 0, i)
+    cstart = s.rindex('<!--', 0, start)
+    if s[cstart:start].count('\n') <= 2: start = cstart
+    end = s.index('</section>', i) + len('</section>')
+    s = s[:start] + s[end:]
 
 # ---- 2. group activities -> solo variants ----
 def solo_block(m):
@@ -48,6 +48,8 @@ s = s.replace('<li><a href="web/">Self-paced version</a></li>',
 # ---- 4. slide counter ----
 n = len(re.findall(r'<section class="slide', s))
 s = re.sub(r'(id="deckCount">1 / )\d+', lambda m: m.group(1) + str(n), s)
+
+s = s.replace('</body>', '<script src="../assets/js/narration.js?v=1"></script>\n</body>')
 
 assert 'As a group' not in s, 'a group block survived'
 assert 'id="s-welcome"' not in s

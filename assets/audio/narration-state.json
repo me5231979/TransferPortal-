@@ -24,11 +24,15 @@
     "normalized": true
   },
   "s-plan": {
-    "hash": "2a5ceda4ddb6e1ed182ae25d33a60517a60b103e3cd52ee2503483d9367924e8",
+    "hash": "e25c03af50c1755b9166c0dfa21aab3bd8ddaec09c0c68f1c5081cd5b6cc1af4",
     "normalized": true
   },
   "s-close": {
     "hash": "5e5d879615f46ba0cec986d6d1652c79f9d593c235163cca8f6f427cd3e8eb6c",
+    "normalized": true
+  },
+  "s-recap": {
+    "hash": "9523edbb946636e1cfa8e799f94bad4efe4d543c3043d5750246d4fda1a96983",
     "normalized": true
   }
 }

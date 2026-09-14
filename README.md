@@ -20,7 +20,7 @@ picture of its slide.
 ## What the course covers
 
 1. **What it is:** the one front door, its guarantees (privacy by default,
-   the two-week internal-first window, advisory on request), and the
+   the staff-first posting window, advisory on request), and the
    fact-or-fiction folklore check.
 2. **Six entrances:** Explorer, Tenured High Performer, Underutilized
    Contributor, Post-Reorg Realigner, At-Risk Employee, Direct Applicant.

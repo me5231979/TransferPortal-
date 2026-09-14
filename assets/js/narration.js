@@ -19,7 +19,7 @@
 
   var css = document.createElement('style');
   css.textContent =
-    '.narrbar{display:flex;align-items:center;gap:.5rem;margin-left:.9rem}' +
+    '.bottombar__left{display:flex;align-items:center;gap:.9rem;min-width:0}.narrbar{display:flex;align-items:center;gap:.5rem}' +
     '.narrbar button{display:inline-flex;align-items:center;gap:.45rem;height:34px;padding:0 .85rem;' +
     'border:1px solid rgba(255,255,255,.28);border-radius:5px;background:transparent;color:#fff;cursor:pointer;' +
     'font-family:var(--font-condensed,Antonio,Impact,sans-serif);font-weight:700;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase}' +
@@ -48,9 +48,18 @@
   group.className = 'narrbar';
   group.appendChild(listenBtn);
   group.appendChild(autoBtn);
+  /* keep the controls tight against the title on the left: wrap both in
+     one flex child so the bar's space-between cannot spread them apart */
   var title = bar.querySelector('.bottombar__title');
-  if (title && title.nextSibling) bar.insertBefore(group, title.nextSibling);
-  else bar.appendChild(group);
+  if (title) {
+    var left = document.createElement('div');
+    left.className = 'bottombar__left';
+    bar.insertBefore(left, title);
+    left.appendChild(title);
+    left.appendChild(group);
+  } else {
+    bar.appendChild(group);
+  }
 
   var auto = true;
   try { auto = localStorage.getItem('narrAuto') !== '0'; } catch (e) {}

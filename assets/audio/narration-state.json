@@ -1,0 +1,34 @@
+{
+  "s-hero": {
+    "hash": "9e989953bf72d4b38ca268b326d49d70f7d5420772cef4e15f71439eafe86d0e",
+    "normalized": false
+  },
+  "s-charge": {
+    "hash": "f3bce3fccbfe448eb178c843287c385e17238b4d2cf903ae63f60d324f9fbfe8",
+    "normalized": false
+  },
+  "s-what": {
+    "hash": "cae04375c31c658dfceb9ba9b66fcf544a4223309167ef50f66fd707c94ce780",
+    "normalized": false
+  },
+  "s-entrances": {
+    "hash": "6506cf6c6a8b4c144d0f1ec7e91e5dc4cfd69bb690aff37bd0f35fb68914bf78",
+    "normalized": false
+  },
+  "s-process": {
+    "hash": "c7ed7f30336b6728c8052f2afdaf5c3dfc4b75c111e0f15eb592ce0bee47c442",
+    "normalized": false
+  },
+  "s-culture": {
+    "hash": "b0d755c0975d03540f519b28c3f3a92ade57e60001a3df80f6eb415294832808",
+    "normalized": false
+  },
+  "s-plan": {
+    "hash": "c25d05ffbd8951265144d4ff9d1345bba03d9337e786933c269e1e3def897db0",
+    "normalized": false
+  },
+  "s-close": {
+    "hash": "8334fba9acafa565335f2d49f46ed31b158885829f83d194e454141ba0f72dea",
+    "normalized": false
+  }
+}

@@ -1,6 +1,8 @@
 /* Narration for the classroom, self-paced, and SCORM editions.
-   Bottom-bar controls in the Manager Foundations style: LISTEN replays
-   the current page, AUTO reads every page as it turns (default on).
+   Bottom-bar controls: LISTEN plays or pauses the current page, AUTO
+   reads every page as it turns (default on). Pausing never loses your
+   place: positions are kept per page and saved to the browser, so
+   toggling off to take notes and back on resumes where you stopped.
    Tracks live at assets/audio/narr-<slide id>.mp3; pages with no track
    are skipped silently, so the deck works before generation runs. */
 (function () {
@@ -24,18 +26,17 @@
     '.narrbar button:hover{border-color:var(--vu-gold-flat,#CFAE70);background:rgba(207,174,112,.12)}' +
     '.narrbar button svg{width:14px;height:14px;fill:currentColor}' +
     '.narrbar .narr-auto.is-on{background:var(--vu-gold-flat,#CFAE70);border-color:var(--vu-gold-flat,#CFAE70);color:#1C1C1C}' +
-    '.narrbar button[disabled]{opacity:.35;cursor:default}' +
     '@media (max-width:900px){.narrbar{margin-left:.5rem}.narrbar button span{display:none}.narrbar button{padding:0 .6rem}}';
   document.head.appendChild(css);
 
   var SPEAKER = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>';
+  var PAUSE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>';
   var LINES = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h10v2H4z"/></svg>';
 
   var listenBtn = document.createElement('button');
   listenBtn.type = 'button';
   listenBtn.className = 'narr-listen';
-  listenBtn.innerHTML = SPEAKER + '<span>Listen</span>';
-  listenBtn.setAttribute('aria-label', 'Replay the narration for this page');
+  listenBtn.setAttribute('aria-label', 'Play or pause the narration for this page');
 
   var autoBtn = document.createElement('button');
   autoBtn.type = 'button';
@@ -59,48 +60,85 @@
   }
   paintAuto();
 
+  /* remembered positions, per slide, survive a reload */
+  var pos = {};
+  try { pos = JSON.parse(localStorage.getItem('narrPos') || '{}') || {}; } catch (e) { pos = {}; }
+  var saveTimer = null;
+  function savePos() {
+    if (saveTimer) return;
+    saveTimer = setTimeout(function () {
+      saveTimer = null;
+      try { localStorage.setItem('narrPos', JSON.stringify(pos)); } catch (e) {}
+    }, 400);
+  }
+
   var tracks = {};
   slides.forEach(function (s) {
     var a = new Audio(AUDIO_BASE + 'narr-' + s.id + '.mp3');
     a.preload = 'none';
-    a.addEventListener('error', function () { tracks[s.id] = null; });
+    var resumed = false;
+    a.addEventListener('loadedmetadata', function () {
+      if (resumed) return;
+      resumed = true;
+      var p = pos[s.id];
+      if (p && p > 0.5 && p < a.duration - 1) { try { a.currentTime = p; } catch (e) {} }
+    });
+    a.addEventListener('timeupdate', function () {
+      pos[s.id] = a.ended ? 0 : a.currentTime;
+      savePos();
+    });
+    a.addEventListener('pause', function () { paintListen(); savePos(); });
+    a.addEventListener('play', function () { paintListen(); });
+    a.addEventListener('ended', function () { pos[s.id] = 0; savePos(); paintListen(); });
+    a.addEventListener('error', function () { tracks[s.id] = null; paintListen(); });
     tracks[s.id] = a;
   });
 
   var currentId = slides[0].id;
   var primed = false;   /* browsers allow sound only after a user gesture */
 
-  function stopAll() {
+  function currentTrack() { return tracks[currentId]; }
+  function paintListen() {
+    var a = currentTrack();
+    if (!a) { listenBtn.hidden = true; return; }
+    listenBtn.hidden = false;
+    var playing = !a.paused && !a.ended;
+    listenBtn.innerHTML = (playing ? PAUSE : SPEAKER) + '<span>' + (playing ? 'Pause' : 'Listen') + '</span>';
+  }
+  function pauseAll() {
     slides.forEach(function (s) {
       var a = tracks[s.id];
-      if (a && !a.paused) a.pause();
+      if (a && !a.paused) a.pause();   /* pause, never rewind */
     });
   }
-  function playCurrent(fromStart) {
-    var a = tracks[currentId];
+  function resumeCurrent() {
+    var a = currentTrack();
     if (!a) return;
-    stopAll();
-    if (fromStart) { try { a.currentTime = 0; } catch (e) {} }
+    pauseAll();
+    if (a.ended) { try { a.currentTime = 0; } catch (e) {} }
     var p = a.play();
     if (p && p.catch) p.catch(function () {});
   }
 
   listenBtn.addEventListener('click', function () {
     primed = true;
-    playCurrent(true);
+    var a = currentTrack();
+    if (!a) return;
+    if (a.paused || a.ended) resumeCurrent();
+    else a.pause();
   });
   autoBtn.addEventListener('click', function () {
     auto = !auto;
     primed = true;
     try { localStorage.setItem('narrAuto', auto ? '1' : '0'); } catch (e) {}
     paintAuto();
-    if (auto) playCurrent(true); else stopAll();
+    if (auto) resumeCurrent(); else pauseAll();
   });
 
   function prime() {
     if (primed) return;
     primed = true;
-    if (auto) playCurrent(true);
+    if (auto) resumeCurrent();
   }
   ['pointerdown', 'keydown', 'touchstart'].forEach(function (ev) {
     window.addEventListener(ev, prime, { once: true, capture: true });
@@ -112,10 +150,13 @@
         if (!e.isIntersecting) return;
         if (e.target.id === currentId) return;
         currentId = e.target.id;
-        stopAll();
-        if (auto && primed) playCurrent(true);
+        pauseAll();
+        paintListen();
+        if (auto && primed) resumeCurrent();
       });
     }, { threshold: 0.6 });
     slides.forEach(function (s) { io.observe(s); });
   }
+
+  paintListen();
 })();

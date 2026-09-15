@@ -1,8 +1,9 @@
 /* Narration for the classroom, self-paced, and SCORM editions.
    Bottom-bar controls: LISTEN plays or pauses the current page, AUTO
    reads every page as it turns (default on). Pausing never loses your
-   place: positions are kept per page and saved to the browser, so
-   toggling off to take notes and back on resumes where you stopped.
+   place while you stay on the page: pause to take notes and resume
+   where you stopped. Turning to a page with next or back starts that
+   page's narration from the top.
    Tracks live at assets/audio/narr-<slide id>.mp3; pages with no track
    are skipped silently, so the deck works before generation runs. */
 (function () {
@@ -160,6 +161,14 @@
         if (e.target.id === currentId) return;
         currentId = e.target.id;
         pauseAll();
+        /* arriving on a page restarts its narration from the top;
+           pausing while staying on the page keeps the position */
+        var a = tracks[currentId];
+        if (a) {
+          try { a.currentTime = 0; } catch (err) {}
+          pos[currentId] = 0;
+          savePos();
+        }
         paintListen();
         if (auto && primed) resumeCurrent();
       });
